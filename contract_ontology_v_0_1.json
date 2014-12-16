@@ -1,0 +1,73 @@
+{ "@context": {
+    "cn" : "http://rsmluv.cz/ContractOntology/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "owl": "http://www.w3.org/2002/07/owl#"
+  },
+  
+  "@type": "owl:Ontology",
+  
+  # Classes
+  "cn:Document" : {
+    "@type" : "owl:Class",
+    "rdfs:label" : "Dokument"@cs",
+    "rdfs:comment" : "Popis dokumentu"@cs"
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  "cn:Contract" : {
+    "@type" : "owl:Class",
+    "rdfs:label" : "Smlouva"@cs",
+    "rdfs:comment" : "Popis smlouvy"@cs"
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  # Properties
+  
+  "cn:documentUri" : {
+    "@type" : "owl:ObjectProperty",
+    "rdfs:label" : "Název property"@cs",
+    "rdfs:comment" : "Popis property"@cs"
+    "rdfs:domain" : "cn:Document",
+    "rdfs:range" : "xsd:anyURI",
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  "cn:type" : {
+    "@type" : "owl:ObjectProperty",
+    "rdfs:label" : "Název property"@cs",
+    "rdfs:comment" : "Popis property"@cs"
+    "rdfs:domain" : "cn:Document",
+    "rdfs:range" : "xsd:string",
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  "cn:fileURI" : {
+    "@type" : "owl:ObjectProperty",
+    "rdfs:label" : "Název property"@cs",
+    "rdfs:comment" : "Popis property"@cs"
+    "rdfs:domain" : "cn:Document",
+    "rdfs:range" : "xsd:anyURI",
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  "cn:authentication" : {
+    "@type" : "owl:ObjectProperty",
+    "rdfs:label" : "Název property"@cs",
+    "rdfs:comment" : "Popis property"@cs"
+    "rdfs:domain" : "cn:Document",
+    "rdfs:range" : "xsd:string",
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  "cn:versions" : {
+    "@type" : "owl:ObjectProperty",
+    "rdfs:label" : "Název property"@cs",
+    "rdfs:comment" : "Popis property"@cs"
+    "rdfs:domain" : "cn:Document",
+    "rdfs:isDefinedBy" : "http://rsmluv.cz/ContractOntology/"
+  },
+  
+  
+  
+}

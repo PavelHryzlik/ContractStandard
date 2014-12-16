@@ -1,0 +1,35 @@
+{
+    "document": {
+      "URI" : "http://rsmluv.cz/smlouva/12345",
+      "Type" : "Smlouva",
+      "FileURI" : "http://rsmluv.cz/smlouva/12345/Smlouva12345.docx",
+      "Authentication" : "url",
+      "Versions" : [
+        {
+            "Version" : "1",
+            "VersionURI" : "http://rsmluv.cz/smlouva/12345/verze/1",
+            "Published" : "2014-09-15"
+        }
+      ],
+      "Parties" : [
+        {
+            "localID" : "OI-00009",
+            "ID" : "46347011",
+            "Name" : "Kovoprojekta Brno a.s.",
+            "Publisher" : "false" 
+        },
+        {
+            "localID" : "OI-00001",
+            "Name" : "Statutární město Brno",
+            "Publisher" : "true" 
+        }   
+      ],
+      
+      "contract": {
+        "Ammount" : "99999",
+        "Currency" : "CZK",
+        "Title" : "Rekonstrukce kanalizace a vodovodu",
+        "description" : "Předmětem projektové dokumentace pro stavební povolení a zadání stavby je rekonstrukce kanalizace v ul. Cyrilská v úseku od ul.Mlýnské po ul. Řeznickou v celkové délce 211 m. Úsek v délce 201 m bude z kameninových trub DN 400 a úsek dl. 10 m z trub betonových DN500/700. Součástí je rekonstrukce kanalizačních přípojek, napojení stávajících dešťových vpustí, rušení staré kanalizace. Součástí projektu je dále rekonstrukce vodovodu DN 100 v délce 251 m v ul. Cyrilské, rek. vodovodu DN 150 v délce 143 m v ul. Mlýnské z trub z tvárné litiny s vnitřní výstelkou. Potrubí u tramvajových kolejí bude opatřeno vnější těžkou protikorozní ochranou. Součástí je výměna vodovodních přípojek, rušení nefunkčního vodovodu. Dále je součástí rozebrání a oprava chodníků nad rýhou a celoplošná obnova vozovky."
+      } 
+    }  
+}

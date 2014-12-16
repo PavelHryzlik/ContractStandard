@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:cn="http://rsmluv.cz/ContractOntology/"
+>
+  <rdf:Description rdf:nodeID="Nc841c91d8b184ddaa2fbece60f5fb403">
+    <cn:Document>
+      <rdf:Description rdf:about="http://rsmluv.cz/smlouva/12345">
+        <cn:versions>
+          <rdf:Description rdf:nodeID="N46c110a1a9e848a9b1d389e407df26c6">
+            <cn:versionUri rdf:resource="http://rsmluv.cz/smlouva/12345/verze/1"/>
+            <cn:version>1</cn:version>
+            <cn:published rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-09-15</cn:published>
+          </rdf:Description>
+        </cn:versions>
+        <cn:parties>
+          <rdf:Description rdf:nodeID="N2ee4339fa51046a9bd31adb3b6d0cd49">
+            <cn:id>46347011</cn:id>
+            <cn:publisher>false</cn:publisher>
+            <cn:name>Kovoprojekta Brno a.s.</cn:name>
+            <owl:sameAs rdf:resource="http://linked.opendata.cz/resource/business-entity/CZ46347011"/>
+            <cn:localID>OI-00009</cn:localID>
+          </rdf:Description>
+        </cn:parties>
+        <cn:authentication>url</cn:authentication>
+        <cn:type>Smlouva</cn:type>
+        <cn:parties>
+          <rdf:Description rdf:nodeID="N3f47d3bcf3144c4196c55e4b5f40a69d">
+            <cn:name>Statutární město Brno</cn:name>
+            <cn:publisher>true</cn:publisher>
+            <cn:localID>OI-00001</cn:localID>
+          </rdf:Description>
+        </cn:parties>
+        <cn:fileURI rdf:resource="http://rsmluv.cz/smlouva/12345/Smlouva12345.docx"/>
+      </rdf:Description>
+    </cn:Document>
+    <cn:Contract>
+      <rdf:Description rdf:nodeID="Nd3ae2af769c04337a7c9cc4e3be1b9ad">
+        <cn:ammount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">99999.0</cn:ammount>
+        <cn:description>Předmětem projektové dokumentace pro stavební povolení a zadání stavby je rekonstrukce kanalizace v ul. Cyrilská v úseku od ul.Mlýnské po ul. Řeznickou v celkové délce 211 m. Úsek v délce 201 m bude z kameninových trub DN 400 a úsek dl. 10 m z trub betonových DN500/700. Součástí je rekonstrukce kanalizačních přípojek, napojení stávajících dešťových vpustí, rušení staré kanalizace. Součástí projektu je dále rekonstrukce vodovodu DN 100 v délce 251 m v ul. Cyrilské, rek. vodovodu DN 150 v délce 143 m v ul. Mlýnské z trub z tvárné litiny s vnitřní výstelkou. Potrubí u tramvajových kolejí bude opatřeno vnější těžkou protikorozní ochranou. Součástí je výměna vodovodních přípojek, rušení nefunkčního vodovodu. Dále je součástí rozebrání a oprava chodníků nad rýhou a celoplošná obnova vozovky.</cn:description>
+        <cn:title>Rekonstrukce kanalizace a vodovodu</cn:title>
+        <cn:versionUri rdf:resource="http://rsmluv.cz/smlouva/12345/verze/1"/>
+        <cn:currency>CZK</cn:currency>
+      </rdf:Description>
+    </cn:Contract>
+  </rdf:Description>
+</rdf:RDF>

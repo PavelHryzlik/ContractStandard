@@ -1,0 +1,72 @@
+{
+    "@context": {
+      "cn": "http://rsmluv.cz/ContractOntology/",
+      "gr": "http://purl.org/goodrelations/v1#",
+      "dc": "http://purl.org/dc/terms/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "cn:documentUri": "@id",
+      "cn:fileURI": {
+        "@type": "@id"
+      },
+      "cn:versionUri": {
+        "@type": "@id"
+      },
+      "owl:sameAs": {
+        "@type": "@id"
+      },
+      "gr:hasCurrencyValue": {
+        "@type": "xsd:float"
+      },
+      "cn:published": {
+        "@type": "xsd:date"
+      }
+    },
+        
+    "cn:Document": {
+      "cn:documentUri" : "http://rsmluv.cz/smlouva/12345",
+      "cn:type" : "Smlouva",
+      "cn:fileURI" : "http://rsmluv.cz/smlouva/12345/Smlouva12345.docx",
+      "cn:authentication" : "url",
+      "cn:versions" : [
+        {
+            "cn:version" : "1",
+            "cn:versionUri" : "http://rsmluv.cz/smlouva/12345/verze/1",
+            "cn:published" : "2014-09-15"
+        }
+      ],
+      "cn:parties" : [
+        {
+            "cn:contractingAuthority" : {
+              "cn:localID" : "OI-00009",
+              "cn:publisher" : "false",
+              "gr:BusinessEntity" : {
+                "gr:name" : "Kovoprojekta Brno a.s.",
+                "gr:vatID" : "CZ46347011"
+              },
+              "owl:sameAs" : "http://linked.opendata.cz/resource/business-entity/CZ46347011"
+            }
+        },
+        {
+            "cn:contractingAuthority" : {
+              "cn:localID" : "OI-00001",
+              "cn:publisher" : "true",
+              "gr:BusinessEntity" : {
+                "gr:name" : "Statutární město Brno"
+              }
+            }
+        }   
+      ],
+      
+      "cn:Contract": {
+        "pc:contractPrice" : {
+          "gr:PriceSpecification" : {
+            "gr:hasCurrency" : "CZK",
+            "gr:hasCurrencyValue" : "99999"
+          }
+        },
+        "dc:title" : "Rekonstrukce kanalizace a vodovodu",
+        "dc:description" : "Předmětem projektové dokumentace pro stavební povolení a zadání stavby je rekonstrukce kanalizace v ul. Cyrilská v úseku od ul.Mlýnské po ul. Řeznickou v celkové délce 211 m. Úsek v délce 201 m bude z kameninových trub DN 400 a úsek dl. 10 m z trub betonových DN500/700. Součástí je rekonstrukce kanalizačních přípojek, napojení stávajících dešťových vpustí, rušení staré kanalizace. Součástí projektu je dále rekonstrukce vodovodu DN 100 v délce 251 m v ul. Cyrilské, rek. vodovodu DN 150 v délce 143 m v ul. Mlýnské z trub z tvárné litiny s vnitřní výstelkou. Potrubí u tramvajových kolejí bude opatřeno vnější těžkou protikorozní ochranou. Součástí je výměna vodovodních přípojek, rušení nefunkčního vodovodu. Dále je součástí rozebrání a oprava chodníků nad rýhou a celoplošná obnova vozovky."
+      } 
+    }  
+}
