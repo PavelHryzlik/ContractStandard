@@ -1,0 +1,25 @@
+**Contracts register - Data standard**
+  * [[en:standard:introduction|Introduction]]
+**Schema**
+  * [[en:standard:schema:structure_specification|Structure specification]]
+    * [[en:standard:schema:structure_specification:document|Document]]   
+    * [[en:standard:schema:structure_specification:contract|Contract]] 
+    * [[en:standard:schema:structure_specification:attachment|Attachment]] 
+    * [[en:standard:schema:structure_specification:amendment|Amendment]]
+    * [[en:standard:schema:structure_specification:order|Order]]
+    * [[en:standard:schema:structure_specification:invoice|Invoice]]
+  * [[en:standard:schema:fields|Field reference]]
+    * [[en:standard:schema:fields:authentication|Authentication]] 
+    * [[en:standard:schema:fields:party|Party]]    
+    * [[en:standard:schema:fields:publisher|Publisher]]
+    * [[en:standard:schema:fields:superior_institution|SuperiorInstitution]] 
+    * [[en:standard:schema:fields:version|Version]] 
+  * [[en:standard:schema:codelists|Codelists]]
+**Implementation**
+  * [[en:standard:implementation:userguide|User guide]]
+  * [[en:standard:implementation:ontology|Ontology]]
+  * [[en:standard:implementation:examples|Examples]]
+**About project**
+  * [[en:standard:about:autors|Autors]]
+  * [[en:standard:about:partners|Partners]]
+ 
