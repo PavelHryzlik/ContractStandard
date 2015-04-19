@@ -1,0 +1,68 @@
+{
+  "@context": "http://standard.zindex.cz/doku.php/cs/implementation/contract_ontology_v1.json"
+  
+  "Document" : {
+    
+    "uri" : "http://rsmluv.cz/smlouva/12345",
+    "document" : "http://rsmluv.cz/smlouva/12345/Smlouva12345.docx",
+    "type" : "Smlouva",
+    "valid" : "true",
+    "anonymised" : "false",
+    
+    "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
+    
+    "publisher" : {
+      "ID" : "6003508",
+      "name" : "Statutární město Brno",
+      "noID" : "false",
+      "country" : "Czech Republic",
+      "authentication" : "email"    
+    },
+    
+    "parties" : [         
+      {
+        "ID" : "44992785",
+        "localID" : "OI-00001",
+      	"name" : "Statutární město Brno",
+        "payer" : "false",
+      	"noID" : "false",
+      	"country" : "Czech Republic",
+        "address" : "Dominikánské náměstí 196/1, Brno-město, 602 00 Brno",
+        "competency" : "Verejnopravni",
+        "paysVAT" : "false",
+        "superiorInstitution" : {
+          "ID" : "00064581",
+        	"localID" : "OI-00018",
+        	"name" : "Magistrát hlavního města Prahy",
+        	"noID" : "false",
+        	"country" : "Czech Republic" 
+        }
+      },
+      {
+        "ID" : "46347011",
+        "localID" : "OI-00009",
+        "name" : "Kovoprojekta Brno a.s.",
+        "payer" : "true",
+        "noID" : "false",
+        "country" : "Czech Republic",
+        "address" : "Šumavská 416/15, Ponava, 602 00 Brno",
+        "competency" : "Soukromepravni",
+        "paysVAT" : "true"
+      }           
+    ],
+    
+    "versions" : [ 
+      {  
+        "version" : "1",
+        "uri" : "http://rsmluv.cz/smlouva/12345/verze/1",
+        "published" : "2014-09-15"    
+      },
+      {  
+        "version" : "2",
+        "uri" : "http://rsmluv.cz/smlouva/12345/verze/2",
+        "published" : "2015-03-15"    
+      }  
+    ]
+  }
+  
+}

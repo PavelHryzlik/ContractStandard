@@ -1,0 +1,76 @@
+{
+  "date": "2014-03-25", 
+  "id": "89f689cd-e784-4374-bb17-94144679d46f",
+  "language": "cs",
+
+  "contracts": [],
+
+"attachments": [
+    {
+      "Title" : "Priloha1",
+      "Contract" : "http://rsmluv.cz/smlouva/12345",       
+
+      "URI" : "http://rsmluv.cz/priloha/priloha1",
+      "Document" : "http://rsmluv.cz/smlouva/12345/Priloha1.docx",
+      "Type" : [ "Smlouva" ],
+      "Valid" : true,
+      "Anonymised" : false,
+    
+      "ResponsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
+      
+      "Publisher" : {
+        "ID" : "6003508",
+        "Name" : "Statutární město Brno",
+        "NoID" : false,
+        "Country" : "Czech Republic",
+        "Authentication" : "email"    
+      },
+      
+      "Parties" : [         
+        {
+          "ID" : "44992785",
+          "LocalID" : 132456,
+          "Name" : "Statutární město Brno",
+          "Payer" : false,
+          "NoID" : false,
+          "Country" : "Czech Republic",
+          "Address" : "Dominikánské náměstí 196/1, Brno-město, 602 00 Brno",
+          "Competency" : [ "Verejnopravni" ],
+          "PaysVAT" : false,
+          "SuperiorInstitution" : {
+            "ID" : "00064581",
+          	"LocalID" : 56486,
+          	"Name" : "Magistrát hlavního města Prahy",
+          	"NoID" : false,
+          	"Country" : "Czech Republic" 
+          }
+        },
+        {
+          "ID" : "46347011",
+          "LocalID" : 987654,
+          "Name" : "Kovoprojekta Brno a.s.",
+          "Payer" : true,
+          "NoID" : false,
+          "Country" : "Czech Republic",
+          "Address" : "Šumavská 416/15, Ponava, 602 00 Brno",
+          "Competency" : [ "Soukromepravni" ],
+          "PaysVAT" : true
+        }           
+      ],
+      
+      "Versions" : [ 
+        {  
+          "Version" : 1,
+          "URI" : "http://rsmluv.cz/smlouva/12345/verze/1",
+          "Published" : "2014-09-15T23:20:50+01:00"    
+        },
+        {  
+          "Version" : 2,
+          "URI" : "http://rsmluv.cz/smlouva/12345/verze/2",
+          "Published" : "2015-03-15T14:35:28+01:00"    
+        }  
+      ]
+    }
+]
+}
+                                      
