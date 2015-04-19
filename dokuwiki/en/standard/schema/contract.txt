@@ -1,0 +1,79 @@
+====== EN Contract ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- 
+| AwardID || String || N*
+| Evidenční číslo veřejné zakázky
+
+|- 
+| AwardProfileID  || String || N
+| Číslo zakázky na profilu zadavatele
+
+|- class="danger"
+| Ammount || Nullable float || C
+| Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL.
+
+|- class="danger"
+| AmmountNoVat || Nullable float || C*
+| Cena bez dph, uvádí se povinně pouze v případě, že Ammount je s DPH 
+
+|- class="danger"
+| Title || String || C
+| Předmět smlouvy
+
+|- class="danger"
+| Type || String || C
+| Číselník typů smlouvy. Viz. <link>
+
+|- class="info"
+| SubjectType || String || B
+| Číselník typů zboží/služeb
+
+|- class="info"
+| PriceAnnual || Boolean || B
+| Identifikuje, pokud je v Ammount roční částka.
+
+|- class="info"
+| Currency || String || B
+| Měna, 3-písmenný, ISO 4217 formát
+
+|- class="info"
+| DateSigned || Date || B
+| Datum posledního podpisu
+
+|- class="info"
+| ValidFrom  || Date || B
+| Datum účinnosti smlouvy
+
+|- class="info"
+| ValidUntil || Date || B
+| Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu .
+
+|- class="info"
+| Funding || String || B
+| Převažující financování – vlastní, případně název dotačního titulu (bude kontrolován proti číselníku)
+
+|- class="info"
+| Annexes || String URI array || B
+| Seznam URI identifikátorů příloh
+
+|- class="info"
+| Supplements || String URI array || B
+| Seznam URI identifikátorů dodatků
+
+|- class="success"
+| CurrentValidContract  || String URI || A
+| Aktuálně platné znění smlouvy (se zapracovanými dodatky)
+
+|- class="success"
+| Description || String || A
+| Popis předmětu smlouvy
+
+|- class="success"
+| Implementation || Object || A
+| Objekt reprezentující transakce a milníky, viz. [[cs:standard:schema:structure_specification:implementation|Implementation]]
+
+|}

@@ -1,0 +1,21 @@
+====== Příloha ======
+
+Popisné údaje přílohy.
+
+{| class="wikitable"
+|-
+! Název pole !! Datový typ !! Validita !! Popis
+
+|- class="danger"
+| Title || String || C
+| Název
+
+|- class="danger"
+| Contract || String URI || C
+| Jednoznační identifikátor smlouvy
+
+|- class="info"
+| Number || Int || B
+| Číslo přílohy
+
+|}

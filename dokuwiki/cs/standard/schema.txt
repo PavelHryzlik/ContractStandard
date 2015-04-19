@@ -1,0 +1,62 @@
+====== Schéma ======
+
+Schéma podrobně popisuje datovou strukturu otevřeného formátu pro evidenci smluv.
+
+Otevřené smlouvy jsou veřejně dostupná metadata o konkrétních smlouvách, resp. konkrétní otisk dat v daném čase na internetu. Jedná se o [[cs:standard:introduction|otevřená data]].
+
+
+
+
+===== Základní členění =====
+
+Základním objektem, který slouží k reprezentaci dat, je dokument. Jedná se o abstraktní entitu, která nabývá třech rozšířeních typu smlouva/příloha/dodatek. Tato rozšíření obsahují všechny položky obsažené v dokumentu a navíc konkrétní položky pro daný typ.
+
+Objednávka a faktura jsou separátní objekty, které se mohou vázat na konkrétní smlouvu/přílohu/dodatek pomocí jednoznačného identifikátoru.
+
+Rozšiřující entity jsou součástí smlouvy reprezentují důležité události v životním cyklu dokumentu a jednotlivé transakce. 
+
+Reprezentované entity:
+  * **[[cs:standard:schema:document|Dokument]]** - základní abstraktní struktura pro evidování údajů o smlouvách/přílohách/dodatcích
+    * **[[cs:standard:schema:contract|Smlouva]]** - detailní popisné údaje smlouvy
+      * **[[cs:standard:schema:implementation|Rozšiřující entity]]** - rozšířené informace ke smlouvě (milníky, transakce)
+    * **[[cs:standard:schema:attachment|Příloha]]** - popisné údaje přílohy
+    * **[[cs:standard:schema:amendment|Dodatek]]** - popisné údaje dodatku
+  * **[[cs:standard:schema:order|Objednávka]]** - popisné údaje objednávky, jedná se o doplňující informace k smlouvě/příloze/dodatku
+  * **[[cs:standard:schema:invoice|Faktura]]** - popisné údaje faktury, jedná se o doplňující informace k smlouvě/příloze/dodatku
+
+===== Akceptovatelné soubory =====
+
+Systém bude přijímat pouze tyto dokumenty: (může být rozšířeno o efaktury)
+{| class="wikitable"
+|-
+! Formát !! Validita !! Popis
+
+|- class="danger"
+| PDF || C
+| Portable Document Format - ideálně strojově čitelný
+
+|- class="danger"
+| DOC || C
+| Textový dokument Microsoft Word 
+
+|- class="danger"
+| XLS || C
+| Tabulka Microsoft Excel
+
+|- class="info"
+| DOCX || B
+| Textový dokument Microsoft Word
+
+|- class="info"
+| ODT || B
+| Textový dokument OpenDocument 
+
+|- class="info"
+| XLSX || B
+| Tabulka Microsoft Excel
+
+|- class="info"
+| ODS || B
+| Tabulka OpenDocument
+
+|}

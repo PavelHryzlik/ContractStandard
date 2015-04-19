@@ -1,0 +1,60 @@
+====== EN Implementation ======
+Výchází z http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#implementation
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- class="danger"
+| Milestones || Obejct array|| C
+| Milníky, pro volnou evidenci událostí (obnova smlouvy, předání apod.). Viz. [[cs:standard:schema:structure_specification:implementation#Milestone|Milestone]]
+
+|- class="danger"
+| Transactions || Obejct array || C
+| Seznam transakcí, tedy proběhlých plateb na základě smlouvy. Viz. [[cs:standard:schema:structure_specification:implementation#Transaction|Transaction ]]
+
+|}
+
+====== Milestone ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- class="danger"
+| Title || String || C
+| Název
+
+|- class="danger"
+| DueDate || String || C
+| Datum
+
+|}
+
+====== Transaction ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- class="danger"
+| Date || DateTime || C
+| Datum a čas problěhlé transakce
+
+|- class="danger"
+| Ammount || Float || C
+| Zaplacená cena s DPH, vždy stejná měna jako v Currency
+
+|- class="danger"
+| SenderOrganization || Reference || C
+| Identifikátor odesílatele. Viz. [[cs:standard:schema:structure_specification:document#Party|Party]]
+
+|- class="danger"
+| ReceiverOrganization || Reference || C
+| Identifikátor příjemce. Viz. [[cs:standard:schema:structure_specification:document#Party|Party]]
+
+|- class="info"
+| Number || Int || B
+| Libovolný číselný identifikátor transakce, unikátní v rámci smlouvy
+
+|}

@@ -1,0 +1,31 @@
+====== EN Order ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- 
+| ParrentDocument || String URI || N
+| Jednoznačný identifikátor smlouvy
+
+|- class="danger"
+| Title || String || C
+| Předmět
+
+|- class="danger"
+| Ammount || Float || C
+| Cena s DPH
+
+|- class="info"
+| Currency || String || B
+| Měna, 3-písmenný, ISO 4217 formát
+
+|- class="info"
+| DateSigned || Date || B
+| Datum posledního podpisu
+
+|- class="success"
+| Implementation || Object || A
+| Objekt reprezentující transakce a milníky, viz. [[cs:standard:schema:structure_specification:implementation|Implementation]]
+
+|}

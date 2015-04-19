@@ -1,0 +1,29 @@
+====== Faktura ======
+
+Popisné údaje faktury. Jedná se o doplňující informace k smlouvě/příloze/dodatku.
+
+{| class="wikitable"
+|-
+! Název pole !! Datový typ !! Validita !! Popis
+
+|- 
+| ParrentDocument || String URI || N
+| Jednoznačný identifikátor smlouvy, objednávky
+
+|- class="danger"
+| Title || String || C
+| Předmět
+
+|- class="danger"
+| Ammount || Nullable float || C*
+| Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. **Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.**
+
+|- class="info"
+| Currency || String || B
+| Měna, 3-písmenný, ISO 4217 formát
+
+|- class="info"
+| Due || Date || B
+| Datum podpisu
+
+|}

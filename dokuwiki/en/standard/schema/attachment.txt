@@ -1,0 +1,19 @@
+====== EN Attachment ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- class="danger"
+| Title || String || C
+| Název
+
+|- class="danger"
+| Contract || String URI || C
+| Jednoznační identifikátor smlouvy
+
+|- class="info"
+| Number || Int || B
+| Číslo přílohy
+
+|}

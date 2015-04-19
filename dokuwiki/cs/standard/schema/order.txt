@@ -1,0 +1,33 @@
+====== Objednávka ======
+
+Popisné údaje objednávky. Jedná se o doplňující informace k smlouvě/příloze/dodatku.
+
+{| class="wikitable"
+|-
+! Název pole !! Datový typ !! Validita !! Popis
+
+|- 
+| ParrentDocument || String URI || N
+| Jednoznačný identifikátor smlouvy
+
+|- class="danger"
+| Title || String || C
+| Předmět
+
+|- class="danger"
+| Ammount || Float || C
+| Cena s DPH
+
+|- class="info"
+| Currency || String || B
+| Měna, 3-písmenný, ISO 4217 formát
+
+|- class="info"
+| DateSigned || Date || B
+| Datum posledního podpisu
+
+|- class="success"
+| Implementation || Object || A
+| Objekt reprezentující transakce a milníky, viz. [[cs:standard:schema:implementation|Implementation]]
+
+|}

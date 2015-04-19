@@ -1,0 +1,17 @@
+====== Json schema ======
+
+Definice datové struktury smluv v JSON formátu pro potřeby validace.
+
+[[http://localhost:1080/dokuwiki/lib/exe/fetch.php/cs/standard/implementation/contract_schema_v1.json|Json schema verze 1]]
+
+
+====== Json příklady ======
+
+Příklad uživatelských dat, validních vůči definovanému schématu.
+
+[[http://localhost:1080/dokuwiki/lib/exe/fetch.php/cs/standard/implementation/contract_sample.json|Json příklad]]
+
+====== Linked open data ======
+
+Kontext\\
+Ontologie

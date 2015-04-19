@@ -1,0 +1,173 @@
+====== EN Document ======
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- class="warning"
+| URI || String URI || S
+| Jednoznačný identifikátor formou URL. Typicky //rsmluv.cz/[Typ]/[Id]/[Version]//, kde Version je vzestupné číslování verzí při změnách dokumentu či metadat
+
+|- class="warning"
+| Document || String URI || S
+| Adresa URL fyzického umístění dokumentu. Typicky //rsmluv.cz/[Typ]/[Id]/[Version]/File//
+
+|- class="warning"
+| Versions || Object array || S
+| Údaje o verzi dokumentu. Viz. [[cs:standard:schema:document#Version|Version]] 
+
+|- class="danger"
+| Type || String Enum || C
+| Typ dokumentu. Nabývá hodnot - [[cs:standard:schema:contract|Smlouva]]/[[cs:standard:schema:attachment|Příloha]]/[[cs:standard:schema:amendment|Dodatek]]
+
+|- class="danger"
+| Publisher || Reference || C
+| Informace o vydavateli. Viz. [[cs:standard:schema:document#Publisher|Publisher]]
+
+|- class="danger"
+| Parties || Object array || C
+| Výčet smluvních stran. Viz. [[cs:standard:schema:document#Party|Party]]
+
+|- class="info"
+| Valid || Boolean || B/S
+| Indikuje, zda dokument je platný, tj. nebyl zneplatněn nebo nahrazen novou verzí  
+
+|- class="info"
+| Plain text || String || B/S
+| Prostý text dokumentu (nestrukturovaný, indexovatelný), alternativa pro scanované dokumenty
+
+|- class="info"
+| Responsible persons || String array || B 
+| Výčet odpovědných osob
+
+|- class="info"
+| Anonymised || Boolean || B
+| Značí, zda-li byla provedena anonymizace dokumentu
+
+|}
+
+====== Publisher ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- 
+| ID || String || N
+| Identifikační číslo osoby, lze vložit i zahraniční ID
+
+|- class="danger"
+| Name || String || C
+| Název, případně jméno a příjmení (s tituly)
+
+|- class="info"
+| noID || Boolean || B
+| Indikuje že subjekt nemá IČO, nebo zahraniční ID
+
+|- class="info"
+| Country || String || B
+| Země původu, 3-písmený ISO kód
+
+|- class="warning"
+| Authentication || String || S
+| Značí stupeň ověřenosti zveřejňující strany.
+
+|}
+
+====== Party ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- 
+| ID || String || N
+| Identifikační číslo osoby, lze vložit i zahraniční id
+
+|- class="danger"
+| localID || Int || C
+| Jednoznačný identifikátor v rámci dokumentu
+
+|- class="danger"
+| Name || String || C
+| Název, případně jméno a příjmení (s tituly)
+
+|- class="danger"
+| Payer || Boolean || C*
+| Identifikuje stranu která bude finančně plnit, pokud není zřejmé, nevyplňuje se
+
+|- class="info"
+| noID || Boolean || B
+| Indikuje že subjekt nemá IČO, nebo zahraniční ID
+
+|- class="info"
+| Country || String || B
+| Země původu, 3-písmený ISO kód
+
+|- class="success"
+| Address || String || A
+| Adresa subjektu, případně "Anonymizováno"
+
+|- class="success"
+| Competency || String enum || A
+| Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu
+
+|- class="success"
+| PaysVAT || Boolean || A
+| Indikuje, zda-li je subjekt plátce DPH
+
+|- class="warning"
+| SuperiorInstitution || Reference || N/S
+| Řídící nebo ovládající právnická osoba, v případě veřejnoprávních smluv nadřízený správní orgán. Viz. [[cs:standard:schema:document#SuperiorInstitution|SuperiorInstitution]]
+
+|}
+
+====== SuperiorInstitution ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- 
+| ID || String || N
+| Identifikační číslo osoby, lze vložit i zahraniční id
+
+|- class="danger"
+| localID || Int || C
+| Jednoznačný identifikátor v rámci dokumentu
+
+|- class="danger"
+| Name || String || C
+| Název, případně jméno a příjmení (s tituly)
+
+|- class="info"
+| noID || Boolean || B
+| Indikuje že subjekt nemá IČO, nebo zahraniční ID
+
+|- class="info"
+| Country || String || B
+| Země původu, 3-písmený ISO kód
+
+|}
+
+====== Version ======
+
+{| class="wikitable"
+|-
+! Field name !! Data type !! Validation !! Description
+
+|- class="warning"
+| Version || Int || S
+| Pořadové číslo verze, nejvyšší = aktuální
+
+|- class="warning"
+| URI || String URI || S
+| Identifikátor dané verze
+
+|- class="warning"
+| Published || DateTime || S
+| Datum publikace v systému
+
+|}
