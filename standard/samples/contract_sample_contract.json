@@ -3,7 +3,7 @@
   "id": "89f689cd-e784-4374-bb17-94144679d46f",
   "language": "cs",
 
-  "contracts": [
+  "documents": [
     {
       "URI" : "http://rsmluv.cz/smlouva/12345",
       "Document" : "http://rsmluv.cz/smlouva/12345/Smlouva12345.docx",
