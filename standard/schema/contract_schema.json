@@ -14,7 +14,8 @@
         "date": {
             "title": "Release date",
             "description": "Datum publikace souboru",
-            "type": "string"
+            "type": "string",
+            "format": "date-time"
         },  
         
         "documents": {
@@ -77,25 +78,25 @@
             "title": "Document",
             "description": "Dokument je základní strukturou pro evidování údajů o smlouvách.",
             "properties": {          
-                "URI": {
+                "uri": {
                     "description": "Jednoznačný identifikátor formou URL. Typicky rsmluv.cz/[Typ]/[Id]/[Version], kde Version je vzestupné číslování verzí při změnách dokumentu či metadat",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "S"
                 },
-                "Document": {
+                "document": {
                     "description": "Adresa URL fyzického umístění dokumentu. Typicky rsmluv.cz/[Typ]/[Id]/[Version]/File",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "S"
                 },
-                "Versions": {
+                "versions": {
                     "description": "Údaje o verzi dokumentu.",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Version" },
                     "validity": "S"
                 },
-                "Type": {
+                "type": {
                     "description": "Typ dokumentu. Nabývá hodnot - Smlouva/Příloha/Dodatek",
                     "type": "array",
                     "items": {
@@ -103,28 +104,28 @@
                     },
                     "validity": "C"
                 },
-                "Publisher": {
+                "publisher": {
                     "description": "Informace o vydavateli.",
                     "$ref": "#/definitions/Publisher",
                     "validity": "C"
                 },
-                "Parties": {
+                "parties": {
                     "description": "Výčet smluvních stran.",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Party" },
                     "validity": "C"
                 },
-                "Valid": {
+                "valid": {
                     "description": "Indikuje, zda dokument je platný, tj. nebyl zneplatněn nebo nahrazen novou verzí",
                     "type": ["boolean", "null"],
                     "validity": ["B", "S"]
                 },
-                "PlainText": {
+                "plainText": {
                     "description": "Prostý text dokumentu (nestrukturovaný, indexovatelný), alternativa pro scanované dokumenty",
                     "type": ["string", "null"],
                     "validity": ["B", "S"]
                 },
-                "ResponsiblePersons": {
+                "responsiblePersons": {
                     "description": "Výčet odpovědných osob",
                     "type": ["array", "null"],
                     "items": {
@@ -132,7 +133,7 @@
                     },
                     "validity": "B"
                 },
-                "Anonymised": {
+                "anonymised": {
                     "description": "Značí, zda-li byla provedena anonymizace dokumentu",
                     "type": ["boolean", "null"],
                     "validity": "B"
@@ -140,7 +141,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Type", "Publisher", "Parties"]
+            "required": ["type", "publisher", "parties"]
         },    
         
         "Publisher": {
@@ -148,27 +149,27 @@
             "title": "Publisher",
             "description": "Informace o vydavateli, který zveřejňuje údaje o smlouvách.",
             "properties": {          
-                "ID": {
+                "id": {
                     "description": "Identifikační číslo osoby, lze vložit i zahraniční ID",
                     "type": ["string", "null"],
                     "validity": "N"
                 },
-                "Name": {
+                "name": {
                     "description": "Název, případně jméno a příjmení (s tituly)",
                     "type": ["string", "null"],
                     "validity": "C"
                 },
-                "NoID": {
+                "noID": {
                     "description": "Indikuje že subjekt nemá IČO, nebo zahraniční ID",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
-                "Country": {
+                "country": {
                     "description": "Země původu, 3-písmený ISO kód",
                     "type": ["string", "null"],
                     "validity": "B"
                 },
-                "Authentication": {
+                "authentication": {
                     "description": "Značí stupeň ověřenosti zveřejňující strany.",
                     "type": ["string", "null"],
                     "validity": "S"
@@ -176,7 +177,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Name"]
+            "required": ["name"]
         },    
         
         "Party": {
@@ -184,42 +185,42 @@
             "title": "Party",
             "description": "Údaje o konkrétní smluvní straně vystupující ve smlouvě.",
             "properties": {          
-                "ID": {
+                "id": {
                     "description": "Identifikační číslo osoby, lze vložit i zahraniční id",
                     "type": ["string", "null"],
                     "validity": "N"
                 },
-                "LocalID": {
+                "localID": {
                     "description": "Jednoznačný identifikátor v rámci dokumentu",
                     "type": ["integer", "null"],
                     "validity": "C"
                 },
-                "Name": {
+                "name": {
                     "description": "Název, případně jméno a příjmení (s tituly)",
                     "type": ["string", "null"],
                     "validity": "C"
                 },
-                "Payer": {
+                "payer": {
                     "description": "Identifikuje stranu která bude finančně plnit, pokud není zřejmé, nevyplňuje se",
                     "type": ["boolean", "null"],
                     "validity": "C"
                 },
-                "NoID": {
+                "noID": {
                     "description": "Indikuje že subjekt nemá IČO, nebo zahraniční ID",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
-                "Country": {
+                "country": {
                     "description": "Země původu, 3-písmený ISO kód",
                     "type": ["string", "null"],
                     "validity": "B"
                 },
-                "Address": {
+                "address": {
                     "description": "Adresa subjektu, případně “Anonymizováno”",
                     "type": ["string", "null"],
                     "validity": "A"
                 },
-                "Competency": {
+                "competency": {
                     "description": "Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu",
                     "type": "array",
                     "items": {
@@ -227,12 +228,12 @@
                     },
                     "validity": "S"
                 },
-                "PaysVAT": {
+                "paysVAT": {
                     "description": "Indikuje, zda-li je subjekt plátce DPH",
                     "type": "boolean",
                     "validity": "S"
                 },
-                "SuperiorInstitution": {
+                "superiorInstitution": {
                     "description": "Řídící nebo ovládající právnická osoba, v případě veřejnoprávních smluv nadřízený správní orgán",
                     "$ref": "#/definitions/SuperiorInstitution",
                     "validity": "S"
@@ -240,7 +241,7 @@
             },
             "patternProperties": {
             },
-            "required": ["LocalID", "Name", "Payer"]
+            "required": ["localID", "name", "payer"]
         }, 
         
         "SuperiorInstitution": {
@@ -248,27 +249,27 @@
             "title": "SuperiorInstitution",
             "description": "Informace o řídící nebo ovládající právní osobě vystupující u smluvní strany. V případě veřejnoprávních smluv nadřízený správní orgán.",
             "properties": {          
-                "ID": {
+                "id": {
                     "description": "Identifikační číslo osoby, lze vložit i zahraniční id",
                     "type": ["string", "null"],
                     "validity": "N"
                 },
-                "LocalID": {
+                "localID": {
                     "description": "Jednoznačný identifikátor v rámci dokumentu",
                     "type": ["integer", "null"],
                     "validity": "C"
                 },
-                "Name": {
+                "name": {
                     "description": "Název, případně jméno a příjmení (s tituly)",
                     "type": ["string", "null"],
                     "validity": "C"
                 },
-                "NoID": {
+                "noID": {
                     "description": "Indikuje že subjekt nemá IČO, nebo zahraniční ID",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
-                "Country": {
+                "country": {
                     "description": "Země původu, 3-písmený ISO kód",
                     "type": ["string", "null"],
                     "validity": "B"
@@ -276,7 +277,7 @@
             },
             "patternProperties": {
             },
-            "required": ["LocalID", "Name"]
+            "required": ["localID", "name"]
         },  
         
         "Version": {
@@ -284,18 +285,18 @@
             "title": "Version",
             "description": "Identifikace jednotlivé verze dokumentu.",
             "properties": {          
-                "Version": {
+                "version": {
                     "description": "Pořadové číslo verze, nejvyšší = aktuální",
                     "type": ["integer", "null"],
                     "validity": "S"
                 },
-                "URI": {
+                "uri": {
                     "description": "Identifikátor dané verze",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "S"
                 },
-                "Published": {
+                "published": {
                     "description": "Identifikátor dané verze",
                     "type": ["string", "null"],
                     "format": "date-time",
@@ -311,75 +312,75 @@
             "title": "Contract",
             "description": "Detailní popisné údaje smlouvy.",
             "properties": {    
-                "AwardID": {
+                "awardID": {
                     "description": "Evidenční číslo veřejné zakázky. Uvádí se volitelně, pokud existuje.",
                     "type": ["string", "null"],
                     "validity": "N"
                 },
-                "AwardProfileID": {
+                "awardProfileID": {
                     "description": "Číslo zakázky na profilu zadavatele",
                     "type": ["string", "null"],
                     "validity": "N"
                 },   
-                "Ammount": {
+                "ammount": {
                     "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.",
                     "type": ["number", "null"],
                     "validity": "C"
                 }, 
-                "AmmountNoVat": {
+                "ammountNoVat": {
                     "description": "Cena bez dph, uvádí se povinně pouze v případě, že Ammount je s DPH",
                     "type": ["number", "null"],
                     "validity": "C"
                 }, 
-                "Title": {
+                "title": {
                     "description": "Předmět smlouvy",
                     "type": ["string", "null"],
                     "validity": "C"
                 }, 
-                "ContractType": {
+                "contractType": {
                     "description": "Číselník typů smlouvy.",
                     "type": ["string", "null"],
                     "validity": "C"
                 },   
-                "SubjectType": {
+                "subjectType": {
                     "description": "Číselník typů zboží/služeb",
                     "type": ["string", "null"],
                     "validity": "B"
                 },  
-                "PriceAnnual": {
+                "priceAnnual": {
                     "description": "Identifikuje, pokud je v Ammount roční částka.",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
-                "Currency": {
+                "currency": {
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
                     "type": ["string", "null"],
                     "validity": "B"
                 },
-                "DateSigned": {
+                "dateSigned": {
                     "description": "Datum posledního podpisu",
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
                  },
-                "ValidFrom": {
+                "validFrom": {
                     "description": "Datum účinnosti smlouvy",
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
                 },
-                "ValidUntil": {
+                "validUntil": {
                     "description": "Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu .",
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
                 },
-                "Funding": {
+                "funding": {
                     "description": "Převažující financování – vlastní, případně název dotačního titulu (bude kontrolován proti číselníku)",
                     "type": ["string", "null"],
                     "validity": "B"
                 },
-                "Annexes": {
+                "annexes": {
                     "description": "Seznam URI identifikátorů příloh",
                     "type": ["array", "null"],
                     "items": {
@@ -388,7 +389,7 @@
                     },
                     "validity": "B"
                 },
-                "Supplements": {
+                "supplements": {
                     "description": "Seznam URI identifikátorů dodatků",
                     "type": ["array", "null"],
                     "items": {
@@ -397,18 +398,18 @@
                     },
                     "validity": "B"
                 }, 
-                "CurrentValidContract": {
+                "currentValidContract": {
                     "description": "Aktuálně platné znění smlouvy (se zapracovanými dodatky)",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "A"
                 }, 
-                "Description": {
+                "description": {
                     "description": "Popis předmětu smlouvy",
                     "type": ["string", "null"],
                     "validity": "A"
                 }, 
-                "Implementation": {
+                "implementation": {
                     "description": "Objekt reprezentující transakce a milníky (odpovídá ODCschema, viz. http://ocds.open-contracting.org/standard/r/1__0__RC/release-schema.json)",
                     "$ref": "#/definitions/Implementation",
                     "validity": "A"
@@ -416,7 +417,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Ammount", "Title", "ContractType"] 
+            "required": ["ammount", "title", "contractType"] 
         },   
         
         "Attachment": {
@@ -424,18 +425,18 @@
             "title": "Attachment",
             "description": "Popisné údaje přílohy.",
             "properties": {          
-                "Title": {
+                "title": {
                     "description": "Název",
                     "type": ["string", "null"],
                     "validity": "C"
                 },
-                "Contract": {
+                "contract": {
                     "description": "Jednoznační identifikátor smlouvy",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "C"
                 },
-                "Number": {
+                "number": {
                     "description": "Číslo přílohy",
                     "type": ["integer", "null"],
                     "validity": "B"
@@ -443,7 +444,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Title", "Contract"]
+            "required": ["title", "contract"]
         },  
         
         "Amendment": {
@@ -451,23 +452,23 @@
             "title": "Amendment",
             "description": "Popisné údaje dodatku.",
             "properties": {      
-                "Title": {
+                "title": {
                     "description": "Název",
                     "type": ["string", "null"],
                     "validity": "C"
                 },    
-                "Contract": {
+                "contract": {
                     "description": "Jednoznační identifikátor smlouvy",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "C"
                 },
-                "Number": {
+                "number": {
                     "description": "Číslo dodatku",
                     "type": ["integer", "null"],
                     "validity": "B"
                 },  
-                "DateSigned": {
+                "dateSigned": {
                     "description": "Datum podpisu",
                     "type": ["string", "null"],
                     "format": "date",
@@ -476,7 +477,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Title", "Contract"]
+            "required": ["title", "contract"]
         },     
         
         "Order": {
@@ -484,34 +485,34 @@
             "title": "Order",
             "description": "",
             "properties": {      
-                "ParrentDocument": {
+                "parrentDocument": {
                     "description": "Jednoznačný identifikátor smlouvy",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "N"
                 },  
-                "Title": {
+                "title": {
                     "description": "Předmět",
                     "type": ["string", "null"],
                     "validity": "C"
                 },    
-                "Ammount": {
+                "ammount": {
                     "description": "Cena s DPH",
                     "type": ["number", "null"],
                     "validity": "C"
                 },
-                "Currency": {
+                "currency": {
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
                     "type": ["string", "null"],
                     "validity": "B"
                 },  
-                "DateSigned": {
+                "dateSigned": {
                     "description": "Datum posledního podpisu",
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
                 },  
-                "Implementation": {
+                "implementation": {
                     "description": "Objekt reprezentující transakce a milníky",
                     "$ref": "#/definitions/Implementation",
                     "validity": "A"
@@ -519,7 +520,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Title", "Ammount"]
+            "required": ["title", "ammount"]
         },    
         
         "Invoice": {
@@ -527,28 +528,28 @@
             "title": "Invoice",
             "description": "Popisné údaje faktury.",
             "properties": {      
-                "ParrentDocument": {
+                "parrentDocument": {
                     "description": "Jednoznačný identifikátor smlouvy, objednávky",
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "N"
                 },  
-                "Title": {
+                "title": {
                     "description": "Předmět",
                     "type": ["string", "null"],
                     "validity": "C"
                 },    
-                "Ammount": {
+                "ammount": {
                     "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.",
                     "type": ["number", "null"],
                     "validity": "C"
                 },
-                "Currency": {
+                "currency": {
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
                     "type": ["string", "null"],
                     "validity": "B"
                 }, 
-                "Due": {
+                "due": {
                     "description": "Datum podpisu",
                     "type": ["string", "null"],
                     "format": "date",
@@ -557,7 +558,7 @@
             },
             "patternProperties": {
             },
-            "required": ["Title", "Ammount"]
+            "required": ["title", "ammount"]
         }     
     }  
 }

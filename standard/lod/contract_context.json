@@ -1,4 +1,145 @@
 {
   "@context": {
-  }
+    "id": "@id",
+    "type": "@type",
+  
+    "cn": "http://purl.org/odc/",
+    "com": "https://w3id.org/commerce#",
+    "dc": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gr": "http://purl.org/goodrelations/v1#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pc": "http://purl.org/procurement/public-contracts#",
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "id" : "dc:identifier",    
+    "date" : { "@id": "cn:releaseDate", "@type" : "xsd:dateTime" }, 
+    "language" : "dc:language",
+
+    "documents" : { "@id": "cn:documents", "@container": "@set" },
+    "orders" : { "@id": "cn:orders", "@container": "@set" },
+    "invoices" : { "@id": "cn:invoices", "@container": "@set" },
+    
+    "uri" : { "@id": "dc:identifier", "@type" : "@id" },
+    "document" : { "@id": "dc:source", "@type" : "@id" },  
+    "type" : { "@id": "dc:type", "@container": "@set" },
+    "valid" : { "@id": "cn:valid", "@type" : "xsd:boolean" },
+    "anonymised" : { "@id": "cn:anonymised", "@type" : "xsd:boolean" },
+    "responsiblePersons" : { "@id": "cn:responsiblePersons", "@container": "@set" },
+    "parties" : { "@id": "cn:Party", "@container": "@set" },
+    "publisher" : "cn:Publisher",
+    "versions" : { "@id": "cn:Version", "@container": "@set" },
+       
+    "address" : "vcard:adr",
+    "authentication" : "cn:authentication",   
+    "competency" : { "@id": "cn:competency", "@container": "@set" },
+    "country" : "vcard:country-name",   
+    "name" : "gr:legalName",
+    "noID" : { "@id": "cn:noID", "@type" : "xsd:boolean" },
+    "localID" : { "@id": "cn:localID", "@type" : "xsd:integer" },
+    "payer" : { "@id": "cn:payer", "@type" : "xsd:boolean" }, 
+    "paysVAT" : { "@id": "cn:paysVAT", "@type" : "xsd:boolean" },
+    "published" : { "@id": "cn:published", "@type" : "xsd:fateTime" }, 
+    "superiorInstitution" : "cn:SuperiorInstitution", 
+    "version" : { "@id": "cn:version", "@type" : "xsd:integer" },
+     
+    "ammount": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" },
+    "currency": "gr:hasCurrency"
+  },
+
+  "@id": "http://rsmluv.cz/release/89f689cd-e784-4374-bb17-94144679d46f",
+  "id": "http://rsmluv.cz/release/89f689cd-e784-4374-bb17-94144679d46f",
+  "date": "2014-03-25T23:20:50+01:00",
+  "language": "cs",
+
+  "documents": [
+    {
+      "@id" : "http://rsmluv.cz/Contract/12345",
+      "uri" : "http://rsmluv.cz/Contract/12345",
+      "document" : "http://rsmluv.cz/Contract/12345/Smlouva12345.docx",
+      "type" : [ "Smlouva" ],
+      "valid" : true,
+      "anonymised" : false,
+    
+      "awardID": "486026",
+      "awardProfileID": "OI-010143",
+      "ammount": 584520.00,
+      "title": "Brno, Vackova, Šafaříkova - rekonstrukce kanalizace a vodovodu",
+      "contractType": "Kupní smlouva",
+      "subjectType": "Právní, finanční překladatelské, pojišťovnické, poradenské a jiné služby",
+      "priceAnnual": false,
+      "currency": "CZK",
+      "dateSigned": "2011-11-16",
+      "validFrom": "2011-11-02",
+      "validUntil": "2012-06-30",
+      "currentValidContract": "http://zakazky.brno.cz/?pg=detail&id=18249&list=135",
+      "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.", 
+    
+      "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
+      
+      "publisher" : {
+        "@id" : "http://rsmluv.cz/Publisher/6003508",
+        "id" : "6003508",
+        "name" : "Statutární město Brno",
+        "noID" : false,
+        "country" : "Czech Republic",
+        "authentication" : "email"    
+      },
+      
+      "parties" : [         
+        {
+          "@id" : "http://rsmluv.cz/Party/44992785",
+          "id" : "44992785",
+          "localID" : 132456,
+          "name" : "Statutární město Brno",
+          "payer" : false,
+          "noID" : false,
+          "country" : "Czech Republic",
+          "address" : "Dominikánské náměstí 196/1, Brno-město, 602 00 Brno",
+          "competency" : [ "Verejnopravni" ],
+          "paysVAT" : false,
+          "superiorInstitution" : {
+            "@id" : "http://rsmluv.cz/SuperiorInstitution/00064581",
+            "id" : "00064581",
+          	"localID" : 56486,
+          	"name" : "Magistrát hlavního města Prahy",
+          	"noID" : false,
+          	"country" : "Czech Republic" 
+          }
+        },
+        {
+          "@id" : "http://rsmluv.cz/Party/46347011",
+          "id" : "46347011",
+          "localID" : 987654,
+          "name" : "Kovoprojekta Brno a.s.",
+          "payer" : true,
+          "noID" : false,
+          "country" : "Czech Republic",
+          "address" : "Šumavská 416/15, Ponava, 602 00 Brno",
+          "competency" : [ "Soukromepravni" ],
+          "paysVAT" : true
+        }           
+      ],
+      
+      "versions" : [ 
+        {  
+          "@id" : "http://rsmluv.cz/smlouva/12345/verze/1",
+          "uri" : "http://rsmluv.cz/smlouva/12345/verze/1",
+          "version" : 1,
+          "published" : "2014-09-15T23:20:50+01:00"    
+        },
+        { 
+          "@id" : "http://rsmluv.cz/smlouva/12345/verze/2", 
+          "uri" : "http://rsmluv.cz/smlouva/12345/verze/2",
+          "version" : 2,
+          "published" : "2015-03-15T14:35:28+01:00"    
+        }  
+      ]
+    }
+  ]
+  
 }
