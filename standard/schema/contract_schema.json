@@ -209,10 +209,32 @@
                     "type": ["string", "null"],
                     "validity": "B"
                 },
-                "address": {
+                "address":{
                     "description": "Adresa subjektu, případně “Anonymizováno”",
-                    "type": ["string", "null"],
-                    "validity": "A"
+                    "type": ["object", "string", "null"],
+                    "validity": "A",
+                    "properties": {
+                        "streetAddress": {
+                          "description": "Ulice, případně “Anonymizováno”",
+                          "type": ["string", "null"],
+                          "validity": "A"
+                        },
+                        "locality": {
+                          "description": "Město, případně “Anonymizováno”",
+                          "type": ["string", "null"],
+                          "validity": "A"
+                        },
+                        "postalCode": {
+                          "description": "PSČ, případně “Anonymizováno”",
+                          "type": ["string", "null"],
+                          "validity": "A"
+                        },
+                        "region": {
+                          "description": "kraj, případně “Anonymizováno”",
+                          "type": ["string", "null"],
+                          "validity": "A"
+                        }
+                    }
                 },
                 "competency": {
                     "description": "Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu",
