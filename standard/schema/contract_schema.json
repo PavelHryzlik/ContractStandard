@@ -195,6 +195,7 @@
                 "localID": {
                     "description": "Jednoznačný identifikátor v rámci dokumentu",
                     "type": ["integer", "string", "null"],
+                    "format": "uri",  
                     "validity": "C"
                 },
                 "name": {
