@@ -23,39 +23,7 @@
         "country" : "Czech Republic",
         "authentication" : "email"    
       },
-      
-      "parties" : [         
-        {
-          "id" : "44992785",
-          "localID" : 132456,
-          "name" : "Statutární město Brno",
-          "payer" : false,
-          "noID" : false,
-          "country" : "Czech Republic",
-          "address" : "Dominikánské náměstí 196/1, Brno-město, 602 00 Brno",
-          "competency" : [ "Verejnopravni" ],
-          "paysVAT" : false,
-          "superiorInstitution" : {
-            "id" : "00064581",
-          	"localID" : 56486,
-          	"name" : "Magistrát hlavního města Prahy",
-          	"noID" : false,
-          	"country" : "Czech Republic" 
-          }
-        },
-        {
-          "id" : "46347011",
-          "localID" : 987654,
-          "name" : "Kovoprojekta Brno a.s.",
-          "payer" : true,
-          "noID" : false,
-          "country" : "Czech Republic",
-          "address" : "Šumavská 416/15, Ponava, 602 00 Brno",
-          "competency" : [ "Soukromepravni" ],
-          "paysVAT" : true
-        }           
-      ],
-      
+
       "versions" : [ 
         {  
           "version" : 1,

@@ -103,16 +103,10 @@
                         "type": "string"
                     },
                     "validity": "C"
-                },
+                },  
                 "publisher": {
                     "description": "Informace o vydavateli.",
                     "$ref": "#/definitions/Publisher",
-                    "validity": "C"
-                },
-                "parties": {
-                    "description": "Výčet smluvních stran.",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/Party" },
                     "validity": "C"
                 },
                 "valid": {
@@ -141,7 +135,7 @@
             },
             "patternProperties": {
             },
-            "required": ["type", "publisher", "parties"]
+            "required": ["type", "publisher"]
         },    
         
         "Publisher": {
@@ -341,7 +335,13 @@
                     "description": "Číselník typů smlouvy.",
                     "type": ["string", "null"],
                     "validity": "C"
-                },   
+                },
+                "parties": {
+                    "description": "Výčet smluvních stran.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Party" },
+                    "validity": "C"
+                },
                 "subjectType": {
                     "description": "Číselník typů zboží/služeb",
                     "type": ["string", "null"],
@@ -417,7 +417,7 @@
             },
             "patternProperties": {
             },
-            "required": ["ammount", "title", "contractType"] 
+            "required": ["ammount", "title", "contractType", "publisher", "parties"] 
         },   
         
         "Attachment": {
@@ -440,7 +440,7 @@
                     "description": "Číslo přílohy",
                     "type": ["integer", "null"],
                     "validity": "B"
-                }        
+                }              
             },
             "patternProperties": {
             },
@@ -473,7 +473,7 @@
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
-                }       
+                }  
             },
             "patternProperties": {
             },
@@ -505,7 +505,13 @@
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
                     "type": ["string", "null"],
                     "validity": "B"
-                },  
+                }, 
+                "parties": {
+                    "description": "Výčet smluvních stran.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Party" },
+                    "validity": "B"
+                }, 
                 "dateSigned": {
                     "description": "Datum posledního podpisu",
                     "type": ["string", "null"],
@@ -554,7 +560,13 @@
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
-                }       
+                }, 
+                "parties": {
+                    "description": "Výčet smluvních stran.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Party" },
+                    "validity": "B"
+                }      
             },
             "patternProperties": {
             },
