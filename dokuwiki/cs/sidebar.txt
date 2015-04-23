@@ -1,25 +1,15 @@
-=== Datový standard ===
   * **[[cs:introduction|Úvod]]**
-\\
-[[cs:standard:schema|Schéma]]
-  * **[[cs:standard:schema:document|Dokument]]** 
-  * **[[cs:standard:schema:contract|Smlouva]]** 
-  * **[[cs:standard:schema:attachment|Příloha]]** 
-  * **[[cs:standard:schema:amendment|Dodatek]]**
-  * **[[cs:standard:schema:order|Objednávka]]**
-  * **[[cs:standard:schema:invoice|Faktura]]**
-  * **[[cs:standard:schema:implementation|Rozšiřující entity]]**
-\\
-[[cs:standard:schema:validate|Validita]]
-\\
-\\
-[[cs:standard:schema:codelists|Číselníky]]
-\\
-\\
-[[cs:standard:implementation|Implementace]]
-\\
-\\
-[[cs:standard:usage|Příklady]]
-\\
-\\
-[[cs:standard:about|O Projektu]]
+  * **Schéma**
+    * **[[cs:standard:schema|Obecné]]** 
+    * **[[cs:standard:schema:document|Dokument]]** 
+    * **[[cs:standard:schema:contract|Smlouva]]** 
+    * **[[cs:standard:schema:attachment|Příloha]]** 
+    * **[[cs:standard:schema:amendment|Dodatek]]**
+    * **[[cs:standard:schema:order|Objednávka]]**
+    * **[[cs:standard:schema:invoice|Faktura]]**
+    * **[[cs:standard:schema:implementation|Rozšiřující entity]]**
+  * **[[cs:standard:schema:validate|Validita]]**
+  * **[[cs:standard:schema:codelists|Číselníky]]**
+  * **[[cs:standard:implementation|Implementace]]**
+  * **[[cs:standard:usage|Příklady]]**
+  * **[[cs:standard:about|O Projektu]]**

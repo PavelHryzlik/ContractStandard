@@ -25,39 +25,3 @@ Reprezentované entity:
   * **[[cs:standard:schema:order|Objednávka]]** - popisné údaje objednávky, jedná se o doplňující informace k smlouvě/příloze/dodatku
   * **[[cs:standard:schema:invoice|Faktura]]** - popisné údaje faktury, jedná se o doplňující informace k smlouvě/příloze/dodatku
 
-===== Akceptovatelné soubory =====
-
-Systém bude přijímat pouze tyto dokumenty: (může být rozšířeno o efaktury)
-{| class="wikitable"
-|-
-! Formát !! Validita !! Popis
-
-|- style="background-color: #f2dede;"
-| PDF || C
-| Portable Document Format - ideálně strojově čitelný
-
-|- style="background-color: #f2dede;"
-| DOC || C
-| Textový dokument Microsoft Word 
-
-|- style="background-color: #f2dede;"
-| XLS || C
-| Tabulka Microsoft Excel
-
-|- style="background-color: #d9edf7;"
-| DOCX || B
-| Textový dokument Microsoft Word
-
-|- style="background-color: #d9edf7;"
-| ODT || B
-| Textový dokument OpenDocument 
-
-|- style="background-color: #d9edf7;"
-| XLSX || B
-| Tabulka Microsoft Excel
-
-|- style="background-color: #d9edf7;"
-| ODS || B
-| Tabulka OpenDocument
-
-|}
