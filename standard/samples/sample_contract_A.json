@@ -35,37 +35,32 @@
         "authentication" : "email"    
       },
       
-      "parties" : [         
-        {
-          "id" : "44992785",
-          "localID" : 132456,
-          "name" : "Statutární město Brno",
-          "payer" : false,
-          "noID" : false,
-          "country" : "Czech Republic",
-          "address" : "Dominikánské náměstí 196/1, Brno-město, 602 00 Brno",
-          "competency" : [ "Verejnopravni" ],
-          "paysVAT" : false,
-          "superiorInstitution" : {
-            "id" : "00064581",
-          	"localID" : 56486,
-          	"name" : "Magistrát hlavního města Prahy",
-          	"noID" : false,
-          	"country" : "Czech Republic" 
+      "parties" : [ 132456, 987654 ], 
+      
+      "Implementation" : {
+        "milestones" : [
+          { 
+            "title" : "Výpověď smlouvy",
+            "dueDate" : "2012-06-20T23:20:50+01:00"
           }
-        },
-        {
-          "id" : "46347011",
-          "localID" : 987654,
-          "name" : "Kovoprojekta Brno a.s.",
-          "payer" : true,
-          "noID" : false,
-          "country" : "Czech Republic",
-          "address" : "Šumavská 416/15, Ponava, 602 00 Brno",
-          "competency" : [ "Soukromepravni" ],
-          "paysVAT" : true
-        }           
-      ],
+        ],
+        "transactions" : [
+          {
+            "number" : 1269483,
+            "dueDate" : "2012-01-01",
+            "amount" : 300000,
+            "senderOrganization" : 987654,
+            "seceiverOrganization" : 132456
+          },
+          {
+            "number" : 934584,
+            "dueDate" : "2012-02-01",
+            "amount" : 284520,
+            "senderOrganization" : 987654,
+            "seceiverOrganization" : 132456
+          }
+        ]
+      },
       
       "versions" : [ 
         {  
@@ -80,6 +75,32 @@
         }  
       ]
     }
+  ],
+  
+  "parties" : [
+    {
+      "id" : "44992785",
+      "localID" : 132456,
+      "name" : "Statutární město Brno",
+      "payer" : false,
+      "noID" : false,
+      "country" : "Czech Republic",
+      "superiorInstitution" : {
+        "id" : "00064581",
+        "localID" : 56486,
+        "name" : "Magistrát hlavního města Prahy",
+        "noID" : false,
+        "country" : "Czech Republic" 
+      }
+      },
+      {
+        "id" : "46347011",
+        "localID" : 987654,
+        "name" : "Kovoprojekta Brno a.s.",
+        "payer" : true,
+        "noID" : false,
+        "country" : "Czech Republic"
+      }      
   ]
 }
                                       

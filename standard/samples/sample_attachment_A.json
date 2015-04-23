@@ -6,7 +6,8 @@
   "documents": [
     {
       "title" : "Priloha1",
-      "contract" : "http://rsmluv.cz/smlouva/12345",       
+      "contract" : "http://rsmluv.cz/smlouva/12345", 
+      "number" : 1,      
 
       "uri" : "http://rsmluv.cz/priloha/priloha1",
       "document" : "http://rsmluv.cz/smlouva/12345/Priloha1.docx",
@@ -21,7 +22,7 @@
         "name" : "Statutární město Brno",
         "noID" : false,
         "country" : "Czech Republic",
-        "authentication" : "email"    
+        "authentication" : "isds"    
       },
 
       "versions" : [ 

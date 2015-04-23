@@ -1,0 +1,79 @@
+{
+  "id": "89f689cd-e784-4374-bb17-94144679d46f",
+  "date": "2014-03-25T23:20:50+01:00",
+  "language": "cs",
+
+  "documents": [
+    {
+      "uri" : "http://rsmluv.cz/smlouva/12345",
+      "document" : "http://rsmluv.cz/smlouva/12345/Smlouva12345.docx",
+      "type" : [ "Smlouva" ],
+      "valid" : true,
+      "anonymised" : false,
+    
+      "awardID": "486026",
+      "awardProfileID": "OI-010143",
+      "ammount": 584520.00,
+      "title": "Brno, Vackova, Šafaříkova - rekonstrukce kanalizace a vodovodu",
+      "contractType": "Kupní smlouva",
+      "subjectType": "Právní, finanční překladatelské, pojišťovnické, poradenské a jiné služby",
+      "priceAnnual": false,
+      "currency": "CZK",
+      "dateSigned": "2011-11-16",
+      "validFrom": "2011-11-02",
+      "validUntil": "2012-06-30",
+      
+      "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
+      
+      "publisher" : {
+        "id" : "6003508",
+        "name" : "Statutární město Brno",
+        "noID" : false,
+        "country" : "Czech Republic",
+        "authentication" : "email"    
+      },
+      
+      "parties" : [ 132456, 987654 ], 
+      
+      "versions" : [ 
+        {  
+          "version" : 1,
+          "uri" : "http://rsmluv.cz/smlouva/12345/verze/1",
+          "published" : "2014-09-15T23:20:50+01:00"    
+        },
+        {  
+          "version" : 2,
+          "uri" : "http://rsmluv.cz/smlouva/12345/verze/2",
+          "published" : "2015-03-15T14:35:28+01:00"    
+        }  
+      ]
+    }
+  ],
+  
+  "parties" : [
+    {
+      "id" : "44992785",
+      "localID" : 132456,
+      "name" : "Statutární město Brno",
+      "payer" : false,
+      "noID" : false,
+      "country" : "Czech Republic",
+      "superiorInstitution" : {
+        "id" : "00064581",
+        "localID" : 56486,
+        "name" : "Magistrát hlavního města Prahy",
+        "noID" : false,
+        "country" : "Czech Republic" 
+      }
+      },
+      {
+        "id" : "46347011",
+        "localID" : 987654,
+        "name" : "Kovoprojekta Brno a.s.",
+        "payer" : true,
+        "noID" : false,
+        "country" : "Czech Republic"
+      }      
+  ]
+}
+                                      
