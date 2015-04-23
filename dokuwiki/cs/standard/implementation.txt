@@ -1,17 +1,35 @@
-====== Json schema ======
+====== Implementace ======
 
-Definice datové struktury smluv v JSON formátu pro potřeby validace.
+K otevření dat o smlouvách u veřejné instituce je podniknout následující kroky:
+  * Analýza evidovaných smluv 
+    * Způsob uložení
+    * Datový model
+  * Konverze dat 
+    * Dostupné nástroje
+    * Pokročilé
+  * Publikování dat 
 
-[[http://localhost:1080/dokuwiki/lib/exe/fetch.php/cs/standard/implementation/contract_schema_v1.json|Json schema verze 1]]
+===== Schema =====
 
+Data o smlouvách na základě definovaného standardu jsou přenositelná ve formátu [[http://en.wikipedia.org/wiki/JSON|JSON]]. Jedná se otevřený, úsporný a lidsky čitelný datový formát. K definování, jak má výsledný datový soubor vypadat, slouží JSON Schema. 
 
-====== Json příklady ======
+JSON Shcema: [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/schema/contract_schema.json|Contract_schema.json]]
 
-Příklad uživatelských dat, validních vůči definovanému schématu.
+===== Analýza evidovaných smluv =====
 
-[[http://localhost:1080/dokuwiki/lib/exe/fetch.php/cs/standard/implementation/contract_sample.json|Json příklad]]
+==== Způsob uložení ====
 
-====== Linked open data ======
+==== Datový model ====
 
-Kontext\\
-Ontologie
+===== Konverze dat =====
+
+==== Dostupné nástroje ====
+
+==== Pokročilé ====
+
+===Linked open data ===
+
+  * Contract_context.jsonld
+  * Contract_ontology.jsonld
+
+===== Publikování dat =====

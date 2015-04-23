@@ -1,25 +1,25 @@
-====== Datový standard =====
-  * **[[noparagraph class=btn^cs:standard:introduction|Úvod]]**
+=== Datový standard ===
+  * **[[cs:introduction|Úvod]]**
 \\
-[[noparagraph class=h4^cs:standard:schema|Schéma]]
-  * **[[noparagraph class=btn^cs:standard:schema:document|Dokument]]** 
-  * **[[noparagraph class=btn^cs:standard:schema:contract|Smlouva]]** 
-  * **[[noparagraph class=btn^cs:standard:schema:attachment|Příloha]]** 
-  * **[[noparagraph class=btn^cs:standard:schema:amendment|Dodatek]]**
-  * **[[noparagraph class=btn^cs:standard:schema:order|Objednávka]]**
-  * **[[noparagraph class=btn^cs:standard:schema:invoice|Faktura]]**
-  * **[[noparagraph class=btn^cs:standard:schema:implementation|Rozšiřující entity]]**
+[[cs:standard:schema|Schéma]]
+  * **[[cs:standard:schema:document|Dokument]]** 
+  * **[[cs:standard:schema:contract|Smlouva]]** 
+  * **[[cs:standard:schema:attachment|Příloha]]** 
+  * **[[cs:standard:schema:amendment|Dodatek]]**
+  * **[[cs:standard:schema:order|Objednávka]]**
+  * **[[cs:standard:schema:invoice|Faktura]]**
+  * **[[cs:standard:schema:implementation|Rozšiřující entity]]**
 \\
-[[noparagraph class=h4^cs:standard:schema:validate|Validita]]
-\\
-\\
-[[noparagraph class=h4^cs:standard:schema:codelists|Číselníky]]
+[[cs:standard:schema:validate|Validita]]
 \\
 \\
-[[noparagraph class=h4^cs:standard:implementation|Implementace]]
+[[cs:standard:schema:codelists|Číselníky]]
 \\
 \\
-[[noparagraph class=h4^cs:standard:usage|Použití]]
+[[cs:standard:implementation|Implementace]]
 \\
 \\
-[[noparagraph class=h4^cs:standard:about|O Projektu]]
+[[cs:standard:usage|Příklady]]
+\\
+\\
+[[cs:standard:about|O Projektu]]

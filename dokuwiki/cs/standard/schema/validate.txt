@@ -12,20 +12,20 @@ Zveřejním-li tedy smlouvu v registru, dostanu potvrzení  o přiděleném iden
 | Nepovinné || N
 | Nepovinná položka
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Základní || C
 | Povinná položka
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Dobrý || B
 | Rozšiřující položka pro status "Dobrý"
 
-|- class="success"
+|- style="background-color: #dff0d8;"
 | Kvalitní || A
 | Rozšiřující položka pro status "Kvalitní"
 
-|- class="Warning"
-| Nevyplňované || S
+|- style="background-color: #fcf8e3;"
+| Systémové || S
 | Položka doplněná systémem
 
 |}

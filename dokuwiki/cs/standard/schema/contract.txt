@@ -14,69 +14,153 @@ Detailní popisné údaje smlouvy.
 | AwardProfileID  || String || N
 | Číslo zakázky na profilu zadavatele
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Ammount || Nullable float || C*
 | Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL.
 **Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.**
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | AmmountNoVat || Nullable float || C*
 | Cena bez dph, **uvádí se povinně pouze v případě, že Ammount je s DPH** 
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Title || String || C
 | Předmět smlouvy
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | ContractType || String || C
 | Číselník typů smlouvy. Viz. <link>
 
-|- class="info"
+|- style="background-color: #f2dede;"
+| Parties || String URI/Int array || C
+| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Party|Party]]
+
+|- style="background-color: #d9edf7;"
 | SubjectType || String || B
 | Číselník typů zboží/služeb
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | PriceAnnual || Boolean || B
 | Identifikuje, pokud je v Ammount roční částka.
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Currency || String || B
 | Měna, 3-písmenný, ISO 4217 formát
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | DateSigned || Date || B
 | Datum posledního podpisu
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | ValidFrom  || Date || B
 | Datum účinnosti smlouvy
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | ValidUntil || Date || B
 | Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu .
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Funding || String || B
 | Převažující financování – vlastní, případně název dotačního titulu (bude kontrolován proti číselníku)
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Annexes || String URI array || B
 | Seznam URI identifikátorů příloh
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Supplements || String URI array || B
 | Seznam URI identifikátorů dodatků
 
-|- class="success"
+|- style="background-color: #dff0d8;"
 | CurrentValidContract  || String URI || A
 | Aktuálně platné znění smlouvy (se zapracovanými dodatky)
 
-|- class="success"
+|- style="background-color: #dff0d8;"
 | Description || String || A
 | Popis předmětu smlouvy
 
-|- class="success"
+|- style="background-color: #dff0d8;"
 | Implementation || Object || A
 | Objekt reprezentující transakce a milníky, viz. [[cs:standard:schema:implementation|Implementation]]
+
+|}
+
+====== Party ======
+
+Údaje o konkrétní smluvní straně vystupující ve smlouvě.
+
+{| class="wikitable"
+|-
+! Název pole !! Datový typ !! Validita !! Popis
+
+|- 
+| ID || String || N
+| Identifikační číslo osoby, lze vložit i zahraniční id
+
+|- style="background-color: #f2dede;"
+| LocalID || String URI/Int || C
+| Jednoznačný identifikátor v rámci dokumentu
+
+|- style="background-color: #f2dede;"
+| Name || String || C
+| Název, případně jméno a příjmení (s tituly)
+
+|- style="background-color: #f2dede;"
+| Payer || Boolean || C*
+| Identifikuje stranu která bude finančně plnit, **pokud není zřejmé, nevyplňuje se**
+
+|- style="background-color: #d9edf7;"
+| NoID || Boolean || B
+| Indikuje že subjekt nemá IČO, nebo zahraniční ID
+
+|- style="background-color: #d9edf7;"
+| Country || String || B
+| Země původu, 3-písmený ISO kód
+
+|- style="background-color: #dff0d8;"
+| Address || String || A
+| Adresa subjektu, případně "Anonymizováno"
+
+|- style="background-color: #dff0d8;"
+| Competency || String enum || A
+| Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu
+
+|- style="background-color: #dff0d8;"
+| PaysVAT || Boolean || A
+| Indikuje, zda-li je subjekt plátce DPH
+
+|- style="background-color: #fcf8e3;"
+| SuperiorInstitution || Reference || N/S
+| Řídící nebo ovládající právnická osoba, v případě veřejnoprávních smluv nadřízený správní orgán. Viz. [[cs:standard:schema:document#SuperiorInstitution|SuperiorInstitution]]
+
+|}
+
+====== SuperiorInstitution ======
+
+Informace o řídící nebo ovládající právní osobě vystupující u smluvní strany. V případě veřejnoprávních smluv nadřízený správní orgán
+
+{| class="wikitable"
+|-
+! Název pole !! Datový typ !! Validita !! Popis
+
+|- 
+| ID || String || N
+| Identifikační číslo osoby, lze vložit i zahraniční id
+
+|- style="background-color: #f2dede;"
+| LocalID || Int || C
+| Jednoznačný identifikátor v rámci dokumentu
+
+|- style="background-color: #f2dede;"
+| Name || String || C
+| Název, případně jméno a příjmení (s tituly)
+
+|- style="background-color: #d9edf7;"
+| NoID || Boolean || B
+| Indikuje že subjekt nemá IČO, nebo zahraniční ID
+
+|- style="background-color: #d9edf7;"
+| Country || String || B
+| Země původu, 3-písmený ISO kód
 
 |}

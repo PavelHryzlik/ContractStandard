@@ -10,23 +10,27 @@ Popisné údaje objednávky. Jedná se o doplňující informace k smlouvě/př�
 | ParrentDocument || String URI || N
 | Jednoznačný identifikátor smlouvy
 
-|- class="danger"
+|- 
+| Parties || String URI/Int array || N
+| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Party|Party]]
+
+|- style="background-color: #f2dede;"
 | Title || String || C
 | Předmět
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Ammount || Float || C
 | Cena s DPH
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Currency || String || B
 | Měna, 3-písmenný, ISO 4217 formát
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | DateSigned || Date || B
 | Datum posledního podpisu
 
-|- class="success"
+|- style="background-color: #dff0d8;"
 | Implementation || Object || A
 | Objekt reprezentující transakce a milníky, viz. [[cs:standard:schema:implementation|Implementation]]
 

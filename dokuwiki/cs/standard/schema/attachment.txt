@@ -6,15 +6,15 @@ Popisné údaje přílohy.
 |-
 ! Název pole !! Datový typ !! Validita !! Popis
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Title || String || C
 | Název
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Contract || String URI || C
 | Jednoznační identifikátor smlouvy
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Number || Int || B
 | Číslo přílohy
 

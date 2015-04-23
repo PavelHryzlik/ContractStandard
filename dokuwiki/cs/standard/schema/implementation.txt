@@ -1,16 +1,16 @@
 ====== Implementation ======
-Rozšířené informace k dokumentu.\\
+Rozšířené informace ke smlouvě.\\
 Výchází z http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#implementation
 
 {| class="wikitable"
 |-
 ! Název pole !! Datový typ !! Validita !! Popis
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Milestones || Obejct array|| C
 | Milníky, pro volnou evidenci událostí (obnova smlouvy, předání apod.). Viz. [[cs:standard:schema:implementation#Milestone|Milestone]]
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Transactions || Obejct array || C
 | Seznam transakcí, tedy proběhlých plateb na základě smlouvy. Viz. [[cs:standard:schema:implementation#Transaction|Transaction ]]
 
@@ -24,11 +24,11 @@ Milestone reprezentuje důležitou událost v životním cyklu smlouvy.
 |-
 ! Název pole !! Datový typ !! Validita !! Popis
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Title || String || C
 | Název
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | DueDate || String || C
 | Datum
 
@@ -42,23 +42,23 @@ Reprezentuje proběhlou platbu na základě smlouvy.
 |-
 ! Název pole !! Datový typ !! Validita !! Popis
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Date || DateTime || C
 | Datum a čas problěhlé transakce
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | Ammount || Float || C
 | Zaplacená cena s DPH, vždy stejná měna jako v Currency
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | SenderOrganization || Reference || C
-| Identifikátor odesílatele. Viz. [[cs:standard:schema:document#Party|Party]]
+| Informace o odesílateli. Viz. [[cs:standard:schema:document#Party|Party]]
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | ReceiverOrganization || Reference || C
-| Identifikátor příjemce. Viz. [[cs:standard:schema:document#Party|Party]]
+| Informace o příjemci. Viz. [[cs:standard:schema:document#Party|Party]]
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | Number || Int || B
 | Libovolný číselný identifikátor transakce, unikátní v rámci smlouvy
 

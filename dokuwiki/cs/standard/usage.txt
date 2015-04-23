@@ -1,0 +1,29 @@
+====== Příklady použití ======
+
+Příklady výsledných datových souborů zveřejněných údajů o smlouvách, validních vůči schématu [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/schema/contract_schema.json|Contract_schema.json]]
+
+{| class="wikitable"
+|-
+! Popis !! Validita !! Datový soubor
+
+|- style="background-color: #f2dede;"
+| Soubor s jednou smlouvou - minimální přípustná kvalita informací || C
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_contract_C.json|Sample_contract_C.json]]
+
+|- style="background-color: #f2dede;"
+| Soubor s jednou přílohou - minimální přípustná kvalita informací || C
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_attachment_C.json|Sample_attachment_C.json]]
+
+|- style="background-color: #d9edf7;"
+| Soubor  s jednou smlouvou - dobrá kvalita informací || B
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_contract_B.json|Sample_contract_B.json]]
+
+|- style="background-color: #dff0d8;"
+| Soubor  s jednou smlouvou - maximální kvalita informací || A
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_contract_A.json|Sample_contract_A.json]]
+
+|- style="background-color: #dff0d8;"
+| Soubor  s jednou přílohou - dobrá a zároveň maximální kvalita informací (B splňuje i A) || A
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_attachment_A.json|Sample_attachment_A.json]]
+
+|}

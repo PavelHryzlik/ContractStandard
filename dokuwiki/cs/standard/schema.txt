@@ -2,7 +2,7 @@
 
 Schéma podrobně popisuje datovou strukturu otevřeného formátu pro evidenci smluv.
 
-Otevřené smlouvy jsou veřejně dostupná metadata o konkrétních smlouvách, resp. konkrétní otisk dat v daném čase na internetu. Jedná se o [[cs:standard:introduction|otevřená data]].
+Otevřené smlouvy jsou veřejně dostupná metadata o konkrétních smlouvách, resp. konkrétní otisk dat v daném čase na internetu. Jedná se o [[cs:introduction|otevřená data]].
 
 
 
@@ -21,6 +21,7 @@ Reprezentované entity:
       * **[[cs:standard:schema:implementation|Rozšiřující entity]]** - rozšířené informace ke smlouvě (milníky, transakce)
     * **[[cs:standard:schema:attachment|Příloha]]** - popisné údaje přílohy
     * **[[cs:standard:schema:amendment|Dodatek]]** - popisné údaje dodatku
+  * **[[cs:standard:schema:contract#Party|Parties]]** - výčet smluvních stran
   * **[[cs:standard:schema:order|Objednávka]]** - popisné údaje objednávky, jedná se o doplňující informace k smlouvě/příloze/dodatku
   * **[[cs:standard:schema:invoice|Faktura]]** - popisné údaje faktury, jedná se o doplňující informace k smlouvě/příloze/dodatku
 
@@ -31,31 +32,31 @@ Systém bude přijímat pouze tyto dokumenty: (může být rozšířeno o efaktu
 |-
 ! Formát !! Validita !! Popis
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | PDF || C
 | Portable Document Format - ideálně strojově čitelný
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | DOC || C
 | Textový dokument Microsoft Word 
 
-|- class="danger"
+|- style="background-color: #f2dede;"
 | XLS || C
 | Tabulka Microsoft Excel
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | DOCX || B
 | Textový dokument Microsoft Word
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | ODT || B
 | Textový dokument OpenDocument 
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | XLSX || B
 | Tabulka Microsoft Excel
 
-|- class="info"
+|- style="background-color: #d9edf7;"
 | ODS || B
 | Tabulka OpenDocument
 

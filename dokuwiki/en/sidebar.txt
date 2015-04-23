@@ -1,30 +1,25 @@
-====== Data standard ======
-  * **[[noparagraph class=btn^en:standard:introduction|Introduction]]**
-\\
-[[noparagraph class=h4^en:standard:schema|Schema]]
-    * **[[noparagraph class=btn^en:standard:schema:document|Document]]**   
-    * **[[noparagraph class=btn^en:standard:schema:contract|Contract]]** 
-    * **[[noparagraph class=btn^en:standard:schema:attachment|Attachment]]** 
-    * **[[noparagraph class=btn^en:standard:schema:amendment|Amendment]]**
-    * **[[noparagraph class=btn^en:standard:schema:order|Order]]**
-    * **[[noparagraph class=btn^en:standard:schema:invoice|Invoice]]**
-\\
-[[noparagraph class=h4^en:standard:schema:fields|Field reference]]
-    * **[[noparagraph class=btn^en:standard:schema:implementation|Implementation]]** 
-    * **[[noparagraph class=btn^en:standard:schema:document#Party|Party]]**    
-    * **[[noparagraph class=btn^en:standard:schema:document#Publisher|Publisher]]**
-    * **[[noparagraph class=btn^en:standard:schema:document#SuperiorInstitution|SuperiorInstitution]]** 
-    * **[[noparagraph class=btn^en:standard:schema:document#Version|Version]]** 
-\\
-[[noparagraph class=h4^en:standard:schema:codelists|Codelists]]
-\\
-\\
-====== Implementation ======
-  * **[[noparagraph class=btn^en:standard:implementation:userguide|User guide]]**
-  * **[[noparagraph class=btn^cs:standard:implementation:json|JSON]]**
-  * **[[noparagraph class=btn^cs:standard:implementation:validator|Validator]]**
-\\
-====== About project ======
-  * **[[noparagraph class=btn^en:standard:about:autors|Autors]]**
-  * **[[noparagraph class=btn^en:standard:about:partners|Partners]]**
+**Data standard**
+  * [[en:start|Introduction]]
+**Schema**
+  * [[en:schema:structure_specification|Structure specification]]
+    * [[en:schema:structure_specification:document|Document]]   
+    * [[en:schema:structure_specification:contract|Contract]] 
+    * [[en:schema:structure_specification:attachment|Attachment]] 
+    * [[en:schema:structure_specification:amendment|Amendment]]
+    * [[en:schema:structure_specification:order|Order]]
+    * [[en:schema:structure_specification:invoice|Invoice]]
+  * [[en:schema:fields|Field reference]]
+    * [[en:schema:fields:authentication|Authentication]] 
+    * [[en:schema:fields:party|Party]]    
+    * [[en:schema:fields:publisher|Publisher]]
+    * [[en:schema:fields:superior_institution|SuperiorInstitution]] 
+    * [[en:schema:fields:version|Version]] 
+  * [[en:schema:codelists|Codelists]]
+**Implementation**
+  * [[en:implementation:userguide|User guide]]
+  * [[en:implementation:ontology|Ontology]]
+  * [[en:implementation:examples|Examples]]
+**About project**
+  * [[en:about:autors|Autors]]
+  * [[en:about:partners|Partners]]
  
