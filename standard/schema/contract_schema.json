@@ -1,5 +1,5 @@
 {
-    "id": "http://standard.zindex.cz/doku.php/cs/schema/release-schema_v1.json",
+    "id": "http://standard.zindex.cz/doku.php/cs/standard/implementation",
     "$schema": "http://json-schema.org/draft-04/schema#", 
     "$schemaODC": "http://ocds.open-contracting.org/standard/r/1__0__RC/release-schema.json",
     "title": "Definice datové struktury smluv",
