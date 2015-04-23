@@ -490,6 +490,12 @@
                     "type": ["string", "null"],
                     "format": "uri",
                     "validity": "N"
+                }, 
+                "parties": {
+                    "description": "Výčet smluvních stran.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Party" },
+                    "validity": "N"
                 },  
                 "title": {
                     "description": "Předmět",
@@ -504,12 +510,6 @@
                 "currency": {
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
                     "type": ["string", "null"],
-                    "validity": "B"
-                }, 
-                "parties": {
-                    "description": "Výčet smluvních stran.",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/Party" },
                     "validity": "B"
                 }, 
                 "dateSigned": {
@@ -540,6 +540,12 @@
                     "format": "uri",
                     "validity": "N"
                 },  
+                "parties": {
+                    "description": "Výčet smluvních stran.",
+                    "type": "array",
+                    "items": { "$ref": "#/definitions/Party" },
+                    "validity": "N"
+                },
                 "title": {
                     "description": "Předmět",
                     "type": ["string", "null"],
@@ -560,13 +566,7 @@
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
-                }, 
-                "parties": {
-                    "description": "Výčet smluvních stran.",
-                    "type": "array",
-                    "items": { "$ref": "#/definitions/Party" },
-                    "validity": "B"
-                }      
+                }     
             },
             "patternProperties": {
             },
