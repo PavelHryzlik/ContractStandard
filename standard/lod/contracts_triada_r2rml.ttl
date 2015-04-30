@@ -1,0 +1,204 @@
+﻿# The R2RML mapping contracts
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ex: <http://example.com/ns#>.
+@base <http://example.com/base/> .
+
+@prefix dc:     <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<#ContractsTableView> rr:sqlQuery """
+  SELECT Smlouva.ID,
+  Verze.PORADIVERZE, Verze.ANONYMIZOVANO, Verze.PREDMET, Verze.POPIS_POPIS, Verze.TYPSMLOUVY, Verze.MENA, Verze.CELKOVACASTKA,
+  Verze.DATUMPODPISU, Verze.DATUMUCINOSTI, Verze.DATUMUKONCENI, Verze.SMLUVSTRANROZD, Verze.DATUMZMENYSTAVU_TS
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  """.
+  
+<#PartiesTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, SmlStrana.HAD_POUZITA
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_SMLUVSTRANA] AS SmlStrana ON Verze.SMLUVSTRANROZD = SmlStrana.SMLUVSTRANYROZDELOVNIK
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  """.
+
+<#PartyTableView> rr:sqlQuery """
+  SELECT SmlStrana1.HAD_POUZITA, SmlStrana1.PLATCEDPH, 
+         Had.ICO, Had.ULICE, Had.CISLA, Had.PSC, Had.MESTO, Had.STAT
+  FROM [triada].[ESMLUV_SMLUVSTRANA] AS SmlStrana1
+  JOIN (SELECT DISTINCT HAD_POUZITA, MIN(ID) AS MinId
+  FROM [triada].[ESMLUV_SMLUVSTRANA]
+  GROUP BY HAD_POUZITA) AS SmlStrana2
+  ON SmlStrana1.ID = SmlStrana2.MinId
+  JOIN [triada].[HAD_POUZITA] AS Had
+  ON SmlStrana2.HAD_POUZITA = Had.ID_POUZITA
+  """.
+  
+  <#Contract> a rr:TriplesMap;
+    rr:logicalTable <#ContractsTableView>;
+    rr:subjectMap [
+      rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}";
+      rr:class ex:Contract;
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:type;
+      rr:objectMap [ rr:constant "Smlouva" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:anonymised;
+      rr:objectMap [ 
+        rr:constant false;
+        rr:datatype xsd:boolean 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:title;
+      rr:objectMap [ rr:column "[PREDMET]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:description;
+      rr:objectMap [ rr:column "[POPIS_POPIS]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:ammount;
+      rr:objectMap [ rr:column "[CELKOVACASTKA]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:currency;
+      rr:objectMap [ rr:column "[MENA]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:dateSigned;
+      rr:objectMap [ 
+        rr:column "[DATUMPODPISU]"; 
+        rr:datatype xsd:date 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:validFrom;
+      rr:objectMap [ 
+        rr:column "[DATUMUCINOSTI]"; 
+        rr:datatype xsd:date 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:validUntil;
+      rr:objectMap [ 
+        rr:column "[DATUMUKONCENI]"; 
+        rr:datatype xsd:date 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Publisher;
+      rr:objectMap [ rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}/publisher" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Version;
+      rr:objectMap [ rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}/version" ];
+    ].
+    
+<#Publisher> a rr:TriplesMap;
+    rr:logicalTable <#ContractsTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}/publisher"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:name;
+        rr:objectMap [  rr:constant "MěÚ Dolina" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:noID;
+        rr:objectMap [ 
+          rr:constant true;
+          rr:datatype xsd:boolean 
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:country;
+        rr:objectMap [  rr:constant "CZE" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:authentication;
+        rr:objectMap [  rr:constant "email" ];
+    ].
+
+<#Version> a rr:TriplesMap;
+    rr:logicalTable <#ContractsTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}/version"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:uri;
+        rr:objectMap [  rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:published;
+        rr:objectMap [ 
+        rr:column "[DATUMZMENYSTAVU_TS]"; 
+        rr:datatype xsd:dateTime 
+      ];
+    ].
+      
+<#Parties> a rr:TriplesMap;
+    rr:logicalTable <#PartiesTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:29701/contract/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Party;
+        rr:objectMap [  rr:template "http://localhost:29701/party/{HAD_POUZITA}" ];
+    ].
+
+<#Party> a rr:TriplesMap;
+    rr:logicalTable <#PartyTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:29701/party/{HAD_POUZITA}";
+        rr:class ex:Party;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:identifier;
+        rr:objectMap [ rr:column "[ICO]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:localID;
+        rr:objectMap [ rr:column "[HAD_POUZITA]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Address;
+        rr:objectMap [ rr:template "http://localhost:29701/party/{HAD_POUZITA}/address" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:country;
+        rr:objectMap [ rr:column "[STAT]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:paysVAT;
+        rr:objectMap [ rr:column "[PLATCEDPH]" ];
+	  ].
+    
+<#Address> a rr:TriplesMap;
+    rr:logicalTable <#PartyTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:29701/party/{HAD_POUZITA}/address";
+        rr:class ex:Address;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:streetAddress;
+        rr:objectMap [ 
+          rr:template "{ULICE} {CISLA}"; 
+          rr:termType rr:Literal;
+        ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:postalCode;
+        rr:objectMap [ rr:column "[PSC]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:locality;
+        rr:objectMap [ rr:column "[MESTO]" ];
+	  ].
+    
+
+    
+    
