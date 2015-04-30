@@ -235,7 +235,7 @@
                         },
                         "postalCode": {
                           "description": "PSČ, případně “Anonymizováno”",
-                          "type": ["string", "null"],
+                          "type": ["integer", "null"],
                           "validity": "A"
                         },
                         "nuts": {

@@ -29,7 +29,7 @@
         "id" : "6003508",
         "name" : "Statutární město Brno",
         "noID" : false,
-        "country" : "Czech Republic",
+        "country" : "CZE",
         "authentication" : "email"    
       },
       
@@ -57,7 +57,8 @@
       "name" : "Statutární město Brno",
       "payer" : false,
       "noID" : false,
-      "country" : "Czech Republic",
+      "country" : "CZE",
+      "address" : "Dominikánské náměstí 196/1, Brno-město, 602 00 Brno",
       "superiorInstitution" : {
         "id" : "00064581",
         "localID" : 56486,
@@ -66,14 +67,15 @@
         "country" : "Czech Republic" 
       }
       },
-      {
-        "id" : "46347011",
-        "localID" : 987654,
-        "name" : "Kovoprojekta Brno a.s.",
-        "payer" : true,
-        "noID" : false,
-        "country" : "Czech Republic"
-      }      
+    {
+      "id" : "46347011",
+      "localID" : 987654,
+      "name" : "Kovoprojekta Brno a.s.",
+      "payer" : true,
+      "noID" : false,
+      "country" : "CZE",
+      "address" : "Šumavská 416/15, Ponava, 602 00 Brno"
+    }      
   ]
 }
                                       
