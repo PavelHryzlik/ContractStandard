@@ -8,7 +8,7 @@
     "properties": {
         "id": {
             "title": "Release ID",
-            "description": "Jednoznačný identifikátor tohoto souboru",
+            "description": "Jednoznačný identifikátor souboru",
             "type": "string"
         },
         "date": {
@@ -47,7 +47,7 @@
         
         "parties": {
             "title": "Parties",
-            "description": "Výčet smluvních stran.",
+            "description": "Výčet smluvních stran",
             "type": "array",
             "items": { "$ref": "#/definitions/Party" },
             "uniqueItems": true
@@ -84,7 +84,7 @@
         "Document": {
             "type": "object",
             "title": "Document",
-            "description": "Dokument je základní strukturou pro evidování údajů o smlouvách.",
+            "description": "Dokument je základní strukturou pro evidování údajů o smlouvách",
             "properties": {          
                 "uri": {
                     "description": "Jednoznačný identifikátor formou URL. Typicky rsmluv.cz/[Typ]/[Id]/[Version], kde Version je vzestupné číslování verzí při změnách dokumentu či metadat",
@@ -99,7 +99,7 @@
                     "validity": "S"
                 },
                 "versions": {
-                    "description": "Údaje o verzi dokumentu.",
+                    "description": "Údaje o verzi dokumentu",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Version" },
                     "validity": "S"
@@ -113,7 +113,7 @@
                     "validity": "C"
                 },  
                 "publisher": {
-                    "description": "Informace o vydavateli.",
+                    "description": "Informace o vydavateli",
                     "$ref": "#/definitions/Publisher",
                     "validity": "C"
                 },
@@ -149,7 +149,7 @@
         "Publisher": {
             "type": "object",
             "title": "Publisher",
-            "description": "Informace o vydavateli, který zveřejňuje údaje o smlouvách.",
+            "description": "Informace o vydavateli, který zveřejňuje údaje o smlouvách",
             "properties": {          
                 "id": {
                     "description": "Identifikační číslo osoby, lze vložit i zahraniční ID",
@@ -172,7 +172,7 @@
                     "validity": "B"
                 },
                 "authentication": {
-                    "description": "Značí stupeň ověřenosti zveřejňující strany.",
+                    "description": "Značí stupeň ověřenosti zveřejňující strany",
                     "type": ["string", "null"],
                     "validity": "S"
                 }            
@@ -185,7 +185,7 @@
         "Party": {
             "type": "object",
             "title": "Party",
-            "description": "Údaje o konkrétní smluvní straně vystupující ve smlouvě.",
+            "description": "Údaje o konkrétní smluvní straně vystupující ve smlouvě",
             "properties": {          
                 "id": {
                     "description": "Identifikační číslo osoby, lze vložit i zahraniční id",
@@ -272,7 +272,7 @@
         "SuperiorInstitution": {
             "type": "object",
             "title": "SuperiorInstitution",
-            "description": "Informace o řídící nebo ovládající právní osobě vystupující u smluvní strany. V případě veřejnoprávních smluv nadřízený správní orgán.",
+            "description": "Informace o řídící nebo ovládající právní osobě vystupující u smluvní strany. V případě veřejnoprávních smluv nadřízený správní orgán",
             "properties": {          
                 "id": {
                     "description": "Identifikační číslo osoby, lze vložit i zahraniční id",
@@ -308,7 +308,7 @@
         "Version": {
             "type": "object",
             "title": "Version",
-            "description": "Identifikace jednotlivé verze dokumentu.",
+            "description": "Identifikace jednotlivé verze dokumentu",
             "properties": {          
                 "version": {
                     "description": "Pořadové číslo verze, nejvyšší = aktuální",
@@ -335,10 +335,10 @@
         "Contract": {
             "type": "object",
             "title": "Contract",
-            "description": "Detailní popisné údaje smlouvy.",
+            "description": "Detailní popisné údaje smlouvy",
             "properties": {    
                 "awardID": {
-                    "description": "Evidenční číslo veřejné zakázky. Uvádí se volitelně, pokud existuje.",
+                    "description": "Evidenční číslo veřejné zakázky. Uvádí se volitelně, pokud existuje",
                     "type": ["string", "null"],
                     "validity": "N"
                 },
@@ -348,7 +348,7 @@
                     "validity": "N"
                 },   
                 "ammount": {
-                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.",
+                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true",
                     "type": ["number", "null"],
                     "validity": "C"
                 }, 
@@ -363,12 +363,12 @@
                     "validity": "C"
                 }, 
                 "contractType": {
-                    "description": "Číselník typů smlouvy.",
+                    "description": "Číselník typů smlouvy",
                     "type": ["string", "null"],
                     "validity": "C"
                 },
                 "parties": {
-                    "description": "Výčet smluvních stran.",
+                    "description": "Výčet smluvních stran",
                     "type": ["array", "null"],
                     "items": {
                         "type": ["integer", "string"],
@@ -382,7 +382,7 @@
                     "validity": "B"
                 },  
                 "priceAnnual": {
-                    "description": "Identifikuje, pokud je v Ammount roční částka.",
+                    "description": "Identifikuje, pokud je v Ammount roční částka",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
@@ -404,7 +404,7 @@
                     "validity": "B"
                 },
                 "validUntil": {
-                    "description": "Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu .",
+                    "description": "Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu",
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
@@ -484,7 +484,7 @@
         "Amendment": {
             "type": "object",
             "title": "Amendment",
-            "description": "Popisné údaje dodatku.",
+            "description": "Popisné údaje dodatku",
             "properties": {      
                 "title": {
                     "description": "Název",
@@ -526,7 +526,7 @@
                     "validity": "N"
                 }, 
                 "parties": {
-                    "description": "Výčet smluvních stran.",
+                    "description": "Výčet smluvních stran",
                     "type": ["array", "null"],
                     "items": {
                         "type": ["integer", "string"],
@@ -592,7 +592,7 @@
                     "validity": "C"
                 },    
                 "ammount": {
-                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.",
+                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true",
                     "type": ["number", "null"],
                     "validity": "C"
                 },
@@ -619,7 +619,7 @@
             "description": "Rozšířené informace ke smlouvě",
             "properties": {
                 "transactions": {
-                    "description": "Důležitá událost v životním cyklu smlouvy.",
+                    "description": "Důležitá událost v životním cyklu smlouvy",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Transaction" },
                     "uniqueItems": true
