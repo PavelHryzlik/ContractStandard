@@ -1,6 +1,8 @@
+====== Rozšiřující entity ======
+Rozšířené informace ke smlouvě.
+
 ====== Implementation ======
-Rozšířené informace ke smlouvě.\\
-Výchází z http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#implementation
+Výchází z [[http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#implementation|Open Contracting Data Standard]]
 
 {| class="wikitable"
 |-
@@ -8,17 +10,17 @@ Výchází z http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/refe
 
 |- style="background-color: #f2dede;"
 | Milestones || Obejct array|| C
-| Milníky, pro volnou evidenci událostí (obnova smlouvy, předání apod.). Viz. [[cs:standard:schema:implementation#Milestone|Milestone]]
+| Milníky, pro volnou evidenci událostí (obnova smlouvy, předání apod.). Viz. [[cs:standard:schema:implementation#Milestone|Milník]]
 
 |- style="background-color: #f2dede;"
 | Transactions || Obejct array || C
-| Seznam transakcí, tedy proběhlých plateb na základě smlouvy. Viz. [[cs:standard:schema:implementation#Transaction|Transaction ]]
+| Seznam transakcí, tedy proběhlých plateb na základě smlouvy. Viz. [[cs:standard:schema:implementation#Transaction|Transakce]]
 
 |}
 
-====== Milestone ======
+====== Milník ======
 
-Milestone reprezentuje důležitou událost v životním cyklu smlouvy.
+Milník reprezentuje důležitou událost v životním cyklu smlouvy.
 
 {| class="wikitable"
 |-
@@ -34,7 +36,7 @@ Milestone reprezentuje důležitou událost v životním cyklu smlouvy.
 
 |}
 
-====== Transaction ======
+====== Transakce ======
 
 Reprezentuje proběhlou platbu na základě smlouvy.
 

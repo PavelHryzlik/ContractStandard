@@ -12,7 +12,7 @@ Popisné údaje objednávky. Jedná se o doplňující informace k smlouvě/př�
 
 |- 
 | Parties || String URI/Int array || N
-| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Party|Party]]
+| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]
 
 |- style="background-color: #f2dede;"
 | Title || String || C

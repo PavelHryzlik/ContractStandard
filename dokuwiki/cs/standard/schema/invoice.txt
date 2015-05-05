@@ -12,7 +12,7 @@ Popisné údaje faktury. Jedná se o doplňující informace k smlouvě/příloz
 
 |- 
 | Parties || String URI/Int array || N
-| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Party|Party]]
+| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]
 
 |- style="background-color: #f2dede;"
 | Title || String || C
@@ -20,7 +20,7 @@ Popisné údaje faktury. Jedná se o doplňující informace k smlouvě/příloz
 
 |- style="background-color: #f2dede;"
 | Ammount || Nullable float || C*
-| Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. **Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.**
+| Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. **Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true**
 
 |- style="background-color: #d9edf7;"
 | Currency || String || B

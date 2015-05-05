@@ -9,7 +9,9 @@ Otevřené smlouvy jsou veřejně dostupná metadata o konkrétních smlouvách,
 
 ===== Základní členění =====
 
-Základním objektem, který slouží k reprezentaci dat, je dokument. Jedná se o abstraktní entitu, která nabývá třech rozšířeních typu smlouva/příloha/dodatek. Tato rozšíření obsahují všechny položky obsažené v dokumentu a navíc konkrétní položky pro daný typ.
+Základním objektem, který slouží k reprezentaci dat, je dokument. Jedná se o abstraktní entitu, která nabývá třech rozšířeních typu [[cs:standard:schema:contract|Smlouva]]/[[cs:standard:schema:attachment|Příloha]]/[[cs:standard:schema:amendment|Dodatek]]. Tato rozšíření obsahují všechny položky obsažené v dokumentu a navíc konkrétní položky pro daný typ.
+
+Smluvní strany jsou separátní objekty navázané buď na smlouvu, objednávku nebo fakturu pomocí jednoznačného identifikátoru.
 
 Objednávka a faktura jsou separátní objekty, které se mohou vázat na konkrétní smlouvu/přílohu/dodatek pomocí jednoznačného identifikátoru.
 
@@ -21,7 +23,31 @@ Reprezentované entity:
       * **[[cs:standard:schema:implementation|Rozšiřující entity]]** - rozšířené informace ke smlouvě (milníky, transakce)
     * **[[cs:standard:schema:attachment|Příloha]]** - popisné údaje přílohy
     * **[[cs:standard:schema:amendment|Dodatek]]** - popisné údaje dodatku
-  * **[[cs:standard:schema:contract#Party|Parties]]** - výčet smluvních stran
+  * **[[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]** - popisné údaje smluvní strany
   * **[[cs:standard:schema:order|Objednávka]]** - popisné údaje objednávky, jedná se o doplňující informace k smlouvě/příloze/dodatku
   * **[[cs:standard:schema:invoice|Faktura]]** - popisné údaje faktury, jedná se o doplňující informace k smlouvě/příloze/dodatku
 
+===== Položky =====
+Každá dílčí položka je popsaná v tabulce u dané entity. Obsahuje informace:
+
+{| class="wikitable"
+|-
+! Název pole !! Popis
+
+|- style="background-color: #d9edf7;"
+| Název pole
+| Jméno reprezentující danou položku
+
+|- style="background-color: #d9edf7;"
+| Datový typ
+| Přípustný datový typ položky
+
+|- style="background-color: #d9edf7;"
+| Validita
+| Stupeň kvality položky. Viz. [[cs:standard:validate|Validita]]
+
+|- style="background-color: #d9edf7;"
+| Popis
+| Podrobný popis položky
+
+|} 

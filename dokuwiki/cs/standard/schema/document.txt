@@ -16,7 +16,7 @@ Dokument je základní strukturou pro evidování údajů o smlouvách/příloh�
 
 |- style="background-color: #fcf8e3;"
 | Versions || Object array || S
-| Údaje o verzi dokumentu. Viz. [[cs:standard:schema:document#Version|Version]] 
+| Údaje o verzi dokumentu. Viz. [[cs:standard:schema:document#Verze|Verze]] 
 
 |- style="background-color: #f2dede;"
 | Type || String Enum || C
@@ -24,7 +24,7 @@ Dokument je základní strukturou pro evidování údajů o smlouvách/příloh�
 
 |- style="background-color: #f2dede;"
 | Publisher || Reference || C
-| Informace o vydavateli. Viz. [[cs:standard:schema:document#Publisher|Publisher]]
+| Informace o vydavateli. Viz. [[cs:standard:schema:document#Vydavatel|Vydavatel]]
 
 |- style="background-color: #d9edf7;"
 | Valid || Boolean || B/S
@@ -44,7 +44,11 @@ Dokument je základní strukturou pro evidování údajů o smlouvách/příloh�
 
 |}
 
-====== Publisher ======
+==== Doplňující validační pravidla ====
+
+  * Dokument je buď v strojově čitelném formátu (viz. [[cs:standard:validate#Akceptovatelné soubory|Akceptovatelné soubory]]), nebo je k němu poskytnut plain text. Pro smlouvy účinné od 1.6.2015 (TBA) je přípustná pouze varianta ve strojově čitelném formátu. 
+
+====== Vydavatel ======
 
 Informace o vydavateli, který zveřejňuje údaje o smlouvách.
 
@@ -70,11 +74,11 @@ Informace o vydavateli, který zveřejňuje údaje o smlouvách.
 
 |- style="background-color: #fcf8e3;"
 | Authentication || String || S
-| Značí stupeň ověřenosti zveřejňující strany.
+| Značí stupeň ověřenosti zveřejňující strany
 
 |}
 
-====== Version ======
+====== Verze ======
 
 Identifikace jednotlivé verze dokumentu.
 

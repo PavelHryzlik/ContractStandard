@@ -1,0 +1,7 @@
+====== O projektu ======
+
+Cílem projektu je poskytnout technický, ale i věcný standard pro zveřejňování smluv. Definuje podrobně jednotlivé položky a technickou strukturu, v jaké mají být organizovány. Standard připravilo sdružení [[http://cae.zindex.cz|Centrum aplikované ekonomie]], ve spolupráci se sdružením Oživení a odborníky z koalice Starostové za transparentnost - mezi prvními Praha 6, Praha 7, Černošice, Psáry.
+
+Projekt byl podpořen Britskou ambasádou prostřednictvím Fondu Otakara Motejla.
+
+{{:cs:standard:fond_om.gif?direct&200|}}

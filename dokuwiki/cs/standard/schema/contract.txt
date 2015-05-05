@@ -1,6 +1,6 @@
 ====== Smlouva ======
 
-Detailní popisné údaje smlouvy.
+Detailní popisné údaje smlouvy. Jedná se o jedno z rozšířeních dokumentu, resp. údaje o smlouvě obsahují položky i z dokumentu. Viz. [[cs:standard:schema:document|Dokument]]
 
 {| class="wikitable"
 |-
@@ -8,7 +8,7 @@ Detailní popisné údaje smlouvy.
 
 |- 
 | AwardID || String || N*
-| Evidenční číslo veřejné zakázky. Uvádí se volitelně, pokud existuje.
+| Evidenční číslo veřejné zakázky. Uvádí se volitelně, pokud existuje
 
 |- 
 | AwardProfileID  || String || N
@@ -17,7 +17,7 @@ Detailní popisné údaje smlouvy.
 |- style="background-color: #f2dede;"
 | Ammount || Nullable float || C*
 | Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL.
-**Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true.**
+**Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true**
 
 |- style="background-color: #f2dede;"
 | AmmountNoVat || Nullable float || C*
@@ -33,7 +33,7 @@ Detailní popisné údaje smlouvy.
 
 |- style="background-color: #f2dede;"
 | Parties || String URI/Int array || C
-| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Party|Party]]
+| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]
 
 |- style="background-color: #d9edf7;"
 | SubjectType || String || B
@@ -41,7 +41,7 @@ Detailní popisné údaje smlouvy.
 
 |- style="background-color: #d9edf7;"
 | PriceAnnual || Boolean || B
-| Identifikuje, pokud je v Ammount roční částka.
+| Identifikuje, pokud je v Ammount roční částka
 
 |- style="background-color: #d9edf7;"
 | Currency || String || B
@@ -57,7 +57,7 @@ Detailní popisné údaje smlouvy.
 
 |- style="background-color: #d9edf7;"
 | ValidUntil || Date || B
-| Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu .
+| Datum ukončení účinnosti smlouvy (poslední plnění), NULL pro smlouvy na dobu
 
 |- style="background-color: #d9edf7;"
 | Funding || String || B
@@ -85,7 +85,11 @@ Detailní popisné údaje smlouvy.
 
 |}
 
-====== Party ======
+==== Doplňující validační pravidla ====
+
+  *  U smlouvy typu darovací nesmí být připojeny faktury, ani jedna smluvní strana nesmí být identifikována jako Payer.
+
+====== Smluvní strana ======
 
 Údaje o konkrétní smluvní straně vystupující ve smlouvě.
 
@@ -118,8 +122,8 @@ Detailní popisné údaje smlouvy.
 | Země původu, 3-písmený ISO kód
 
 |- style="background-color: #dff0d8;"
-| Address || String || A
-| Adresa subjektu, případně "Anonymizováno"
+| Address || String/Reference || A
+| Adresa subjektu, případně "Anonymizováno". Umožňuje zadat adresu jako prostý řetězec, nebo strukturovaně. Viz.[[cs:standard:schema:contract#Address|Publisher]] 
 
 |- style="background-color: #dff0d8;"
 | Competency || String enum || A
@@ -131,11 +135,11 @@ Detailní popisné údaje smlouvy.
 
 |- style="background-color: #fcf8e3;"
 | SuperiorInstitution || Reference || N/S
-| Řídící nebo ovládající právnická osoba, v případě veřejnoprávních smluv nadřízený správní orgán. Viz. [[cs:standard:schema:document#SuperiorInstitution|SuperiorInstitution]]
+| Řídící nebo ovládající právnická osoba, v případě veřejnoprávních smluv nadřízený správní orgán. Viz.  [[cs:standard:schema:contract#Nadřazená instituce|Nadřazená instituce]]
 
 |}
 
-====== SuperiorInstitution ======
+====== Nadřazená instituce ======
 
 Informace o řídící nebo ovládající právní osobě vystupující u smluvní strany. V případě veřejnoprávních smluv nadřízený správní orgán
 
@@ -162,5 +166,31 @@ Informace o řídící nebo ovládající právní osobě vystupující u smluvn
 |- style="background-color: #d9edf7;"
 | Country || String || B
 | Země původu, 3-písmený ISO kód
+
+|}
+
+====== Adresa ======
+
+Podrobné údaje o adrese
+
+{| class="wikitable"
+|-
+! Název pole !! Datový typ !! Validita !! Popis
+
+|- style="background-color: #dff0d8;"
+| StreetAddress || String || A
+| Ulice, případně “Anonymizováno”
+
+|- style="background-color: #dff0d8;"
+| Locality || String || A
+| Město, případně “Anonymizováno”
+
+|- style="background-color: #dff0d8;"
+| PostalCode || Integer || A
+| PSČ, případně “Anonymizováno”
+
+|- style="background-color: #dff0d8;"
+| Nuts || String || A
+| Normalizovaná klasifikace územních celků (např. Praha - CZ010), případně “Anonymizováno”
 
 |}

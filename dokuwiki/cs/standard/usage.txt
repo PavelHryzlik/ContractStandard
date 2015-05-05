@@ -1,6 +1,6 @@
 ====== Příklady použití ======
 
-Příklady výsledných datových souborů zveřejněných údajů o smlouvách, validních vůči schématu [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/schema/contract_schema.json|Contract_schema.json]]
+Příklady výsledných datových souborů zveřejněných údajů o smlouvách, validních vůči schématu [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/schema/contract_schema.json|Contract_schema.json]]. Informace v příkladech jsou čistě ilustrační.
 
 {| class="wikitable"
 |-

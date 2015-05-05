@@ -1,6 +1,6 @@
 ====== Dodatek ======
 
-Popisné údaje dodatku.
+Popisné údaje dodatku. Jedná se o jedno z rozšířeních dokumentu, resp. údaje o dodatku obsahují položky i z dokumentu. Viz. [[cs:standard:schema:document|Dokument]]
 
 {| class="wikitable"
 |-

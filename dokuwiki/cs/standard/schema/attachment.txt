@@ -1,6 +1,6 @@
 ====== Příloha ======
 
-Popisné údaje přílohy.
+Popisné údaje přílohy. Jedná se o jedno z rozšířeních dokumentu, resp. údaje o příloze obsahují položky i z dokumentu. Viz. [[cs:standard:schema:document|Dokument]]
 
 {| class="wikitable"
 |-

@@ -28,4 +28,4 @@ aby data splňovaly určité podmínky.
   * Umožňují efektivnější boj s korupcí
   * Zaručují kvalitnější veřejnou službu
   * Snižují náklady
-  * Umožňují další využití - analýzy, watchdog, prezentační platformy uchopitelné běžnými uživateli
+  * Umožňují další využití - analýzy, "watchdog", prezentační platformy uchopitelné běžnými uživateli
