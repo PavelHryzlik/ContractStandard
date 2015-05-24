@@ -1,7 +1,7 @@
 {
   "@context": {
   
-    "cn": "http://purl.org/open-contracting/ontology#",
+    "cn": "http://tiny.cc/open-contracting#",
     "com": "https://w3id.org/commerce#",
     "dc": "http://purl.org/dc/terms/",
     "dcmi": "http://dublincore.org/documents/dcmi-type-vocabulary/",

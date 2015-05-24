@@ -1,5 +1,5 @@
 {
-  "@context": "http://purl.org/open-contracting/context",
+  "@context": "http://tiny.cc/open-contracting_context",
 
   "@id" : "http://rsmluv.cz/data/89f689cd-e784-4374-bb17-94144679d46f",
   "id": "89f689cd-e784-4374-bb17-94144679d46f",
