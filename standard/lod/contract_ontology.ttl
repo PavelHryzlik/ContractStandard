@@ -1,4 +1,4 @@
-@prefix :         <http://purl.org/open-contracting/ontology#> .
+@prefix :         <http://tiny.cc/open-contracting#> .
 
 @prefix com:      <https://w3id.org/commerce#> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
