@@ -1,0 +1,244 @@
+{
+  "@context": {
+  
+    "cn": "http://purl.org/open-contracting/ontology#",
+    "com": "https://w3id.org/commerce#",
+    "dc": "http://purl.org/dc/terms/",
+    "dcmi": "http://dublincore.org/documents/dcmi-type-vocabulary/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "gr": "http://purl.org/goodrelations/v1#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "ps": "https://w3id.org/payswarm#",
+    "schema": "http://schema.org/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "id" : "dc:identifier",     
+    "language" : "dc:language",
+    
+    "Contract" : "cn:Contract",
+    "Attachment" : "cn:Attachment",
+    "Amendment" : "cn:Amendment",
+    "Order" : "cn:Order",
+    "Invoice" : "cn:Invoice",
+    "Publisher" : "foaf:Organization",
+    "Version" : "cn:Version",
+    "Party" : "gr:BusinessEntity",
+    "SuperiorInstitution" : "gr:BusinessEntity",
+    "Address" : "schema:PostalAddress",
+    "Implementation" : "cn:Implementation",
+    "Milestone" : "cn:Milestone",
+    "Transaction" : "com:Transaction",
+
+    "documents" : { "@id": "cn:documents", "@container": "@set" },
+    "orders" : { "@id": "cn:orders", "@container": "@set" },
+    "invoices" : { "@id": "cn:invoices", "@container": "@set" },
+    
+    "uri" : { "@id": "dc:identifier", "@type" : "@id" },
+    "document" : { "@id": "com:contentUrl", "@type" : "@id" }, 
+    "valid" : { "@id": "cn:valid", "@type" : "xsd:boolean" },
+    "anonymised" : { "@id": "cn:anonymised", "@type" : "xsd:boolean" },
+    "responsiblePersons" : { "@id": "cn:responsiblePerson", "@container": "@set" },  
+    
+    "awardID" : "cn:awardID",  
+    "awardProfileID" : "cn:awardProfileID", 
+    "amount": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" }, 
+    "title" : "dc:title",
+    "type" : { "@id": "dcmi:type", "@container": "@set" },
+    "contractType" : "cn:contractType", 
+    "subjectType" : "cn:subjectType",
+    "priceAnnual" : { "@id": "cn:priceAnnual", "@type" : "xsd:boolean" },
+    "currency":  "gr:hasCurrency",
+    "dateSigned" : { "@id": "dc:created", "@type" : "xsd:date" }, 
+    "validFrom" : { "@id": "ps:validFrom", "@type" : "xsd:date" }, 
+    "validUntil" : { "@id": "ps:validUntil", "@type" : "xsd:date" },
+    "currentValidContract" : { "@id": "cn:currentValidContract", "@type" : "@id" }, 
+    "description" : "dc:description", 
+    "competency" : { "@id": "cn:competency", "@container": "@set" },
+    "parties" : { "@id": "cn:party", "@container": "@set" },
+         
+    "localID" : { "@id": "dc:identifier", "@type" : "xsd:integer" },
+    "name" : "gr:legalName", 
+    "payer" : { "@id": "cn:payer", "@type" : "xsd:boolean" }, 
+    "noID" : { "@id": "cn:noID", "@type" : "xsd:boolean" },
+    "country" : "schema:addressCountry",     
+    "paysVAT" : { "@id": "gr:valueAddedTaxIncluded", "@type" : "xsd:boolean" },
+    "superiorInstitution" : "cn:superiorInstitution", 
+        
+    "publisher" : "dc:publisher",
+    "authentication" : "cn:authentication",           
+    
+    "address" : "schema:address",
+    "streetAddress" : "schema:streetAddres",
+    "locality" : "schema:addressLocality",
+    "postalCode" : "schema:postalCode",
+    "nuts" : "cn:nuts",     
+    
+    "versions" : { "@id": "cn:version", "@container": "@set" }, 
+    "version" : { "@id": "cn:versionOrder", "@type" : "xsd:integer" },
+    "published" : { "@id": "dc:issued", "@type" : "xsd:dateTime" },     
+       
+    "implementation" : "cn:implementation",   
+    "milestones" : { "@id": "cn:milestone", "@type": "@id", "@container": "@set" },
+    "transactions" : { "@id": "cn:transaction", "@type": "@id", "@container": "@set" },
+    "dueDate" : { "@id": "cn:dueDate", "@type" : "xsd:dateTime" }, 
+    "date" : { "@id": "dc:date", "@type" : "xsd:dateTime" },
+    "number" : { "@id": "dc:identifier", "@type" : "xsd:integer" }, 
+    "senderOrganization" : { "@id": "com:source", "@type" : "@id" }, 
+    "receiverOrganization" : { "@id": "com:destination", "@type" : "@id" },
+    
+    "contract" : { "@id": "com:source", "@type" : "@id" }, 
+    "parrentDocument" : { "@id": "com:source", "@type" : "@id" }
+  },
+
+  "@id" : "http://rsmluv.cz/data/89f689cd-e784-4374-bb17-94144679d46f",
+  "id": "89f689cd-e784-4374-bb17-94144679d46f",
+  "published": "2014-03-25T23:20:50+01:00",
+  "language": "cs",
+
+  "documents": [
+    {
+      "@id" : "http://rsmluv.cz/contract/12345/2",
+      "@type" : "Contract",
+      "uri" : "http://rsmluv.cz/contract/12345/2",
+      "document" : "http://rsmluv.cz/file/b15a3c45-5595-4a28-b156-4578edeb2a98/Smlouva12345.docx",
+      "type" : [ "Smlouva" ],
+      "valid" : true,
+      "anonymised" : false,
+    
+      "awardID": "486026",
+      "awardProfileID": "OI-010143",
+      "amount": 584520.00,
+      "title": "Brno, Vackova, Šafaříkova - rekonstrukce kanalizace a vodovodu",
+      "contractType": "Kupní smlouva",
+      "subjectType": "Právní, finanční překladatelské, pojišťovnické, poradenské a jiné služby",
+      "priceAnnual": false,
+      "currency": "CZK",
+      "dateSigned": "2011-11-16",
+      "validFrom": "2011-11-02",
+      "validUntil": "2012-06-30",
+      "currentValidContract": "http://zakazky.brno.cz/?pg=detail&id=18249&list=135",
+      "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.", 
+      "competency" : [ "Soukromoprávní smlouva" ],
+    
+      "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
+      
+      "publisher" : {
+        "@id" : "http://rsmluv.cz/contract/12345/2/publisher",
+        "@type" : "Publisher",
+        "id" : "6003508",
+        "name" : "Statutární město Brno",
+        "noID" : false,
+        "country" : "CZE",
+        "authentication" : "email"    
+      },
+      
+      "parties" : [ 
+        { "@id" : "http://rsmluv.cz/party/132456" },
+        { "@id" : "http://rsmluv.cz/party/987654" }
+      ], 
+      
+      "implementation" : {
+        "@id" : "http://rsmluv.cz/contract/12345/2/implementation",
+        "@type" : "Implementation",
+      
+        "milestones" : [
+          { 
+            "@id" : "http://rsmluv.cz/contract/132456/2/milestone/5830",
+            "@type" : "Milestone",
+            "number" : 5830,
+            "title" : "Výpověď smlouvy",
+            "dueDate" : "2012-06-20T23:20:50+01:00"
+          }
+        ],
+        "transactions" : [
+          {
+            "@id" : "http://rsmluv.cz/contract/132456/2/transaction/132456",
+            "@type" : "Transaction",
+            "number" : 1269483,
+            "date" : "2012-01-01",
+            "amount" : 300000,
+            "senderOrganization" : "http://rsmluv.cz/party/987654",
+            "receiverOrganization" : "http://rsmluv.cz/party/987654"
+          },
+          {
+            "@id" : "http://rsmluv.cz/contract/132456/2/transaction/934584",
+            "@type" : "Transaction",
+            "number" : 934584,
+            "date" : "2012-02-01",
+            "amount" : 284520,
+            "senderOrganization" : "http://rsmluv.cz/party/987654",
+            "receiverOrganization" : "http://rsmluv.cz/party/987654"
+          }
+        ]
+      },
+      
+      "versions" : [ 
+        {  
+          "version" : 1,
+          "@id" : "http://rsmluv.cz/contract/12345/1/version",
+          "@type" : "Version",
+          "uri" : "http://rsmluv.cz/contract/12345/1",
+          "published" : "2014-09-15T23:20:50+01:00"    
+        },
+        {  
+          "version" : 2,
+          "@id" : "http://rsmluv.cz/contract/12345/2/version",
+          "@type" : "Version",
+          "uri" : "http://rsmluv.cz/contract/12345/2",
+          "published" : "2015-03-15T14:35:28+01:00"    
+        }  
+      ]
+    }
+  ],
+  
+  "parties" : [
+    {
+      "@id" : "http://rsmluv.cz/party/132456",
+      "@type" : "Party",
+      "localID" : 132456,
+      "id" : "44992785",
+      "name" : "Statutární město Brno",
+      "payer" : false,
+      "noID" : false,
+      "country" : "CZE",
+      "address" : {
+        "@id" : "http://rsmluv.cz/party/132456/address",
+        "@type" : "Address",
+        "streetAddress" : "Dominikánské náměstí 196/1",
+        "locality" : "Brno-město, Brno",
+        "postalCode" : "60200",
+        "nuts" : "CZ064"
+      },
+      "superiorInstitution" : {
+        "@id" : "http://rsmluv.cz/superiorInstitution/00064581",
+        "@type" : "SuperiorInstitution",
+        "id" : "00064581",
+        "localID" : 56486,
+        "name" : "Magistrát hlavního města Prahy",
+        "noID" : false,
+        "country" : "CZE" 
+      }
+    },
+    {
+      "@id" : "http://rsmluv.cz/party/987654",
+      "@type" : "Party",
+      "localID" : 987654,
+      "id" : "46347011",
+      "name" : "Kovoprojekta Brno a.s.",
+      "payer" : true,
+      "noID" : false,
+      "country" : "CZE",
+      "address" : {
+        "@id" : "http://rsmluv.cz/party/987654/address",
+        "@type" : "Address",
+        "streetAddress" : "Šumavská 416/15",
+        "locality" : "Ponava, Brno",
+        "postalCode" : "60200",
+        "nuts" : "CZ064"
+      }
+    }      
+  ]
+  
+}

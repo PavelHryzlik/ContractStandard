@@ -1,0 +1,407 @@
+@prefix :         <http://purl.org/open-contracting/ontology#> .
+
+@prefix com:      <https://w3id.org/commerce#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix gr:       <http://purl.org/goodrelations/v1#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix ps:       <https://w3id.org/payswarm#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:   <http://schema.org/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> . 
+@prefix vann:     <http://purl.org/vocab/vann/> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+### --- Metadata ---
+
+<http://purl.org/open-contracting/ontology> a owl:Ontology ;
+  owl:versionInfo "0.1";
+  dcterms:title  ""@cs, ""@en;
+  dcterms:description ""@cs ;
+  dcterms:description ""@en ;
+  dcterms:modified "2012-10-10"^^xsd:date ;
+  vann:preferredNamespaceUri "http://purl.org/open-contracting/ontology#" ;
+  vann:preferredNamespacePrefix "odc" ;
+  dcterms:creator <http://www.ms.mff.cuni.cz/~hryzlikp> ;
+  dcterms:rights <http://creativecommons.org/licenses/by/3.0/cz/> .
+
+### --- Ontology author ---
+
+<http://www.ms.mff.cuni.cz/~hryzlikp> a foaf:Person ;
+  foaf:name "Pavel Hryzlík" ;
+  foaf:mbox <mailto:hryzlik@gmail.com> .
+
+### --- Classes ---
+
+:Document a owl:Class ;
+  rdfs:label "Dokument"@cs, "Document"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+
+:Contract a owl:Class ;
+  rdfs:label "Smlouva"@cs, "Contract"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:subClassOf :Document ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  
+:Attachment a owl:Class ;
+  rdfs:label "Příloha"@cs, "Attachment"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:subClassOf :Document ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+     
+:Amendment a owl:Class ;
+  rdfs:label "Dodatek"@cs, "Amendment"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:subClassOf :Document ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+
+:Order a owl:Class ;
+  rdfs:label "Objednávka"@cs, "Order"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  
+:Invoice a owl:Class ;
+  rdfs:label "Faktura"@cs, "Invoice"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  
+:Version a owl:Class ;
+  rdfs:label "Verze"@cs, "Version"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  
+:Implementation a owl:Class ;
+  rdfs:label "Implementace"@cs, "Implementation"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  
+:Milestone a owl:Class ;
+  rdfs:label "Milník"@cs, "Milestone"@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  
+com:Transaction vann:usageNote ""@cs, ""@en .
+  
+### --- Properties ---
+
+dcterms:identifier vann:usageNote ""@cs, ""@en .
+dcterms:issued vann:usageNote ""@cs, ""@en .
+dcterms:language vann:usageNote ""@cs, ""@en .
+
+:documents a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:range [ a rdfs:Class ; owl:unionOf ( :Contract :Attachment :Amendment ) ] ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:orders a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:range :Order ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:invoices a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:range :Invoice ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:party a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice ) ] ;
+  rdfs:range gr:BusinessEntity ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:implementation a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Document :Order ) ] ;
+  rdfs:range :Implementation ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:contract a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Attachment :Amendment ) ] ;
+  rdfs:range xsd:anyURI ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:parrentDocument a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Order :Invoice ) ] ;
+  rdfs:range xsd:anyURI ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### :Document properties ---  
+
+dcterms:identifier vann:usageNote ""@cs, ""@en .
+com:contentUrl vann:usageNote ""@cs, ""@en .
+
+:valid a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:anonymised a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:responsiblePerson a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range dcterms:Person ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:publisher a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range foaf:Organization ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .   
+  
+:address a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range schema:PostalAddress ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> . 
+  
+:version a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range :Version ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### :Contract properties --- 
+
+dcterms:title vann:usageNote ""@cs, ""@en .
+dcterms:type vann:usageNote ""@cs, ""@en .
+dcterms:created vann:usageNote ""@cs, ""@en .
+dcterms:description vann:usageNote ""@cs, ""@en .
+gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
+gr:hasCurrency vann:usageNote ""@cs, ""@en .
+ps:validFrom vann:usageNote ""@cs, ""@en .
+ps:validUntil vann:usageNote ""@cs, ""@en .
+
+:awardID a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:awardProfileID a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:contractType a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf dcterms:type ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:subjectType a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf dcterms:type ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:priceAnnual a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:currentValidContract a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:anyURI ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:competency a owl:DatatypeProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### :Version properties ---   
+
+dcterms:issued vann:usageNote ""@cs, ""@en .   
+
+:versionOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Version ;
+  rdfs:range xsd:integer ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### :Implementation properties ---
+
+:milestone a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Implementation ;
+  rdfs:range :Milestone ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:transaction a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Implementation ;
+  rdfs:range com:Transaction ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### :Milestone properties ---     
+
+dcterms:identifier vann:usageNote ""@cs, ""@en .
+
+:dueDate a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Milestone ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf dcterms:date ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+
+### :Transaction properties ---   
+
+dcterms:identifier vann:usageNote ""@cs, ""@en . 
+dcterms:date vann:usageNote ""@cs, ""@en .
+gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
+com:source vann:usageNote ""@cs, ""@en .
+com:destination vann:usageNote ""@cs, ""@en .
+
+### :Attachment properties ---     
+
+com:source vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote ""@cs, ""@en .
+dcterms:title vann:usageNote ""@cs, ""@en .
+dcterms:created vann:usageNote ""@cs, ""@en .
+
+### :Amendment properties ---     
+
+com:source vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote ""@cs, ""@en .
+dcterms:title vann:usageNote ""@cs, ""@en .
+dcterms:created vann:usageNote ""@cs, ""@en .
+     
+### :Order properties ---     
+
+com:source vann:usageNote ""@cs, ""@en .
+dcterms:title vann:usageNote ""@cs, ""@en .
+dcterms:created vann:usageNote ""@cs, ""@en .
+gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
+gr:hasCurrency vann:usageNote ""@cs, ""@en .
+
+### :Invoice properties ---     
+
+com:source vann:usageNote ""@cs, ""@en .
+dcterms:title vann:usageNote ""@cs, ""@en .
+dcterms:created vann:usageNote ""@cs, ""@en .
+gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
+gr:hasCurrency vann:usageNote ""@cs, ""@en .
+  
+### gr:BusinessEntity properties --- 
+
+dcterms:identifier vann:usageNote ""@cs, ""@en .
+gr:legalName vann:usageNote ""@cs, ""@en .
+gr:valueAddedTaxIncluded vann:usageNote ""@cs, ""@en .
+schema:addressCountry vann:usageNote ""@cs, ""@en .
+
+:payer a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain gr:BusinessEntity ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:noID a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain gr:BusinessEntity ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:superiorInstitution a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain gr:BusinessEntity ;
+  rdfs:range gr:BusinessEntity ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### foaf:Organization properties ---  
+
+:authentication a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain foaf:Organization ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+### schema:PostalAddress properties ---   
+
+:nuts a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain foaf:Organization ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .

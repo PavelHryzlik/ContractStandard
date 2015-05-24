@@ -1,0 +1,773 @@
+﻿# The R2RML mapping contracts
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ex: <http://example.com/ns#>.
+@base <http://example.com/base/> .
+
+@prefix dc:     <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+
+<#PublisherTableView> rr:sqlQuery """
+  SELECT NAZEVORGANIZACE, ICO, 
+  IIF(ICO is NULL, 'true', 'false') As NoID
+  FROM [triada].[TRI_ORGADR] WHERE HLAVNI = 'T'
+  """.
+
+<#ContractsTableView> rr:sqlQuery """
+  SELECT Smlouva.ID,
+  Verze.PORADIVERZE, Verze.PREDMET, Verze.POPIS_POPIS, Verze.TYPSMLOUVY, Mena.ZKRATKA, Verze.CELKOVACASTKA,
+  Verze.DATUMPODPISU, Verze.DATUMUCINOSTI, Verze.DATUMUKONCENI, Verze.SMLUVSTRANROZD, Verze.DATUMZMENYSTAVU_TS,
+  VZakazka.EVIDENCNICISLOZAKAZKY, VZakazka.EVIDENCNICISLOFORMULARE,
+  (CASE Verze.ANONYMIZOVANO
+            WHEN 'T' THEN 'true'
+            WHEN 'F' THEN 'false'
+   END) AS Anonymizovano
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva 
+  JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  JOIN [triada].[ESMLUV_MENA] As Mena ON Verze.MENA = Mena.ID
+  JOIN [triada].[ESMLUV_VERZAKAZKA] As VZakazka ON Verze.VEREJNAZAKAZKA = VZakazka.ID
+  WHERE Smlouva.RODIC is NULL
+  """.
+
+<#ContractTypesTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE,
+  (CASE TypSmlouvy.TYP
+            WHEN '1' THEN 'Nájemní smlouva'
+            WHEN '2' THEN 'Darovací smlouva'
+            WHEN '3' THEN 'Kupní smlouva'
+			WHEN '4' THEN 'Směnná smlouva'
+			WHEN '5' THEN 'Pojistná smlouva'
+			WHEN '6' THEN 'Smlouva o výpůjčce'
+			WHEN '7' THEN 'Smlouva o dílo'
+			WHEN '8' THEN 'Licenční smlouva'
+			WHEN '9' THEN 'Mandátní smlouva'
+			WHEN '10' THEN 'Leasingová smlouva'
+			WHEN '11' THEN 'Pachtovní smlouva'
+			WHEN '12' THEN 'Smlouva o zřízení věcného břemene'
+			WHEN '13' THEN 'Smlouva o provedení stavby'
+			WHEN '14' THEN 'Smlouva o provedení práce'
+			WHEN '15' THEN 'Smlouva o provedení uměleckého výkonu'
+			WHEN '16' THEN 'Smlouva o úvěru'
+			WHEN '17' THEN 'Smlouva o uzavření budoucí smlouvy'
+			WHEN '18' THEN 'Veřejnoprávní smlouva'
+			WHEN '19' THEN 'Jiná'
+   END) AS Typ,
+   Iif(TypSmlouvy.TYP = '18', 'Veřejnoprávní smlouva', 'Soukromoprávní smlouva') As Kompetence
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva 
+  JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  JOIN [triada].[ESMLUV_TYPSMLOUVY] As TypSmlouvy ON Verze.TYPSMLOUVY = TypSmlouvy.ID
+  WHERE Smlouva.RODIC is NULL
+  """.
+
+<#PartiesTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, SmlStrana.HAD_POUZITA
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_SMLUVSTRANA] AS SmlStrana ON Verze.SMLUVSTRANROZD = SmlStrana.SMLUVSTRANYROZDELOVNIK
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is NULL
+  """.
+
+<#PartyTableView> rr:sqlQuery """
+  SELECT SmlStrana1.HAD_POUZITA, 
+  Had.ICO, Had.STAT, Had.ULICE, Had.CISLA, Had.MESTO, Had.PSC,
+  IIF(Had.ICO is NULL, 'true', 'false') As NoID,
+  (CASE SmlStrana1.PLATCEDPH
+            WHEN 'T' THEN 'true'
+            WHEN 'F' THEN 'false'
+   END) AS PlatceDPH
+  FROM [triada].[ESMLUV_SMLUVSTRANA] AS SmlStrana1
+  JOIN 
+  (SELECT DISTINCT HAD_POUZITA, MIN(ID) AS MinId 
+  FROM [triada].[ESMLUV_SMLUVSTRANA]
+  GROUP BY HAD_POUZITA) AS SmlStrana2
+  ON SmlStrana1.ID = SmlStrana2.MinId
+  JOIN [triada].[HAD_POUZITA] AS Had
+  ON SmlStrana2.HAD_POUZITA = Had.ID_POUZITA
+  """.
+
+<#ContractValidTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE,
+  IIF(Smlouva.AKTUALNIVERZE = Verze.ID, 'true', 'false') As Valid
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is NULL
+  """.
+  
+<#ContractFilesTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, Soubor.NAZEVSOUBORU, Soubor.SADADUL_ULOZISTEID
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_PRILOHASMLOUVY] AS Soubor ON Verze.SOUBOR = Soubor.ID
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is NULL
+  """.
+
+<#ContractResponsiblePersons1TableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, 
+  LTRIM(CONCAT(
+  ISNULL(Uzivatel.TITUL_PRED,''),' ',
+  ISNULL(Uzivatel.JMENO,''),' ',
+  ISNULL(Uzivatel.PRIJMENI,''),' ',
+  ISNULL(Uzivatel.TITUL_ZA,''))) AS CeleJmeno
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_EXTKONTAKT] AS ExtKontakt ON Verze.ID = ExtKontakt.VERZESMLOUVY
+  JOIN [triada].[TRI_UZIVATEL] AS Uzivatel ON Uzivatel.CISLO = ExtKontakt.UZIVATEL
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is NULL
+  """.
+
+<#ContractResponsiblePersons2TableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, 
+  LTRIM(CONCAT(
+  ISNULL(ExtKontakt.TITULPRED,''),' ',
+  ISNULL(ExtKontakt.JMENO,''),' ',
+  ISNULL(ExtKontakt.PRIJMENI,''),' ',
+  ISNULL(ExtKontakt.TITULZA,''))) AS CeleJmeno
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_EXTKONTAKT] AS ExtKontakt ON Verze.ID = ExtKontakt.VERZESMLOUVY
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE ExtKontakt.UZIVATEL IS NULL AND Smlouva.RODIC is NULL
+  """.
+
+<#SupplementTableView> rr:sqlQuery """
+  SELECT Dodatek.ID, Dodatek.RODIC, Verze.PORADIVERZE, 
+  VerzeDodatku.PORADIVERZE As PoradiVerzeDodatku, VerzeDodatku.PREDMET, VerzeDodatku.POPIS_POPIS,
+  VerzeDodatku.DATUMPODPISU, VerzeDodatku.DATUMZMENYSTAVU_TS,
+  (CASE VerzeDodatku.ANONYMIZOVANO
+            WHEN 'T' THEN 'true'
+            WHEN 'F' THEN 'false'
+   END) AS Anonymizovano
+  FROM [triada].[ESMLUV_SMLOUVA] AS Dodatek 
+  JOIN [triada].[ESMLUV_VERZESMLOUVY] As VerzeDodatku ON Dodatek.ID = VerzeDodatku.SMLOUVA
+  JOIN [triada].[ESMLUV_SMLOUVA] As Smlouva ON Dodatek.RODIC = Smlouva.ID
+  JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Dodatek.RODIC is not NULL
+  """.
+
+<#SupplementValidTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE,
+  IIF(Smlouva.AKTUALNIVERZE = Verze.ID, 'true', 'false') As Valid
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is not NULL
+  """.
+  
+<#SupplementFilesTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, Soubor.NAZEVSOUBORU, Soubor.SADADUL_ULOZISTEID
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_PRILOHASMLOUVY] AS Soubor ON Verze.SOUBOR = Soubor.ID
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is not NULL
+  """.
+
+<#SupplementResponsiblePersons1TableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, 
+  LTRIM(CONCAT(
+  ISNULL(Uzivatel.TITUL_PRED,''),' ',
+  ISNULL(Uzivatel.JMENO,''),' ',
+  ISNULL(Uzivatel.PRIJMENI,''),' ',
+  ISNULL(Uzivatel.TITUL_ZA,''))) AS CeleJmeno
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_EXTKONTAKT] AS ExtKontakt ON Verze.ID = ExtKontakt.VERZESMLOUVY
+  JOIN [triada].[TRI_UZIVATEL] AS Uzivatel ON Uzivatel.CISLO = ExtKontakt.UZIVATEL
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE Smlouva.RODIC is not NULL
+  """.
+
+<#SupplementResponsiblePersons2TableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE, 
+  LTRIM(CONCAT(
+  ISNULL(ExtKontakt.TITULPRED,''),' ',
+  ISNULL(ExtKontakt.JMENO,''),' ',
+  ISNULL(ExtKontakt.PRIJMENI,''),' ',
+  ISNULL(ExtKontakt.TITULZA,''))) AS CeleJmeno
+  FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
+  JOIN [triada].[ESMLUV_EXTKONTAKT] AS ExtKontakt ON Verze.ID = ExtKontakt.VERZESMLOUVY
+  JOIN [triada].[ESMLUV_SMLOUVA] AS Smlouva ON Smlouva.ID = Verze.SMLOUVA
+  WHERE ExtKontakt.UZIVATEL IS NULL AND Smlouva.RODIC is not NULL
+  """.
+
+<#AttachmentTableView> rr:sqlQuery """
+  SELECT DISTINCT Priloha.ID, Priloha.POPIS_NAZEV, Priloha.NAZEVSOUBORU, 
+  Priloha.SADADUL_ULOZISTEID, Priloha.OKAMZIKVYTVORENI,
+  (CASE Verze.ANONYMIZOVANO
+            WHEN 'T' THEN 'true'
+            WHEN 'F' THEN 'false'
+   END) AS Anonymizovano
+  FROM [triada].[ESMLUV_VERZESMLOUVY] As Verze
+  JOIN [triada].[ESMLUV_PRILOHASMLOUVY] As Priloha ON Verze.SOUBOR = Priloha.RODIC
+  """.
+
+<#AttachmentToContractTableView> rr:sqlQuery """
+  SELECT Smlouva.ID As SmlouvaID, Priloha.ID, Verze.PORADIVERZE
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva 
+  JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  JOIN [triada].[ESMLUV_PRILOHASMLOUVY] As Priloha ON Verze.SOUBOR = Priloha.RODIC
+  """.
+
+<#MilestoneTableView> rr:sqlQuery """
+  SELECT Smlouva.ID, Verze.PORADIVERZE,
+  Milnik.ID As MilestoneID, Milnik.NAZEV, Milnik.DATUMUCINOSTIML
+  FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva 
+  JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
+  JOIN [triada].[ESMLUV_MILNIK] As Milnik ON Verze.ID = Milnik.VERZESMLOUVY
+  """.
+
+<#Publisher> a rr:TriplesMap;
+    rr:logicalTable <#PublisherTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/publisher"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:name;
+        rr:objectMap [  rr:column "[NAZEVORGANIZACE]" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:noID;
+        rr:objectMap [ 
+          rr:column "[NoID]";
+		  rr:datatype xsd:boolean; 
+        ];
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:identifier;
+        rr:objectMap [ rr:column "[ICO]" ];
+	];
+	rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [ rr:template "http://linked.opendata.cz/resource/business-entity/CZ{ICO}" ];
+	];
+    rr:predicateObjectMap [
+        rr:predicate ex:country;
+        rr:objectMap [  rr:constant "CZE" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:authentication;
+        rr:objectMap [  rr:constant "email" ];
+    ].
+  
+<#Contract> a rr:TriplesMap;
+    rr:logicalTable <#ContractsTableView>;
+    rr:subjectMap [
+      rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}";
+      rr:class ex:Contract;
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:type;
+      rr:objectMap [ rr:constant "Smlouva" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:anonymised;
+      rr:objectMap [ 
+        rr:column "[Anonymizovano]";
+        rr:datatype xsd:boolean; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:title;
+      rr:objectMap [ rr:column "[PREDMET]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:description;
+      rr:objectMap [ rr:column "[POPIS_POPIS]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:ammount;
+      rr:objectMap [ rr:column "[CELKOVACASTKA]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:currency;
+      rr:objectMap [ rr:column "[ZKRATKA]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:dateSigned;
+      rr:objectMap [ 
+        rr:column "[DATUMPODPISU]"; 
+        rr:datatype xsd:date; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:validFrom;
+      rr:objectMap [ 
+        rr:column "[DATUMUCINOSTI]"; 
+        rr:datatype xsd:date; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:validUntil;
+      rr:objectMap [ 
+        rr:column "[DATUMUKONCENI]"; 
+        rr:datatype xsd:date; 
+      ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:priceAnnual;
+      rr:objectMap [ 
+        rr:template "false";
+        rr:datatype xsd:boolean; 
+      ];
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:funding;
+        rr:objectMap [ rr:constant "vlastní" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:awardID;
+      rr:objectMap [ rr:column "[EVIDENCNICISLOZAKAZKY]" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:PublicContract;
+      rr:objectMap [ rr:template "http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/{EVIDENCNICISLOZAKAZKY}" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:awardProfileID;
+      rr:objectMap [ rr:column "[EVIDENCNICISLOFORMULARE]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Publisher;
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/publisher" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Version;
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/version" ];
+    ].
+
+<#ContractType> a rr:TriplesMap;
+    rr:logicalTable <#ContractTypesTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:contractType;
+      rr:objectMap [ rr:column "[Typ]" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:competency;
+      rr:objectMap [ rr:column "[Kompetence]" ];
+    ].
+
+<#ContractValid> a rr:TriplesMap;
+    rr:logicalTable <#ContractValidTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:valid;
+        rr:objectMap [ 
+        rr:column "[Valid]"; 
+        rr:datatype xsd:boolean;
+      ];
+    ].
+    
+<#ContractFile> a rr:TriplesMap;
+    rr:logicalTable <#ContractFilesTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:document;
+        rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
+    ].
+
+<#ContractResponsiblePerson1> a rr:TriplesMap;
+    rr:logicalTable <#ContractResponsiblePersons1TableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:responsiblePerson;
+        rr:objectMap [ rr:column "[CeleJmeno]" ];
+	].  
+	
+<#ContractResponsiblePerson2> a rr:TriplesMap;
+    rr:logicalTable <#ContractResponsiblePersons2TableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:responsiblePerson;
+        rr:objectMap [ rr:column "[CeleJmeno]" ];
+	].    
+
+<#ContractVersion> a rr:TriplesMap;
+    rr:logicalTable <#ContractsTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/version"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:uri;
+        rr:objectMap [  rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}" ];
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:version;
+        rr:objectMap [ 
+			rr:column "[PORADIVERZE]"; 
+			rr:datatype xsd:integer; 
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:published;
+        rr:objectMap [ 
+			rr:column "[DATUMZMENYSTAVU_TS]"; 
+			rr:datatype xsd:dateTime; 
+      ];
+    ].
+      
+<#Parties> a rr:TriplesMap;
+    rr:logicalTable <#PartiesTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Party;
+        rr:objectMap [  rr:template "http://localhost:7598/party/{HAD_POUZITA}" ];
+    ].
+
+<#Party> a rr:TriplesMap;
+    rr:logicalTable <#PartyTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/party/{HAD_POUZITA}";
+        rr:class ex:Party;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:identifier;
+        rr:objectMap [ rr:column "[ICO]" ];
+	  ];
+	rr:predicateObjectMap [
+        rr:predicate owl:sameAs;
+        rr:objectMap [ rr:template "http://linked.opendata.cz/resource/business-entity/CZ{ICO}" ];
+	  ];
+	rr:predicateObjectMap [
+        rr:predicate ex:noID;
+        rr:objectMap [ 
+			rr:column "[NoID]"; 
+			rr:datatype xsd:boolean;
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:localID;
+        rr:objectMap [ rr:column "[HAD_POUZITA]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Address;
+        rr:objectMap [ rr:template "http://localhost:7598/party/{HAD_POUZITA}/address" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:country;
+        rr:objectMap [ rr:column "[STAT]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:paysVAT;
+        rr:objectMap [ 
+			rr:column "[PlatceDPH]"; 
+			rr:datatype xsd:boolean;
+		];
+	  ].
+    
+<#Address> a rr:TriplesMap;
+    rr:logicalTable <#PartyTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/party/{HAD_POUZITA}/address";
+        rr:class ex:Address;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:streetAddress;
+        rr:objectMap [ 
+          rr:template "{ULICE} {CISLA}"; 
+          rr:termType rr:Literal;
+        ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:postalCode;
+        rr:objectMap [ rr:column "[PSC]" ];
+	  ];
+    rr:predicateObjectMap [
+        rr:predicate ex:locality;
+        rr:objectMap [ rr:column "[MESTO]" ];
+	  ].
+
+<#ContractSupplements> a rr:TriplesMap;
+    rr:logicalTable <#SupplementTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{RODIC}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Supplement;
+      rr:objectMap [ rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}" ];
+    ].
+
+<#ContractAttachments> a rr:TriplesMap;
+    rr:logicalTable <#AttachmentToContractTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{SmlouvaID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Attachment;
+      rr:objectMap [ rr:template "http://localhost:7598/attachment/{ID}/1" ];
+    ].
+
+<#Supplement> a rr:TriplesMap;
+    rr:logicalTable <#SupplementTableView>;
+    rr:subjectMap [
+      rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}";
+      rr:class ex:Supplement;
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:type;
+      rr:objectMap [ rr:constant "Dodatek" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:anonymised;
+      rr:objectMap [ 
+        rr:column "[Anonymizovano]";
+        rr:datatype xsd:boolean; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:title;
+      rr:objectMap [ rr:column "[PREDMET]" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:contract;
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{RODIC}/{PORADIVERZE}" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:number;
+      rr:objectMap [ rr:column "[ID]" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:dateSigned;
+      rr:objectMap [ 
+        rr:column "[DATUMPODPISU]"; 
+        rr:datatype xsd:date; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Publisher;
+      rr:objectMap [ rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}/publisher" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Version;
+      rr:objectMap [ rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}/version" ];
+    ].
+
+<#SupplementValid> a rr:TriplesMap;
+    rr:logicalTable <#SupplementValidTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/supplement/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:valid;
+        rr:objectMap [ 
+        rr:column "[Valid]"; 
+        rr:datatype xsd:boolean;
+      ];
+    ].
+
+<#SupplementFile> a rr:TriplesMap;
+    rr:logicalTable <#SupplementFilesTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/supplement/{ID}/{PORADIVERZE}"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:document;
+        rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
+    ].
+
+<#SupplementResponsiblePerson1> a rr:TriplesMap;
+    rr:logicalTable <#SupplementResponsiblePersons1TableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/supplement/{ID}/{PORADIVERZE}"
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:responsiblePerson;
+        rr:objectMap [ rr:column "[CeleJmeno]" ];
+	].  
+	
+<#SupplementResponsiblePerson2> a rr:TriplesMap;
+    rr:logicalTable <#SupplementResponsiblePersons2TableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/supplement/{ID}/{PORADIVERZE}"
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:responsiblePerson;
+        rr:objectMap [ rr:column "[CeleJmeno]" ];
+	].  
+
+<#SupplementPublisher> a rr:TriplesMap;
+    rr:logicalTable <#SupplementTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}/publisher"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:name;
+        rr:objectMap [  rr:constant "MěÚ Dolina" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:noID;
+        rr:objectMap [ 
+          rr:template "true";
+		  rr:datatype xsd:boolean; 
+        ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:country;
+        rr:objectMap [  rr:constant "CZE" ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:authentication;
+        rr:objectMap [  rr:constant "email" ];
+    ].
+
+<#SupplementVersion> a rr:TriplesMap;
+    rr:logicalTable <#SupplementTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}/version"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:uri;
+        rr:objectMap [  rr:template "http://localhost:7598/supplement/{ID}/{PoradiVerzeDodatku}" ];
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:version;
+        rr:objectMap [ 
+			rr:column "[PoradiVerzeDodatku]"; 
+			rr:datatype xsd:integer; 
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:published;
+        rr:objectMap [ 
+			rr:column "[DATUMZMENYSTAVU_TS]"; 
+			rr:datatype xsd:dateTime; 
+      ];
+    ].
+
+<#Attachment> a rr:TriplesMap;
+    rr:logicalTable <#AttachmentTableView>;
+    rr:subjectMap [
+      rr:template "http://localhost:7598/attachment/{ID}/1";
+      rr:class ex:Attachment;
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:type;
+      rr:objectMap [ rr:constant "Příloha" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:anonymised;
+      rr:objectMap [ 
+        rr:column "[Anonymizovano]";
+        rr:datatype xsd:boolean; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:title;
+      rr:objectMap [ rr:column "[POPIS_NAZEV]" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:number;
+      rr:objectMap [ rr:column "[ID]" ];
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:valid;
+        rr:objectMap [ 
+			rr:template "true";
+			rr:datatype xsd:boolean;
+      ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:document;
+      rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Publisher;
+      rr:objectMap [ rr:template "http://localhost:7598/attachment/{ID}/1/publisher" ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Version;
+      rr:objectMap [ rr:template "http://localhost:7598/attachment/{ID}/1/version" ];
+    ].
+
+<#AttachmentToContract> a rr:TriplesMap;
+    rr:logicalTable <#AttachmentToContractTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/attachment/{ID}/1"
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:contract;
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{SmlouvaID}/{PORADIVERZE}" ];
+   ].
+
+<#AttachmentVersion> a rr:TriplesMap;
+    rr:logicalTable <#AttachmentTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/attachment/{ID}/1/version"
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:uri;
+        rr:objectMap [  rr:template "http://localhost:7598/attachment/{ID}/1" ];
+    ];
+	rr:predicateObjectMap [
+        rr:predicate ex:version;
+        rr:objectMap [ 
+			rr:template "1"; 
+			rr:datatype xsd:integer; 
+      ];
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:published;
+        rr:objectMap [ 
+			rr:column "[OKAMZIKVYTVORENI]"; 
+			rr:datatype xsd:dateTime; 
+      ];
+    ].
+
+<#ContractToImplementations> a rr:TriplesMap;
+    rr:logicalTable <#MilestoneTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}";
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:Implementation;
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation" ];
+    ].
+
+<#Implementation> a rr:TriplesMap;
+    rr:logicalTable <#MilestoneTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation";
+        rr:class ex:Implementation;
+    ];
+    rr:predicateObjectMap [
+        rr:predicate ex:Milestone;
+        rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation/milestone/{MilestoneID}" ];
+	].
+
+<#Milestone> a rr:TriplesMap;
+    rr:logicalTable <#MilestoneTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation/milestone/{MilestoneID}";
+        rr:class ex:Milestone;
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:number;
+      rr:objectMap [ 
+        rr:column "[MilestoneID]";
+        rr:datatype xsd:integer; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate ex:title;
+      rr:objectMap [ rr:column "[NAZEV]" ];
+    ];
+	rr:predicateObjectMap [
+      rr:predicate ex:dueDate;
+      rr:objectMap [ 
+        rr:column "[DATUMUCINOSTIML]";
+        rr:datatype xsd:dateTime; 
+      ];
+    ].
+    
+
+    
+    
