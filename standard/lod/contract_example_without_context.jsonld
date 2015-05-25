@@ -85,14 +85,14 @@
       
       "versions" : [ 
         {  
-          "versionOrder" : 1,
+          "version" : 1,
           "@id" : "http://rsmluv.cz/contract/12345/1/version",
           "@type" : "Version",
           "uri" : "http://rsmluv.cz/contract/12345/1",
           "published" : "2014-09-15T23:20:50+01:00"    
         },
         {  
-          "versionOrder" : 2,
+          "version" : 2,
           "@id" : "http://rsmluv.cz/contract/12345/2/version",
           "@type" : "Version",
           "uri" : "http://rsmluv.cz/contract/12345/2",

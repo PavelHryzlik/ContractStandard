@@ -30,7 +30,6 @@
     "Implementation" : "cn:Implementation",
     "Milestone" : "cn:Milestone",
     "Transaction" : "com:Transaction",
-    "Version" : "cn:Version",
 
     "documents" : { "@id": "cn:documents", "@container": "@set" },
     "orders" : { "@id": "cn:orders", "@container": "@set" },
@@ -80,7 +79,7 @@
     "nuts" : "cn:nuts",     
     
     "versions" : { "@id": "cn:version", "@container": "@set" }, 
-    "versionOrder" : { "@id": "cn:versionOrder", "@type" : "xsd:integer" },
+    "version" : { "@id": "cn:versionOrder", "@type" : "xsd:integer" },
     "published" : { "@id": "dc:issued", "@type" : "xsd:dateTime" },     
        
     "implementation" : "cn:implementation",   
