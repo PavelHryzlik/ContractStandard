@@ -1,9 +1,31 @@
-@base <http://example.com/ns#>.
+@base <http://tiny.cc/open-contracting#>.
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
+<http://localhost:7598/amendment/41/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
+                                       <http://purl.org/dc/terms/created> "2015-05-22T00:00:00.000000"^^xsd:dateTime;
+                                       <http://purl.org/dc/terms/identifier> "41";
+                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/41/1/publisher>;
+                                       <http://purl.org/dc/terms/title> "Dodatek ke smlouvě č. 2238";
+                                       <http://tiny.cc/open-contracting#anonymised> false;
+                                       <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ",
+                                                                                           "Josef Sobotka ";
+                                       <http://tiny.cc/open-contracting#valid> true;
+                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/amendment/41/1/version>;
+                                       a <http://tiny.cc/open-contracting#Amendment>;
+                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/b9dae93c-7881-44a3-b974-c598542805ee/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Chov%C3%A1n%C3%AD%20%E2%80%93%20postup%2020150301-20150324.pdf>;
+                                       <https://w3id.org/commerce#source> <http://localhost:7598/amendment/40/1>.
+<http://localhost:7598/amendment/41/1/publisher> <http://purl.org/goodrelations/v1#legalName> "MěÚ Dolina";
+                                                 <http://schema.org/addressCountry> "CZE";
+                                                 <http://tiny.cc/open-contracting#authenticationn> "email";
+                                                 <http://tiny.cc/open-contracting#noID> true;
+                                                 a <http://xmlns.com/foaf/0.1/Organization>.
+<http://localhost:7598/amendment/41/1/version> <http://purl.org/dc/terms/issued> "2015-05-22T17:12:30.000000"^^xsd:dateTime;
+                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
+                                               a <http://tiny.cc/open-contracting#Version>;
+                                               <https://w3id.org/commerce#source> <http://localhost:7598/amendment/41/1>.
 <http://localhost:7598/attachment/1/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
                                        <http://purl.org/dc/terms/identifier> "1";
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/attachment/1/1/publisher>;
@@ -11,7 +33,7 @@
                                        <http://tiny.cc/open-contracting#anonymised> false;
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/attachment/1/1/version>;
-                                       a <http://example.com/ns#Attachment>;
+                                       a <http://tiny.cc/open-contracting#Attachment>;
                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/f8fe0c7c-1502-49ba-a0d3-6668074584ad/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
                                        <https://w3id.org/commerce#source> <http://localhost:7598/contract/39/1>,
                                                                           <http://localhost:7598/contract/39/2>.
@@ -26,7 +48,7 @@
                                        <http://tiny.cc/open-contracting#anonymised> false;
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/attachment/9/1/version>;
-                                       a <http://example.com/ns#Attachment>;
+                                       a <http://tiny.cc/open-contracting#Attachment>;
                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/66054b89-6ffa-4bb6-a3bf-783c451bec62/2015_rozpis_triada.xls>;
                                        <https://w3id.org/commerce#source> <http://localhost:7598/contract/39/1>,
                                                                           <http://localhost:7598/contract/39/2>.
@@ -109,7 +131,7 @@
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00";
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557>;
-                                      <http://tiny.cc/open-contracting#amendments> <http://localhost:7598/supplement/41/1>;
+                                      <http://tiny.cc/open-contracting#amendments> <http://localhost:7598/amendment/41/1>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#awardID> "208557";
                                       <http://tiny.cc/open-contracting#awardProfileID> "7203010008557";
@@ -223,25 +245,3 @@
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://xmlns.com/foaf/0.1/Organization>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00123456>.
-<http://localhost:7598/supplement/41/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
-                                        <http://purl.org/dc/terms/created> "2015-05-22T00:00:00.000000"^^xsd:dateTime;
-                                        <http://purl.org/dc/terms/identifier> "41";
-                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/supplement/41/1/publisher>;
-                                        <http://purl.org/dc/terms/title> "Dodatek ke smlouvě č. 2238";
-                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                        <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ",
-                                                                                            "Josef Sobotka ";
-                                        <http://tiny.cc/open-contracting#valid> true;
-                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/supplement/41/1/version>;
-                                        a <http://example.com/ns#Amendment>;
-                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/b9dae93c-7881-44a3-b974-c598542805ee/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Chov%C3%A1n%C3%AD%20%E2%80%93%20postup%2020150301-20150324.pdf>;
-                                        <https://w3id.org/commerce#source> <http://localhost:7598/contract/40/1>.
-<http://localhost:7598/supplement/41/1/publisher> <http://purl.org/goodrelations/v1#legalName> "MěÚ Dolina";
-                                                  <http://schema.org/addressCountry> "CZE";
-                                                  <http://tiny.cc/open-contracting#authenticationn> "email";
-                                                  <http://tiny.cc/open-contracting#noID> true;
-                                                  a <http://xmlns.com/foaf/0.1/Organization>.
-<http://localhost:7598/supplement/41/1/version> <http://purl.org/dc/terms/issued> "2015-05-22T17:12:30.000000"^^xsd:dateTime;
-                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
-                                                a <http://example.com/ns#Version>;
-                                                <https://w3id.org/commerce#source> <http://localhost:7598/supplement/41/1>.
