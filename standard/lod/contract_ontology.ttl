@@ -154,7 +154,7 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   
 ### :Document properties ---  
 
-dcterms:identifier vann:usageNote ""@cs, ""@en .
+com:source vann:usageNote ""@cs, ""@en .
 com:contentUrl vann:usageNote ""@cs, ""@en .
 
 :valid a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -256,6 +256,30 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:funding a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range xsd:string ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:attachment a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range :Attachment ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  
+:amendment a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range :Amendment ;
   rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
   
 :currentValidContract a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -361,6 +385,14 @@ dcterms:identifier vann:usageNote ""@cs, ""@en .
 gr:legalName vann:usageNote ""@cs, ""@en .
 gr:valueAddedTaxIncluded vann:usageNote ""@cs, ""@en .
 schema:addressCountry vann:usageNote ""@cs, ""@en .
+
+:localID a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain gr:BusinessEntity ;
+  rdfs:range xsd:integer ;
+  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
 
 :payer a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
