@@ -52,7 +52,7 @@
     "subjectType" : "cn:subjectType",
     "priceAnnual" : { "@id": "cn:priceAnnual", "@type" : "xsd:boolean" },
     "currency":  "gr:hasCurrency",
-    "dateSigned" : { "@id": "dc:created", "@type" : "xsd:date" }, 
+    "dateSigned" : { "@id": "dc:created", "@type" : "xsd:dateTime" }, 
     "validFrom" : { "@id": "ps:validFrom", "@type" : "xsd:date" }, 
     "validUntil" : { "@id": "ps:validUntil", "@type" : "xsd:date" },
     "funding" : "cn:funding",
