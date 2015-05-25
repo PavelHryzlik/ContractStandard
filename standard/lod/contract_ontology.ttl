@@ -38,58 +38,58 @@
   rdfs:label "Dokument"@cs, "Document"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 :Contract a owl:Class ;
   rdfs:label "Smlouva"@cs, "Contract"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
   rdfs:subClassOf :Document ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Attachment a owl:Class ;
   rdfs:label "Příloha"@cs, "Attachment"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
   rdfs:subClassOf :Document ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
      
 :Amendment a owl:Class ;
   rdfs:label "Dodatek"@cs, "Amendment"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
   rdfs:subClassOf :Document ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 :Order a owl:Class ;
   rdfs:label "Objednávka"@cs, "Order"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Invoice a owl:Class ;
   rdfs:label "Faktura"@cs, "Invoice"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Version a owl:Class ;
   rdfs:label "Verze"@cs, "Version"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Implementation a owl:Class ;
   rdfs:label "Implementace"@cs, "Implementation"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Milestone a owl:Class ;
   rdfs:label "Milník"@cs, "Milestone"@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:isDefinedBy <http://purl.org/open-contracting/ontology> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 com:Transaction vann:usageNote ""@cs, ""@en .
   
@@ -104,21 +104,21 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
   rdfs:range [ a rdfs:Class ; owl:unionOf ( :Contract :Attachment :Amendment ) ] ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :orders a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
   rdfs:range :Order ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :invoices a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
   rdfs:range :Invoice ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :party a owl:ObjectProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -126,7 +126,7 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice ) ] ;
   rdfs:range gr:BusinessEntity ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :implementation a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -134,7 +134,7 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Document :Order ) ] ;
   rdfs:range :Implementation ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :contract a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -142,7 +142,7 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Attachment :Amendment ) ] ;
   rdfs:range xsd:anyURI ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :parrentDocument a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -150,7 +150,7 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Order :Invoice ) ] ;
   rdfs:range xsd:anyURI ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### :Document properties ---  
 
@@ -163,7 +163,7 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range xsd:boolean ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :anonymised a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -171,7 +171,7 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range xsd:boolean ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :responsiblePerson a owl:ObjectProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -179,7 +179,7 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range dcterms:Person ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :publisher a owl:ObjectProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -187,7 +187,7 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range foaf:Organization ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .   
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .   
   
 :address a owl:ObjectProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -195,7 +195,7 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range schema:PostalAddress ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> . 
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :version a owl:ObjectProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -203,7 +203,7 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range :Version ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### :Contract properties --- 
 
@@ -222,7 +222,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :awardProfileID a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -230,7 +230,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :contractType a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -239,7 +239,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:type ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :subjectType a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -248,7 +248,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:type ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :priceAnnual a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -256,7 +256,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:boolean ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :funding a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -264,7 +264,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :attachment a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -272,7 +272,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range :Attachment ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :amendment a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -280,7 +280,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range :Amendment ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :currentValidContract a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -288,7 +288,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:anyURI ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :competency a owl:DatatypeProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -296,7 +296,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### :Version properties ---   
 
@@ -308,7 +308,7 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Version ;
   rdfs:range xsd:integer ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### :Implementation properties ---
 
@@ -318,7 +318,7 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Implementation ;
   rdfs:range :Milestone ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :transaction a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -326,7 +326,7 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Implementation ;
   rdfs:range com:Transaction ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### :Milestone properties ---     
 
@@ -339,7 +339,7 @@ dcterms:identifier vann:usageNote ""@cs, ""@en .
   rdfs:domain :Milestone ;
   rdfs:range xsd:dateTime ;
   rdfs:subPropertyOf dcterms:date ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 ### :Transaction properties ---   
 
@@ -392,7 +392,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:integer ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 :payer a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -400,7 +400,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:boolean ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :noID a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -408,7 +408,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:boolean ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :superiorInstitution a owl:ObjectProperty ;
   rdfs:label ""@cs, ""@en ;
@@ -416,7 +416,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range gr:BusinessEntity ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### foaf:Organization properties ---  
 
@@ -426,7 +426,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain foaf:Organization ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### schema:PostalAddress properties ---   
 
@@ -436,4 +436,4 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain schema:PostalAddress ;
   rdfs:range xsd:string ;
-  rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
