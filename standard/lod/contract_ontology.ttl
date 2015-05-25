@@ -20,9 +20,9 @@
   dcterms:title  ""@cs, ""@en;
   dcterms:description ""@cs ;
   dcterms:description ""@en ;
-  dcterms:modified "2012-10-10"^^xsd:date ;
-  vann:preferredNamespaceUri "http://purl.org/open-contracting/ontology#" ;
-  vann:preferredNamespacePrefix "odc" ;
+  dcterms:modified "2015-05-25"^^xsd:date ;
+  vann:preferredNamespaceUri "http://tiny.cc/open-contracting#" ;
+  vann:preferredNamespacePrefix "ocn" ;
   dcterms:creator <http://www.ms.mff.cuni.cz/~hryzlikp> ;
   dcterms:rights <http://creativecommons.org/licenses/by/3.0/cz/> .
 
@@ -434,6 +434,6 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
   rdfs:label ""@cs, ""@en ;
   rdfs:comment ""@cs ;
   rdfs:comment ""@en ;
-  rdfs:domain foaf:Organization ;
+  rdfs:domain schema:PostalAddress ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://purl.org/procurement/public-contracts> .
