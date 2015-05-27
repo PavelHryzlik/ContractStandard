@@ -1,10 +1,10 @@
 ====== Dokument ======
 
-Dokument je základní strukturou pro evidování údajů o smlouvách/přílohách/dodatcích. Každý dokument má přiděleno jednoznačné ID a typ, zda-li se jedná o smlouvu, přílohu nebo dodatek. Pro jednotlivé typy rozlišujeme různé datové struktury.
+Dokument je základní strukturou pro evidování údajů o [[cs:standard:schema:contract|smlouvách]]/[[cs:standard:schema:attachment|přílohách]]/[[cs:standard:schema:amendment|dodatcích]]. Každý dokument má přiděleno jednoznačné ID a typ, zda-li se jedná o smlouvu, přílohu nebo dodatek. Pro jednotlivé typy rozlišujeme různé datové struktury.
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- style="background-color: #fcf8e3;"
 | URI || String URI || S
@@ -12,7 +12,7 @@ Dokument je základní strukturou pro evidování údajů o smlouvách/příloh�
 
 |- style="background-color: #fcf8e3;"
 | Document || String URI || S
-| Adresa URL fyzického umístění dokumentu. Typicky //rsmluv.cz/[Typ]/[Id]/[Version]/File//
+| Adresa URL fyzického umístění dokumentu. Typicky //rsmluv.cz/[Typ]/[Id]/[Version]/File//, akceptovatelné soubory viz. [[cs:standard:validate#Akceptovatelné soubory|Validita]]
 
 |- style="background-color: #fcf8e3;"
 | Versions || Object array || S
@@ -44,17 +44,13 @@ Dokument je základní strukturou pro evidování údajů o smlouvách/příloh�
 
 |}
 
-==== Doplňující validační pravidla ====
-
-  * Dokument je buď v strojově čitelném formátu (viz. [[cs:standard:validate#Akceptovatelné soubory|Akceptovatelné soubory]]), nebo je k němu poskytnut plain text. Pro smlouvy účinné od 1.6.2015 (TBA) je přípustná pouze varianta ve strojově čitelném formátu. 
-
 ====== Vydavatel ======
 
 Informace o vydavateli, který zveřejňuje údaje o smlouvách.
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- 
 | ID || String || N
@@ -82,9 +78,9 @@ Informace o vydavateli, který zveřejňuje údaje o smlouvách.
 
 Identifikace jednotlivé verze dokumentu.
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- style="background-color: #fcf8e3;"
 | Version || Int || S

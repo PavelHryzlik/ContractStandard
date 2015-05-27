@@ -1,0 +1,106 @@
+====== Publikace ======
+
+Pro potřeby publikace jsou data o smlouvách přenositelná ve formátu [[http://en.wikipedia.org/wiki/JSON|JSON]]. Jedná se otevřený, úsporný a lidsky čitelný datový formát. K definování, jak má výsledný datový soubor vypadat, slouží datové schéma. 
+
+===== Datové schéma =====
+
+Datové schéma definuje soustavu specifikací a pravidel, jak má datový soubor vypadat, aby byl validní. Pro popis formátu JSON se jedná o [[http://json-schema.org/documentation.html|JSON Schema]]. Pro otevřené smlouvy popis konkrétních položek odpovídá definovanému standardu. 
+
+{| class="wikitable" style="font-size: 90%;"
+|-
+! Popis !! Datový soubor
+
+|- style="background-color: #d9edf7;"
+| Datové schéma pro otevřené smlouvy pro formát JSON
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/schema/contract_schema.json|Contract_schema.json]]
+
+|}
+
+==== Struktura datového souboru ====
+
+Na základě datového schématu by měl výsledný datový soubor mít položky:
+
+{| class="wikitable" style="font-size: 90%;"
+|-
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
+
+|- style="background-color: #f2dede;"
+| Id || String || C
+| Jednoznačný identifikátor souboru
+
+|- style="background-color: #f2dede;"
+| Date || DateTime || C
+| Datum publikace souboru
+
+|- style="background-color: #f2dede;"
+| Documents || Object array || C
+| Seznam jednotlivých smluv/příloh/dodatků
+
+|- style="background-color: #f2dede;"
+| Language || String || C
+| Specifikace jazyka pro data. Doporučuje se použití dvou znakového ISO 639-1
+
+|- 
+| Parties || Object array || N
+| Výčet smluvních stran.
+
+|- 
+| Orders || Object array || N
+| Seznam objednávek
+
+|- 
+| Invoices || Object array || N
+| Seznam faktur
+
+|}
+
+Možná struktura výsledného datového souboru: (konkrétní příklady viz.  [[cs:standard:publication#Příklady použití|Příklady]])
+
+<code>
+{
+  "id": "89f689cd-e784-4374-bb17-94144679d46f",
+  "date": "2014-01-22T23:20:50+01:00",
+  "language": "cs",
+
+  "documents": [ /* Jednotlivé smlouvy/přílohy/dodatky */ ],
+  
+  "parties" : [ /* Výčet smluvních stran */ ],
+  
+  "orders" : [ /* Jednotlivé objednávky */ ],
+  
+  "invoices" : [ /* Jednotlivé faktury */ ]
+}
+
+</code>
+
+==== Pokročilé ====
+
+===== Příklady použití =====
+
+Příklady výsledných datových souborů zveřejněných údajů o smlouvách, validních vůči schématu [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/schema/contract_schema.json|Contract_schema.json]]. Informace v příkladech jsou čistě ilustrační.
+
+{| class="wikitable" style="font-size: 90%;"
+|-
+! Popis !! Validita !! Datový soubor
+
+|- style="background-color: #f2dede;"
+| Soubor s jednou smlouvou - minimální přípustná kvalita informací || C
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_contract_C.json|Sample_contract_C.json]]
+
+|- style="background-color: #f2dede;"
+| Soubor s jednou přílohou - minimální přípustná kvalita informací || C
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_attachment_C.json|Sample_attachment_C.json]]
+
+|- style="background-color: #d9edf7;"
+| Soubor  s jednou smlouvou - dobrá kvalita informací || B
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_contract_B.json|Sample_contract_B.json]]
+
+|- style="background-color: #dff0d8;"
+| Soubor  s jednou smlouvou - maximální kvalita informací || A
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_contract_A.json|Sample_contract_A.json]]
+
+|- style="background-color: #dff0d8;"
+| Soubor  s jednou přílohou - dobrá a zároveň maximální kvalita informací (B splňuje i A) || A
+| [[https://raw.githubusercontent.com/PavelHryzlik/ContractOntology/master/standard/samples/sample_attachment_A.json|Sample_attachment_A.json]]
+
+|}

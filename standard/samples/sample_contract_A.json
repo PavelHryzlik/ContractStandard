@@ -22,6 +22,8 @@
       "dateSigned": "2011-11-16",
       "validFrom": "2011-11-02",
       "validUntil": "2012-06-30",
+      "funding" : "vlastní",
+      "competency" : "Soukromoprávní smlouva",
       "currentValidContract": "http://zakazky.brno.cz/?pg=detail&id=18249&list=135",
       "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.", 
     

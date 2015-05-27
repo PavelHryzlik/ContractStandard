@@ -2,7 +2,7 @@
 
 U každé zveřejněné smlouvy rozlišujeme tři stupně validity, resp. správnost a úplnost dat: A (kvalitní), B (dobrý), C (základní). Dokumenty musí splňovat alespoň minimální přípustnou kvalitu C. Pokud je nějaký atribut požadován pro stupeň validity C, je níže v textu označen např. takto (C). Položky doplněné systémem jsou označeny (S). Nepovinné položky jsou značeny (N), hvězdička znamená, že položka je kontrolována pokročilejším pravidlem popsaném u konkrétní položky.
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
 ! Status !! Validita !! Popis
 
@@ -28,11 +28,19 @@ U každé zveřejněné smlouvy rozlišujeme tři stupně validity, resp. správ
 
 |}
 
+==== Doplňující validační pravidla ====
 
-===== Akceptovatelné soubory =====
+Na entity se vztahují další validační pravidla, která nelze přehledně zachytit v rámci popisu jednotlivých položek. Jejich výčet je zde.
+
+  * Dokument je buď v strojově čitelném formátu (viz. [[cs:standard:validate#Akceptovatelné soubory|Akceptovatelné soubory]]), nebo je k němu poskytnut plain text. Pro smlouvy účinné od 1.6.2015 (TBA) je přípustná pouze varianta ve strojově čitelném formátu. 
+  * U smlouvy typu darovací nesmí být připojeny faktury, ani jedna smluvní strana nesmí být identifikována jako Payer.
+  * Entita (Vydavatel/Smluvní strana/Nadřazená instituce) má vyplněno buď ID a nebo NoID = "true".
+
+==== Akceptovatelné soubory ====
 
 Dokumenty připojené ke smlouvám by měly být strojově čitelné, resp. v těchto formátech: (může být rozšířeno o efaktury)
-{| class="wikitable"
+
+{| class="wikitable" style="font-size: 90%;"
 |-
 ! Formát !! Validita !! Popis
 

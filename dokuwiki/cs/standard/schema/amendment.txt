@@ -2,9 +2,9 @@
 
 Popisné údaje dodatku. Jedná se o jedno z rozšířeních dokumentu, resp. údaje o dodatku obsahují položky i z dokumentu. Viz. [[cs:standard:schema:document|Dokument]]
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- style="background-color: #f2dede;"
 | Title || String || C
@@ -12,7 +12,7 @@ Popisné údaje dodatku. Jedná se o jedno z rozšířeních dokumentu, resp. ú
 
 |- style="background-color: #f2dede;"
 | Contract || String URI || C
-| Jednoznační identifikátor smlouvy
+| Jednoznační identifikátor [[cs:standard:schema:contract|smlouvy]]
 
 |- style="background-color: #d9edf7;"
 | Number || Int || B

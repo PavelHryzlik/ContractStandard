@@ -13,7 +13,7 @@ Počítá se se vznikem centrálního registru smluv, který bude evidovat smlou
 Z obecného pohledu jde o data zveřejněná na internetu. Aby zveřejňování mělo smysl, je dobré,
 aby data splňovaly určité podmínky.
 
-=== Data by měly být: ===
+=== Data by měla být: ===
 
   * Úplná, resp. zveřejněna v maximálním možné rozsahu
   * Snadno dohledatelná

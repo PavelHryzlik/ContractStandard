@@ -8,7 +8,7 @@
     * **[[cs:standard:schema:invoice|Faktura]]**
     * **[[cs:standard:schema:implementation|Rozšiřující entity]]**
   * **[[cs:standard:validate|Validita]]**
+  * **[[cs:standard:anonymization|Anonymizace]]**
   * **[[cs:standard:codelists|Číselníky]]**
-  * **[[cs:standard:implementation|Implementace]]**
-  * **[[cs:standard:usage|Příklady]]**
+  * **[[cs:standard:publication|Publikace]]**
   * **[[cs:standard:about|O Projektu]]**

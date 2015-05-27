@@ -245,14 +245,6 @@
                         }
                     }
                 },
-                "competency": {
-                    "description": "Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    },
-                    "validity": "S"
-                },
                 "paysVAT": {
                     "description": "Indikuje, zda-li je subjekt plátce DPH",
                     "type": "boolean",
@@ -348,7 +340,7 @@
                     "validity": "N"
                 },   
                 "ammount": {
-                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true",
+                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Smluvní strana (Party) musí mít příznak Payer = true",
                     "type": ["number", "null"],
                     "validity": "C"
                 }, 
@@ -414,7 +406,7 @@
                     "type": ["string", "null"],
                     "validity": "B"
                 },
-                "annexes": {
+                "attachments": {
                     "description": "Seznam URI identifikátorů příloh",
                     "type": ["array", "null"],
                     "items": {
@@ -423,7 +415,7 @@
                     },
                     "validity": "B"
                 },
-                "supplements": {
+                "amendments": {
                     "description": "Seznam URI identifikátorů dodatků",
                     "type": ["array", "null"],
                     "items": {
@@ -432,6 +424,14 @@
                     },
                     "validity": "B"
                 }, 
+                "competency": {
+                    "description": "Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "validity": "A"
+                },
                 "currentValidContract": {
                     "description": "Aktuálně platné znění smlouvy (se zapracovanými dodatky)",
                     "type": ["string", "null"],
@@ -592,7 +592,7 @@
                     "validity": "C"
                 },    
                 "ammount": {
-                    "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Party musí mít příznak Payer = true",
+                    "description": "Cena s DPH (u neplátců celková cena).
                     "type": ["number", "null"],
                     "validity": "C"
                 },
@@ -601,7 +601,7 @@
                     "type": ["string", "null"],
                     "validity": "B"
                 }, 
-                "due": {
+                "dueDate": {
                     "description": "Datum podpisu",
                     "type": ["string", "null"],
                     "format": "date",
@@ -622,18 +622,19 @@
                     "description": "Důležitá událost v životním cyklu smlouvy",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Transaction" },
-                    "uniqueItems": true
+                    "uniqueItems": true,
+                    "validity": "A"
                 },
                 "milestones": {
                     "description": "Proběhlé platby na základě smlouvy",
                     "type": "array",
                     "items": { "$ref": "#/definitions/Milestone" },
-                    "uniqueItems": true
+                    "uniqueItems": true,
+                    "validity": "A"
                 }
             },
             "patternProperties": {
-            },
-            "required": ["transactions", "milestones"]
+            }
         },
         
         "Milestone": {

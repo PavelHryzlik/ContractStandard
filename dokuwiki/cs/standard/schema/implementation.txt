@@ -1,30 +1,30 @@
 ====== Rozšiřující entity ======
 Rozšířené informace ke smlouvě.
 
-====== Implementation ======
-Výchází z [[http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#implementation|Open Contracting Data Standard]]
+====== Implementace (Implementation) ======
+Jedná se o volitelnou položku u smlouvy, příp. objednávky. Vychází z [[http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#implementation|Open Contracting Data Standard - Implementation]].
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
-|- style="background-color: #f2dede;"
-| Milestones || Obejct array|| C
+|- style="background-color: #dff0d8;"
+| Milestones || Obejct array|| A
 | Milníky, pro volnou evidenci událostí (obnova smlouvy, předání apod.). Viz. [[cs:standard:schema:implementation#Milestone|Milník]]
 
-|- style="background-color: #f2dede;"
-| Transactions || Obejct array || C
+|- style="background-color: #dff0d8;"
+| Transactions || Obejct array || A
 | Seznam transakcí, tedy proběhlých plateb na základě smlouvy. Viz. [[cs:standard:schema:implementation#Transaction|Transakce]]
 
 |}
 
-====== Milník ======
+====== Milník (Milestone) ======
 
-Milník reprezentuje důležitou událost v životním cyklu smlouvy.
+Milník reprezentuje důležitou událost v životním cyklu smlouvy. Jedná se o volitelnou položku entity Implementace. Vychází z [[http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#milestone|Open Contracting Data Standard - Milestone]]
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- style="background-color: #f2dede;"
 | Title || String || C
@@ -36,13 +36,13 @@ Milník reprezentuje důležitou událost v životním cyklu smlouvy.
 
 |}
 
-====== Transakce ======
+====== Transakce (Transaction) ======
 
-Reprezentuje proběhlou platbu na základě smlouvy.
+Reprezentuje proběhlou platbu na základě smlouvy. Jedná se o volitelnou položku entity Implementace. Vychází z [[http://ocds.open-contracting.org/standard/r/1__0__RC/en/schema/reference/#transaction|Open Contracting Data Standard - Transaction]]
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- style="background-color: #f2dede;"
 | Date || DateTime || C

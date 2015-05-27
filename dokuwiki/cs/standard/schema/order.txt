@@ -1,25 +1,25 @@
 ====== Objednávka ======
 
-Popisné údaje objednávky. Jedná se o doplňující informace k smlouvě/příloze/dodatku.
+Popisné údaje objednávky. Jedná se o doplňující informace k [[cs:standard:schema:contract|smlouvě]]/[[cs:standard:schema:attachment|příloze]]/[[cs:standard:schema:amendment|dodatku]].
 
-{| class="wikitable"
+{| class="wikitable" style="font-size: 90%;"
 |-
-! Název pole !! Datový typ !! Validita !! Popis
+! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
 
 |- 
 | ParrentDocument || String URI || N
-| Jednoznačný identifikátor smlouvy
+| Jednoznačný identifikátor [[cs:standard:schema:document|dokumentu]]
 
 |- 
 | Parties || String URI/Int array || N
-| Seznam identifikátorů (localID) smluvních stran. Viz. [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]
+| Seznam identifikátorů (URI nebo LocalID) smluvních stran. Viz. [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]
 
 |- style="background-color: #f2dede;"
 | Title || String || C
 | Předmět
 
 |- style="background-color: #f2dede;"
-| Ammount || Float || C
+| Amount || Float || C
 | Cena s DPH
 
 |- style="background-color: #d9edf7;"
