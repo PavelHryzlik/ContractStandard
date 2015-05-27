@@ -592,7 +592,7 @@
                     "validity": "C"
                 },    
                 "ammount": {
-                    "description": "Cena s DPH (u neplátců celková cena).
+                    "description": "Cena s DPH (u neplátců celková cena)",
                     "type": ["number", "null"],
                     "validity": "C"
                 },
