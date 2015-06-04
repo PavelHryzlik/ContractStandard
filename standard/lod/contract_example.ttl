@@ -8,16 +8,16 @@
                                        <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
                                        <http://purl.org/dc/terms/identifier> "41";
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/41/1/publisher>;
-                                       <http://purl.org/dc/terms/title> "Dodatek ke smlouvÄ› ÄŤ. 2238";
+                                       <http://purl.org/dc/terms/title> "Dodatek ke smlouvě č. 2238";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub NovĂˇk ",
+                                       <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ",
                                                                                            "Josef Sobotka ";
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/amendment/41/1/version>;
                                        a <http://tiny.cc/open-contracting#Amendment>;
                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/b9dae93c-7881-44a3-b974-c598542805ee/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Chov%C3%A1n%C3%AD%20%E2%80%93%20postup%2020150301-20150324.pdf>;
                                        <https://w3id.org/commerce#source> <http://localhost:7598/amendment/40/1>.
-<http://localhost:7598/amendment/41/1/publisher> <http://purl.org/goodrelations/v1#legalName> "MÄ›Ăš Dolina";
+<http://localhost:7598/amendment/41/1/publisher> <http://purl.org/goodrelations/v1#legalName> "MěÚ Dolina";
                                                  <http://schema.org/addressCountry> "CZE";
                                                  <http://tiny.cc/open-contracting#authenticationn> "email";
                                                  <http://tiny.cc/open-contracting#noID> true;
@@ -26,7 +26,7 @@
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                a <http://tiny.cc/open-contracting#Version>;
                                                <https://w3id.org/commerce#source> <http://localhost:7598/amendment/41/1>.
-<http://localhost:7598/attachment/1/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "PĹ™Ă­loha";
+<http://localhost:7598/attachment/1/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
                                        <http://purl.org/dc/terms/identifier> "1";
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/attachment/1/1/publisher>;
                                        <http://purl.org/dc/terms/title> "Specifikace";
@@ -41,7 +41,7 @@
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                a <http://tiny.cc/open-contracting#Version>;
                                                <https://w3id.org/commerce#source> <http://localhost:7598/attachment/1/1>.
-<http://localhost:7598/attachment/9/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "PĹ™Ă­loha";
+<http://localhost:7598/attachment/9/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
                                        <http://purl.org/dc/terms/identifier> "9";
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/attachment/9/1/publisher>;
                                        <http://purl.org/dc/terms/title> "Dokumentace";
@@ -58,9 +58,9 @@
                                                <https://w3id.org/commerce#source> <http://localhost:7598/attachment/9/1>.
 <http://localhost:7598/contract/39/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
-                                      <http://purl.org/dc/terms/description> "SoftwarovĂˇ zakĂˇzka";
+                                      <http://purl.org/dc/terms/description> "Softwarová zakázka";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/39/1/publisher>;
-                                      <http://purl.org/dc/terms/title> "SoftwarovĂˇ zakĂˇzka";
+                                      <http://purl.org/dc/terms/title> "Softwarová zakázka";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557>;
@@ -69,9 +69,9 @@
                                                                                    <http://localhost:7598/attachment/9/1>;
                                       <http://tiny.cc/open-contracting#awardID> "208557";
                                       <http://tiny.cc/open-contracting#awardProfileID> "7203010008557";
-                                      <http://tiny.cc/open-contracting#competency> "SoukromoprĂˇvnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#contractType> "KupnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#funding> "vlastnĂ­";
+                                      <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
+                                      <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
+                                      <http://tiny.cc/open-contracting#funding> "vlastní";
                                       <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/369>,
                                                                               <http://localhost:7598/party/388>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
@@ -88,9 +88,9 @@
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/39/1>.
 <http://localhost:7598/contract/39/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
-                                      <http://purl.org/dc/terms/description> "SoftwarovĂˇ zakĂˇzka";
+                                      <http://purl.org/dc/terms/description> "Softwarová zakázka";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/39/2/publisher>;
-                                      <http://purl.org/dc/terms/title> "SoftwarovĂˇ zakĂˇzka";
+                                      <http://purl.org/dc/terms/title> "Softwarová zakázka";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/OMI-001538>;
@@ -99,9 +99,9 @@
                                                                                    <http://localhost:7598/attachment/9/1>;
                                       <http://tiny.cc/open-contracting#awardID> "OMI-001538";
                                       <http://tiny.cc/open-contracting#awardProfileID> "OMI-001538";
-                                      <http://tiny.cc/open-contracting#competency> "SoukromoprĂˇvnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#contractType> "KupnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#funding> "vlastnĂ­";
+                                      <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
+                                      <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
+                                      <http://tiny.cc/open-contracting#funding> "vlastní";
                                       <http://tiny.cc/open-contracting#implementation> <http://localhost:7598/contract/39/2/implementation>;
                                       <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/369>,
                                                                               <http://localhost:7598/party/388>;
@@ -116,7 +116,7 @@
 <http://localhost:7598/contract/39/2/implementation> <http://tiny.cc/open-contracting#milestone> <http://localhost:7598/contract/39/2/implementation/milestone/81>;
                                                      a <http://tiny.cc/open-contracting#Implementation>.
 <http://localhost:7598/contract/39/2/implementation/milestone/81> <http://purl.org/dc/terms/identifier> 81 ;
-                                                                  <http://purl.org/dc/terms/title> "PodanĂ­ vĂ˝kazu odpracovanĂ˝ch hodin";
+                                                                  <http://purl.org/dc/terms/title> "Podaní výkazu odpracovaných hodin";
                                                                   <http://tiny.cc/open-contracting#dueDate> "2015-06-05T00:00:00.000000+02:00"^^xsd:dateTime;
                                                                   a <http://tiny.cc/open-contracting#Milestone>.
 <http://localhost:7598/contract/39/2/version> <http://purl.org/dc/terms/issued> "2015-05-22T14:45:05.000000+02:00"^^xsd:dateTime;
@@ -125,9 +125,9 @@
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/39/2>.
 <http://localhost:7598/contract/40/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
-                                      <http://purl.org/dc/terms/description> "DopravnĂ­ sluĹľby";
+                                      <http://purl.org/dc/terms/description> "Dopravní služby";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/40/1/publisher>;
-                                      <http://purl.org/dc/terms/title> "DopravnĂ­ sluĹľby";
+                                      <http://purl.org/dc/terms/title> "Dopravní služby";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557>;
@@ -135,13 +135,13 @@
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#awardID> "208557";
                                       <http://tiny.cc/open-contracting#awardProfileID> "7203010008557";
-                                      <http://tiny.cc/open-contracting#competency> "SoukromoprĂˇvnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#contractType> "KupnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#funding> "vlastnĂ­";
+                                      <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
+                                      <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
+                                      <http://tiny.cc/open-contracting#funding> "vlastní";
                                       <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/387>,
                                                                               <http://localhost:7598/party/389>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
-                                      <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub NovĂˇk ",
+                                      <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ",
                                                                                           "Josef Sobotka ";
                                       <http://tiny.cc/open-contracting#valid> true;
                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/40/1/version>;
@@ -154,15 +154,15 @@
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/40/1>.
 <http://localhost:7598/contract/42/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-03"^^xsd:date;
-                                      <http://purl.org/dc/terms/description> "NĂˇkup materiĂˇlĹŻ pro potĹ™eby ĂşĹ™adu";
+                                      <http://purl.org/dc/terms/description> "Nákup materiálů pro potřeby úřadu";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/42/1/publisher>;
-                                      <http://purl.org/dc/terms/title> "NĂˇkup materiĂˇlĹŻ pro potĹ™eby ĂşĹ™adu";
+                                      <http://purl.org/dc/terms/title> "Nákup materiálů pro potřeby úřadu";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "75000,00"^^xsd:float;
                                       <http://tiny.cc/open-contracting#anonymised> false;
-                                      <http://tiny.cc/open-contracting#competency> "SoukromoprĂˇvnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#contractType> "KupnĂ­ smlouva";
-                                      <http://tiny.cc/open-contracting#funding> "vlastnĂ­";
+                                      <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
+                                      <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
+                                      <http://tiny.cc/open-contracting#funding> "vlastní";
                                       <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/385>,
                                                                               <http://localhost:7598/party/388>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
@@ -178,34 +178,34 @@
 <http://localhost:7598/party/366> <http://purl.org/dc/terms/identifier> "43871020";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/366/address>;
-                                  <http://schema.org/addressCountry> "ÄŚeskĂˇ republika";
+                                  <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 366 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ43871020>.
 <http://localhost:7598/party/366/address> <http://schema.org/addressLocality> "Praha 9, Praha ";
-                                          <http://schema.org/postalCode> "19000";
-                                          <http://schema.org/streetAddres> "U svobodĂˇrny 12";
+                                          <http://schema.org/postalCode> 19000 ;
+                                          <http://schema.org/streetAddres> "U svobodárny 12";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/369> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/369/address>;
-                                  <http://schema.org/addressCountry> "ÄŚeskĂˇ republika";
+                                  <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 369 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
 <http://localhost:7598/party/369/address> <http://schema.org/addressLocality> "Dolina, Dolina";
-                                          <http://schema.org/postalCode> "12300";
-                                          <http://schema.org/streetAddres> "LesnĂ­ 6";
+                                          <http://schema.org/postalCode> 12300 ;
+                                          <http://schema.org/streetAddres> "Lesní 6";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/372> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/372/address>;
-                                  <http://schema.org/addressCountry> "ÄŚeskĂˇ republika";
+                                  <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 372 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
 <http://localhost:7598/party/372/address> <http://schema.org/addressLocality> "Praha 1";
-                                          <http://schema.org/postalCode> "11000";
-                                          <http://schema.org/streetAddres> "VÄ›decka 123";
+                                          <http://schema.org/postalCode> 11000 ;
+                                          <http://schema.org/streetAddres> "Vědecka 123";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/384> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/384/address>;
@@ -213,9 +213,9 @@
                                   <http://tiny.cc/open-contracting#localID> 384 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/384/address> <http://schema.org/addressLocality> "ProstÄ›jov";
-                                          <http://schema.org/postalCode> "79601";
-                                          <http://schema.org/streetAddres> "KrĂˇsnĂ©ho 34";
+<http://localhost:7598/party/384/address> <http://schema.org/addressLocality> "Prostějov";
+                                          <http://schema.org/postalCode> 79601 ;
+                                          <http://schema.org/streetAddres> "Krásného 34";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/385> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/385/address>;
@@ -224,8 +224,8 @@
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
 <http://localhost:7598/party/385/address> <http://schema.org/addressLocality> "Praha 6";
-                                          <http://schema.org/postalCode> "16000";
-                                          <http://schema.org/streetAddres> "BÄ›lohorskĂˇ 1815";
+                                          <http://schema.org/postalCode> 16000 ;
+                                          <http://schema.org/streetAddres> "Bělohorská 1815";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/386> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/386/address>;
@@ -234,8 +234,8 @@
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
 <http://localhost:7598/party/386/address> <http://schema.org/addressLocality> "Jihlava";
-                                          <http://schema.org/postalCode> "58601";
-                                          <http://schema.org/streetAddres> "Masarykovo nĂˇm. 2";
+                                          <http://schema.org/postalCode> 58601 ;
+                                          <http://schema.org/streetAddres> "Masarykovo nám. 2";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/387> <http://purl.org/dc/terms/identifier> "02485164";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
@@ -246,8 +246,8 @@
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ02485164>.
 <http://localhost:7598/party/387/address> <http://schema.org/addressLocality> "Dolina";
-                                          <http://schema.org/postalCode> "12300";
-                                          <http://schema.org/streetAddres> "SvitavskĂˇ 15";
+                                          <http://schema.org/postalCode> 12300 ;
+                                          <http://schema.org/streetAddres> "Svitavská 15";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/388> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/388/address>;
@@ -256,8 +256,8 @@
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
 <http://localhost:7598/party/388/address> <http://schema.org/addressLocality> "Znojmo";
-                                          <http://schema.org/postalCode> "66901";
-                                          <http://schema.org/streetAddres> "ZĂˇmeckĂˇ 10";
+                                          <http://schema.org/postalCode> 66901 ;
+                                          <http://schema.org/streetAddres> "Zámecká 10";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/389> <http://purl.org/dc/terms/identifier> "7312111906";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
@@ -267,12 +267,12 @@
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ7312111906>.
-<http://localhost:7598/party/389/address> <http://schema.org/addressLocality> "StarĂˇ Role";
-                                          <http://schema.org/postalCode> "36017";
-                                          <http://schema.org/streetAddres> "JavorovĂˇ 325/1";
+<http://localhost:7598/party/389/address> <http://schema.org/addressLocality> "Stará Role";
+                                          <http://schema.org/postalCode> 36017 ;
+                                          <http://schema.org/streetAddres> "Javorová 325/1";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/publisher> <http://purl.org/dc/terms/identifier> "00123456";
-                                  <http://purl.org/goodrelations/v1#legalName> "MÄ›Ăš Dolina";
+                                  <http://purl.org/goodrelations/v1#legalName> "MěÚ Dolina";
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#authentication> "email";
                                   <http://tiny.cc/open-contracting#noID> false;
