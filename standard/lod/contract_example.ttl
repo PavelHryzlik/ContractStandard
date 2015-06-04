@@ -62,7 +62,7 @@
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/39/1/publisher>;
                                       <http://purl.org/dc/terms/title> "SoftwarovĂˇ zakĂˇzka";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
-                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00";
+                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#attachment> <http://localhost:7598/attachment/1/1>,
@@ -92,7 +92,7 @@
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/39/2/publisher>;
                                       <http://purl.org/dc/terms/title> "SoftwarovĂˇ zakĂˇzka";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
-                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00";
+                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/OMI-001538>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#attachment> <http://localhost:7598/attachment/1/1>,
@@ -129,7 +129,7 @@
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/40/1/publisher>;
                                       <http://purl.org/dc/terms/title> "DopravnĂ­ sluĹľby";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
-                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00";
+                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
                                       <http://purl.org/procurement/public-contracts#publicContract> <http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557>;
                                       <http://tiny.cc/open-contracting#amendments> <http://localhost:7598/amendment/41/1>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
@@ -158,7 +158,7 @@
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/42/1/publisher>;
                                       <http://purl.org/dc/terms/title> "NĂˇkup materiĂˇlĹŻ pro potĹ™eby ĂşĹ™adu";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
-                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "75000,00";
+                                      <http://purl.org/goodrelations/v1#hasCurrencyValue> "75000,00"^^xsd:float;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#competency> "SoukromoprĂˇvnĂ­ smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "KupnĂ­ smlouva";
