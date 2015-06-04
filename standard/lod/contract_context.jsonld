@@ -35,7 +35,7 @@
     "orders" : { "@id": "cn:orders", "@container": "@set" },
     "invoices" : { "@id": "cn:invoices", "@container": "@set" },
     
-    "uri" : { "@id": "com:source", "@type" : "@id" },
+    "uri" : { "@id": "cn:uri", "@type" : "@id" },
     "document" : { "@id": "com:contentUrl", "@type" : "@id" }, 
     "valid" : { "@id": "cn:valid", "@type" : "xsd:boolean" },
     "anonymised" : { "@id": "cn:anonymised", "@type" : "xsd:boolean" },
@@ -88,11 +88,11 @@
     "transactions" : { "@id": "cn:transaction", "@type": "@id", "@container": "@set" },
     "dueDate" : { "@id": "cn:dueDate", "@type" : "xsd:dateTime" }, 
     "date" : { "@id": "dc:date", "@type" : "xsd:dateTime" },
-    "number" : { "@id": "dc:identifier", "@type" : "xsd:integer" }, 
+    "number" : { "@id": "cn:number", "@type" : "xsd:integer" }, 
     "senderOrganization" : { "@id": "com:source", "@type" : "@id" }, 
     "receiverOrganization" : { "@id": "com:destination", "@type" : "@id" },
     
-    "contract" : { "@id": "com:source", "@type" : "@id" }, 
-    "parrentDocument" : { "@id": "com:source", "@type" : "@id" }
+    "contract" : { "@id": "cn:contract", "@type" : "@id" }, 
+    "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" }
   }
 }
