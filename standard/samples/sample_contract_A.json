@@ -1,19 +1,19 @@
 {
   "id": "89f689cd-e784-4374-bb17-94144679d46f",
-  "date": "2014-03-25T23:20:50+01:00",
+  "published": "2014-03-25T23:20:50+01:00",
   "language": "cs",
 
   "documents": [
     {
       "uri" : "http://rsmluv.cz/smlouva/12345",
       "document" : "http://rsmluv.cz/smlouva/12345/Smlouva12345.docx",
-      "type" : [ "Smlouva" ],
+      "type" : "Smlouva",
       "valid" : true,
       "anonymised" : false,
     
       "awardID": "486026",
       "awardProfileID": "OI-010143",
-      "ammount": 584520.00,
+      "amount": 584520.00,
       "title": "Brno, Vackova, Šafaříkova - rekonstrukce kanalizace a vodovodu",
       "contractType": "Kupní smlouva",
       "subjectType": "Právní, finanční překladatelské, pojišťovnické, poradenské a jiné služby",
@@ -23,7 +23,7 @@
       "validFrom": "2011-11-02",
       "validUntil": "2012-06-30",
       "funding" : "vlastní",
-      "competency" : "Soukromoprávní smlouva",
+      "competency" : [ "Soukromoprávní smlouva" ],
       "currentValidContract": "http://zakazky.brno.cz/?pg=detail&id=18249&list=135",
       "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.", 
     
@@ -49,17 +49,17 @@
         "transactions" : [
           {
             "number" : 1269483,
-            "dueDate" : "2012-01-01",
+            "date" : "2012-01-01T18:35:20+01:00",
             "amount" : 300000,
             "senderOrganization" : 987654,
-            "seceiverOrganization" : 132456
+            "receiverOrganization" : 132456
           },
           {
             "number" : 934584,
-            "dueDate" : "2012-02-01",
+            "date" : "2012-02-01T09:13:40+01:00",
             "amount" : 284520,
             "senderOrganization" : 987654,
-            "seceiverOrganization" : 132456
+            "receiverOrganization" : 132456
           }
         ]
       },
@@ -90,7 +90,7 @@
       "address" : {
         "streetAddress" : "Dominikánské náměstí 196/1",
         "locality" : "Brno-město, Brno",
-        "postalCode" : "60200",
+        "postalCode" : 60200,
         "nuts" : "CZ064"
       },
       "superiorInstitution" : {
@@ -111,7 +111,7 @@
       "address" : {
         "streetAddress" : "Šumavská 416/15",
         "locality" : "Ponava, Brno",
-        "postalCode" : "60200",
+        "postalCode" : 60200,
         "nuts" : "CZ064"
       }
     }      

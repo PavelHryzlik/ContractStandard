@@ -11,7 +11,7 @@
             "description": "Jednoznačný identifikátor souboru",
             "type": "string"
         },
-        "date": {
+        "published": {
             "title": "Release date",
             "description": "Datum publikace souboru",
             "type": "string",
@@ -77,7 +77,7 @@
         }
     },
     
-    "required": ["id", "date", "documents", "language"],
+    "required": ["id", "published", "documents", "language"],
     
     "definitions": {
         
@@ -106,7 +106,7 @@
                 },
                 "type": {
                     "description": "Typ dokumentu. Nabývá hodnot - Smlouva/Příloha/Dodatek",
-                    "type": "array",
+                    "type": ["array", "string", "null"],
                     "items": {
                         "type": "string"
                     },
@@ -258,7 +258,7 @@
             },
             "patternProperties": {
             },
-            "required": ["localID", "name", "payer"]
+            "required": ["localID", "name"]
         }, 
         
         "SuperiorInstitution": {
@@ -339,13 +339,13 @@
                     "type": ["string", "null"],
                     "validity": "N"
                 },   
-                "ammount": {
+                "amount": {
                     "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Smluvní strana (Party) musí mít příznak Payer = true",
                     "type": ["number", "null"],
                     "validity": "C"
                 }, 
-                "ammountNoVat": {
-                    "description": "Cena bez dph, uvádí se povinně pouze v případě, že Ammount je s DPH",
+                "amountNoVat": {
+                    "description": "Cena bez dph, uvádí se povinně pouze v případě, že Amount je s DPH",
                     "type": ["number", "null"],
                     "validity": "C"
                 }, 
@@ -361,9 +361,9 @@
                 },
                 "parties": {
                     "description": "Výčet smluvních stran",
-                    "type": ["array", "null"],
+                    "type": [ "array", "null"],
                     "items": {
-                        "type": ["integer", "string"],
+                        "type": [ "object", "integer", "string"],
                         "format": "uri"                     
                     },
                     "validity": "C"
@@ -374,7 +374,7 @@
                     "validity": "B"
                 },  
                 "priceAnnual": {
-                    "description": "Identifikuje, pokud je v Ammount roční částka",
+                    "description": "Identifikuje, pokud je v Amount roční částka",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
@@ -410,8 +410,8 @@
                     "description": "Seznam URI identifikátorů příloh",
                     "type": ["array", "null"],
                     "items": {
-                        "type": "string",
-                        "format": "uri"
+                        "type": [ "object", "integer", "string"],
+                        "format": "uri"                     
                     },
                     "validity": "B"
                 },
@@ -419,14 +419,14 @@
                     "description": "Seznam URI identifikátorů dodatků",
                     "type": ["array", "null"],
                     "items": {
-                        "type": "string",
-                        "format": "uri"
+                        "type": [ "object", "integer", "string"],
+                        "format": "uri"                     
                     },
                     "validity": "B"
                 }, 
                 "competency": {
                     "description": "Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu",
-                    "type": "array",
+                    "type": ["array", "string", "null"],
                     "items": {
                         "type": "string"
                     },
@@ -451,7 +451,7 @@
             },
             "patternProperties": {
             },
-            "required": ["ammount", "title", "contractType", "publisher", "parties"] 
+            "required": ["title", "contractType", "publisher", "parties"] 
         },   
         
         "Attachment": {
@@ -466,8 +466,11 @@
                 },
                 "contract": {
                     "description": "Jednoznační identifikátor smlouvy",
-                    "type": ["string", "null"],
-                    "format": "uri",
+                    "type": ["array", "string", "null"],
+                    "items": {
+                        "type": "string",
+                        "format": "uri"                     
+                    },
                     "validity": "C"
                 },
                 "number": {
@@ -493,8 +496,11 @@
                 },    
                 "contract": {
                     "description": "Jednoznační identifikátor smlouvy",
-                    "type": ["string", "null"],
-                    "format": "uri",
+                    "type": ["array", "string", "null"],
+                    "items": {
+                        "type": "string",
+                        "format": "uri"                     
+                    },
                     "validity": "C"
                 },
                 "number": {
@@ -527,9 +533,9 @@
                 }, 
                 "parties": {
                     "description": "Výčet smluvních stran",
-                    "type": ["array", "null"],
+                    "type": [ "array", "null"],
                     "items": {
-                        "type": ["integer", "string"],
+                        "type": [ "object", "integer", "string"],
                         "format": "uri"                     
                     },
                     "validity": "N"
@@ -539,7 +545,7 @@
                     "type": ["string", "null"],
                     "validity": "C"
                 },    
-                "ammount": {
+                "amount": {
                     "description": "Cena s DPH",
                     "type": ["number", "null"],
                     "validity": "C"
@@ -563,7 +569,7 @@
             },
             "patternProperties": {
             },
-            "required": ["title", "ammount"]
+            "required": ["title", "amount"]
         },    
         
         "Invoice": {
@@ -578,10 +584,10 @@
                     "validity": "N"
                 },  
                 "parties": {
-                    "description": "Výčet smluvních stran.",
-                    "type": ["array", "null"],
+                    "description": "Výčet smluvních stran",
+                    "type": [ "array", "null"],
                     "items": {
-                        "type": ["integer", "string"],
+                        "type": [ "object", "integer", "string"],
                         "format": "uri"                     
                     },
                     "validity": "N"
@@ -591,7 +597,7 @@
                     "type": ["string", "null"],
                     "validity": "C"
                 },    
-                "ammount": {
+                "amount": {
                     "description": "Cena s DPH (u neplátců celková cena)",
                     "type": ["number", "null"],
                     "validity": "C"
@@ -610,7 +616,7 @@
             },
             "patternProperties": {
             },
-            "required": ["title", "ammount"]
+            "required": ["title", "amount"]
         },
         
         "Implementation": {
@@ -675,13 +681,13 @@
                 },
                 "senderOrganization":{
                     "description": "Informace o odesílateli. Viz. Party",
-                    "type": ["integer", "string"],
+                    "type": ["integer", "string", "null"],
                     "format": "uri",   
                     "validity": "C"
                 },
-                "seceiverOrganization":{
+                "receiverOrganization":{
                     "description": "Informace o příjemci. Viz. Party",
-                    "type": ["integer", "string"],
+                    "type": ["integer", "string", "null"],
                     "format": "uri",   
                     "validity": "C"
                 },
@@ -693,7 +699,7 @@
             },
             "patternProperties": {
             },
-            "required": ["date", "amount", "senderOrganization", "seceiverOrganization"]
+            "required": ["date", "amount", "senderOrganization", "receiverOrganization"]
         }    
     }  
 }
