@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 <http://localhost:7598/amendment/41/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
-                                       <http://purl.org/dc/terms/created> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime;
+                                       <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
                                        <http://purl.org/dc/terms/identifier> "41";
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/41/1/publisher>;
                                        <http://purl.org/dc/terms/title> "Dodatek ke smlouvÄ› ÄŤ. 2238";
@@ -57,7 +57,7 @@
                                                a <http://tiny.cc/open-contracting#Version>;
                                                <https://w3id.org/commerce#source> <http://localhost:7598/attachment/9/1>.
 <http://localhost:7598/contract/39/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
-                                      <http://purl.org/dc/terms/created> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime;
+                                      <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "SoftwarovĂˇ zakĂˇzka";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/39/1/publisher>;
                                       <http://purl.org/dc/terms/title> "SoftwarovĂˇ zakĂˇzka";
@@ -81,13 +81,13 @@
                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/39/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/9bcea9e0-c34b-41d6-8bbb-dd0705df84f2/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf>;
-                                      <https://w3id.org/payswarm#validFrom> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime.
+                                      <https://w3id.org/payswarm#validFrom> "2015-05-22"^^xsd:date.
 <http://localhost:7598/contract/39/1/version> <http://purl.org/dc/terms/issued> "2015-05-22T14:42:11.000000+02:00"^^xsd:dateTime;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>;
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/39/1>.
 <http://localhost:7598/contract/39/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
-                                      <http://purl.org/dc/terms/created> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime;
+                                      <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "SoftwarovĂˇ zakĂˇzka";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/39/2/publisher>;
                                       <http://purl.org/dc/terms/title> "SoftwarovĂˇ zakĂˇzka";
@@ -112,7 +112,7 @@
                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/39/2/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/9bcea9e0-c34b-41d6-8bbb-dd0705df84f2/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf>;
-                                      <https://w3id.org/payswarm#validFrom> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime.
+                                      <https://w3id.org/payswarm#validFrom> "2015-05-22"^^xsd:date.
 <http://localhost:7598/contract/39/2/implementation> <http://tiny.cc/open-contracting#milestone> <http://localhost:7598/contract/39/2/implementation/milestone/81>;
                                                      a <http://tiny.cc/open-contracting#Implementation>.
 <http://localhost:7598/contract/39/2/implementation/milestone/81> <http://purl.org/dc/terms/identifier> 81 ;
@@ -124,7 +124,7 @@
                                               a <http://tiny.cc/open-contracting#Version>;
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/39/2>.
 <http://localhost:7598/contract/40/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
-                                      <http://purl.org/dc/terms/created> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime;
+                                      <http://purl.org/dc/terms/created> "2015-05-22"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "DopravnĂ­ sluĹľby";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/40/1/publisher>;
                                       <http://purl.org/dc/terms/title> "DopravnĂ­ sluĹľby";
@@ -147,13 +147,13 @@
                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/40/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/8a39ba47-cf5d-470a-bc31-45ab84d2659a/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1).pdf>;
-                                      <https://w3id.org/payswarm#validFrom> "2015-05-22T00:00:00.000000+02:00"^^xsd:dateTime.
+                                      <https://w3id.org/payswarm#validFrom> "2015-05-22"^^xsd:date.
 <http://localhost:7598/contract/40/1/version> <http://purl.org/dc/terms/issued> "2015-05-22T14:44:47.000000+02:00"^^xsd:dateTime;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>;
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/40/1>.
 <http://localhost:7598/contract/42/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
-                                      <http://purl.org/dc/terms/created> "2015-06-03T00:00:00.000000+02:00"^^xsd:dateTime;
+                                      <http://purl.org/dc/terms/created> "2015-06-03"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "NĂˇkup materiĂˇlĹŻ pro potĹ™eby ĂşĹ™adu";
                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/42/1/publisher>;
                                       <http://purl.org/dc/terms/title> "NĂˇkup materiĂˇlĹŻ pro potĹ™eby ĂşĹ™adu";
@@ -170,7 +170,7 @@
                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/42/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/1b21c9bf-c18d-408c-8ad6-8009fd427363/Datov%C3%BD-standard-pro-registr-smluv1.pdf>;
-                                      <https://w3id.org/payswarm#validFrom> "2015-06-03T00:00:00.000000+02:00"^^xsd:dateTime.
+                                      <https://w3id.org/payswarm#validFrom> "2015-06-03"^^xsd:date.
 <http://localhost:7598/contract/42/1/version> <http://purl.org/dc/terms/issued> "2015-06-03T17:16:46.000000+02:00"^^xsd:dateTime;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>;
