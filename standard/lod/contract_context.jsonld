@@ -76,7 +76,7 @@
     "address" : "schema:address",
     "streetAddress" : "schema:streetAddres",
     "locality" : "schema:addressLocality",
-    "postalCode" : "schema:postalCode",
+    "postalCode" : { "@id": "schema:postalCode", "@type" : "xsd:integer" },
     "nuts" : "cn:nuts",     
     
     "versions" : { "@id": "cn:version", "@container": "@set" }, 
