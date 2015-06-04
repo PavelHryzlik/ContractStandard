@@ -136,6 +136,14 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:range :Implementation ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
+:uri a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Attachment :Amendment :Version ) ] ;
+  rdfs:range xsd:anyURI ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
 :contract a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label ""@cs, ""@en ;
   rdfs:comment ""@cs ;
@@ -154,7 +162,6 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   
 ### :Document properties ---  
 
-com:source vann:usageNote ""@cs, ""@en .
 com:contentUrl vann:usageNote ""@cs, ""@en .
 
 :valid a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -343,6 +350,15 @@ dcterms:identifier vann:usageNote ""@cs, ""@en .
 
 ### :Transaction properties ---   
 
+:number a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Transaction ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf dcterms:identifier ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+
 dcterms:identifier vann:usageNote ""@cs, ""@en . 
 dcterms:date vann:usageNote ""@cs, ""@en .
 gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
@@ -351,21 +367,18 @@ com:destination vann:usageNote ""@cs, ""@en .
 
 ### :Attachment properties ---     
 
-com:source vann:usageNote ""@cs, ""@en .
 dcterms:identifier vann:usageNote ""@cs, ""@en .
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 
 ### :Amendment properties ---     
 
-com:source vann:usageNote ""@cs, ""@en .
 dcterms:identifier vann:usageNote ""@cs, ""@en .
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
      
 ### :Order properties ---     
 
-com:source vann:usageNote ""@cs, ""@en .
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
@@ -373,7 +386,6 @@ gr:hasCurrency vann:usageNote ""@cs, ""@en .
 
 ### :Invoice properties ---     
 
-com:source vann:usageNote ""@cs, ""@en .
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .

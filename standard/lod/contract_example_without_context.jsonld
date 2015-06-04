@@ -12,7 +12,7 @@
       "@type" : "Contract",
       "uri" : "http://rsmluv.cz/contract/12345/2",
       "document" : "http://rsmluv.cz/file/b15a3c45-5595-4a28-b156-4578edeb2a98/Smlouva12345.docx",
-      "type" : [ "Smlouva" ],
+      "type" : "Smlouva",
       "valid" : true,
       "anonymised" : false,
     
@@ -27,9 +27,9 @@
       "dateSigned": "2011-11-16",
       "validFrom": "2011-11-02",
       "validUntil": "2012-06-30",
-      "currentValidContract": "http://zakazky.brno.cz/?pg=detail&id=18249&list=135",
-      "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.", 
       "competency" : [ "Soukromoprávní smlouva" ],
+      "currentValidContract": "http://zakazky.brno.cz/?pg=detail&id=18249&list=135",
+      "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.",    
     
       "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
       
@@ -66,7 +66,7 @@
             "@id" : "http://rsmluv.cz/contract/132456/2/transaction/132456",
             "@type" : "Transaction",
             "number" : 1269483,
-            "date" : "2012-01-01",
+            "date" : "2012-01-01T18:35:20+01:00",
             "amount" : 300000,
             "senderOrganization" : "http://rsmluv.cz/party/987654",
             "receiverOrganization" : "http://rsmluv.cz/party/987654"
@@ -75,7 +75,7 @@
             "@id" : "http://rsmluv.cz/contract/132456/2/transaction/934584",
             "@type" : "Transaction",
             "number" : 934584,
-            "date" : "2012-02-01",
+            "date" : "2012-02-01T09:13:40+01:00",
             "amount" : 284520,
             "senderOrganization" : "http://rsmluv.cz/party/987654",
             "receiverOrganization" : "http://rsmluv.cz/party/987654"
@@ -117,7 +117,7 @@
         "@type" : "Address",
         "streetAddress" : "Dominikánské náměstí 196/1",
         "locality" : "Brno-město, Brno",
-        "postalCode" : "60200",
+        "postalCode" : 60200,
         "nuts" : "CZ064"
       },
       "superiorInstitution" : {
@@ -144,7 +144,7 @@
         "@type" : "Address",
         "streetAddress" : "Šumavská 416/15",
         "locality" : "Ponava, Brno",
-        "postalCode" : "60200",
+        "postalCode" : 60200,
         "nuts" : "CZ064"
       }
     }      

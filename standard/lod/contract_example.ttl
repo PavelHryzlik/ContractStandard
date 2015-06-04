@@ -17,11 +17,6 @@
                                        a <http://tiny.cc/open-contracting#Amendment>;
                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/b9dae93c-7881-44a3-b974-c598542805ee/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Chov%C3%A1n%C3%AD%20%E2%80%93%20postup%2020150301-20150324.pdf>;
                                        <https://w3id.org/commerce#source> <http://localhost:7598/amendment/40/1>.
-<http://localhost:7598/amendment/41/1/publisher> <http://purl.org/goodrelations/v1#legalName> "MěÚ Dolina";
-                                                 <http://schema.org/addressCountry> "CZE";
-                                                 <http://tiny.cc/open-contracting#authenticationn> "email";
-                                                 <http://tiny.cc/open-contracting#noID> true;
-                                                 a <http://xmlns.com/foaf/0.1/Organization>.
 <http://localhost:7598/amendment/41/1/version> <http://purl.org/dc/terms/issued> "2015-05-22T17:12:30.000000+02:00"^^xsd:dateTime;
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                a <http://tiny.cc/open-contracting#Version>;
@@ -176,6 +171,7 @@
                                               a <http://tiny.cc/open-contracting#Version>;
                                               <https://w3id.org/commerce#source> <http://localhost:7598/contract/42/1>.
 <http://localhost:7598/party/366> <http://purl.org/dc/terms/identifier> "43871020";
+                                  <http://purl.org/goodrelations/v1#legalName> "Triada spol. s r.o.";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/366/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
@@ -187,7 +183,8 @@
                                           <http://schema.org/postalCode> 19000 ;
                                           <http://schema.org/streetAddres> "U svobodárny 12";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/369> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
+<http://localhost:7598/party/369> <http://purl.org/goodrelations/v1#legalName> "Adámek Karel";
+                                  <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/369/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 369 ;
@@ -197,7 +194,8 @@
                                           <http://schema.org/postalCode> 12300 ;
                                           <http://schema.org/streetAddres> "Lesní 6";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/372> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
+<http://localhost:7598/party/372> <http://purl.org/goodrelations/v1#legalName> "Einstein Albert";
+                                  <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/372/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 372 ;
@@ -207,7 +205,8 @@
                                           <http://schema.org/postalCode> 11000 ;
                                           <http://schema.org/streetAddres> "Vědecka 123";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/384> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
+<http://localhost:7598/party/384> <http://purl.org/goodrelations/v1#legalName> "Instalaterství Makovský Jan";
+                                  <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/384/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 384 ;
@@ -217,7 +216,8 @@
                                           <http://schema.org/postalCode> 79601 ;
                                           <http://schema.org/streetAddres> "Krásného 34";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/385> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
+<http://localhost:7598/party/385> <http://purl.org/goodrelations/v1#legalName> "Skřivánek Jan";
+                                  <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
                                   <http://schema.org/address> <http://localhost:7598/party/385/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 385 ;
@@ -227,7 +227,8 @@
                                           <http://schema.org/postalCode> 16000 ;
                                           <http://schema.org/streetAddres> "Bělohorská 1815";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/386> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
+<http://localhost:7598/party/386> <http://purl.org/goodrelations/v1#legalName> "Městský úřad Jihlava";
+                                  <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/386/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 386 ;
@@ -238,6 +239,7 @@
                                           <http://schema.org/streetAddres> "Masarykovo nám. 2";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/387> <http://purl.org/dc/terms/identifier> "02485164";
+                                  <http://purl.org/goodrelations/v1#legalName> "ARAL";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/387/address>;
                                   <http://schema.org/addressCountry> "CZE";
@@ -249,7 +251,8 @@
                                           <http://schema.org/postalCode> 12300 ;
                                           <http://schema.org/streetAddres> "Svitavská 15";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/388> <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
+<http://localhost:7598/party/388> <http://purl.org/goodrelations/v1#legalName> "Úřad práce Znojmo";
+                                  <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/388/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 388 ;
@@ -260,6 +263,7 @@
                                           <http://schema.org/streetAddres> "Zámecká 10";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/party/389> <http://purl.org/dc/terms/identifier> "7312111906";
+                                  <http://purl.org/goodrelations/v1#legalName> "Žáček Jiří";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
                                   <http://schema.org/address> <http://localhost:7598/party/389/address>;
                                   <http://schema.org/addressCountry> "CZE";
