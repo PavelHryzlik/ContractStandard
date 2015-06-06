@@ -56,7 +56,6 @@
           { 
             "@id" : "http://rsmluv.cz/contract/132456/2/milestone/5830",
             "@type" : "Milestone",
-            "number" : 5830,
             "title" : "Výpověď smlouvy",
             "dueDate" : "2012-06-20T23:20:50+01:00"
           }
@@ -65,7 +64,7 @@
           {
             "@id" : "http://rsmluv.cz/contract/132456/2/transaction/132456",
             "@type" : "Transaction",
-            "number" : 1269483,
+            "publisherId" : "1269483",
             "date" : "2012-01-01T18:35:20+01:00",
             "amount" : 300000,
             "senderOrganization" : "http://rsmluv.cz/party/987654",
@@ -74,7 +73,7 @@
           {
             "@id" : "http://rsmluv.cz/contract/132456/2/transaction/934584",
             "@type" : "Transaction",
-            "number" : 934584,
+            "publisherId" : "934584",
             "date" : "2012-02-01T09:13:40+01:00",
             "amount" : 284520,
             "senderOrganization" : "http://rsmluv.cz/party/987654",

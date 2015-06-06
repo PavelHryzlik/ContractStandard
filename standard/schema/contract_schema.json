@@ -301,7 +301,12 @@
             "type": "object",
             "title": "Version",
             "description": "Identifikace jednotlivé verze dokumentu",
-            "properties": {          
+            "properties": { 
+                "publisherId": {
+                    "description": "Libovolný číselný identifikátor verze, spisové číslo apod.",
+                    "type": ["string", "null"],
+                    "validity": "N"
+                },         
                 "version": {
                     "description": "Pořadové číslo verze, nejvyšší = aktuální",
                     "type": ["integer", "null"],
@@ -531,6 +536,11 @@
                     "format": "uri",
                     "validity": "N"
                 }, 
+                "subjectType": {
+                    "description": "Číselník typů zboží/služeb",
+                    "type": ["string", "null"],
+                    "validity": "N"
+                },  
                 "parties": {
                     "description": "Výčet smluvních stran",
                     "type": [ "array", "null"],
@@ -607,8 +617,14 @@
                     "type": ["string", "null"],
                     "validity": "B"
                 }, 
+                "dateSigned": {
+                    "description": "Datum posledního podpisu",
+                    "type": ["string", "null"],
+                    "format": "date",
+                    "validity": "B"
+                },  
                 "dueDate": {
-                    "description": "Datum podpisu",
+                    "description": "Datum splatnosti",
                     "type": ["string", "null"],
                     "format": "date",
                     "validity": "B"
@@ -691,9 +707,9 @@
                     "format": "uri",   
                     "validity": "C"
                 },
-                "number":{
+                "publisherId":{
                     "description": "Libovolný číselný identifikátor transakce, unikátní v rámci smlouvy",
-                    "type": ["integer", "null"],
+                    "type": ["string", "null"],
                     "validity": "B"
                 }
             },

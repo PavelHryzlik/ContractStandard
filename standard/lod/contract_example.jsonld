@@ -1,0 +1,543 @@
+{
+  "@context": "http://tiny.cc/open-contracting_context",
+  "id": "contracts_release_20150606",
+  "published": "2015-06-06T16:43:18.5167154+02:00",
+  "language": "cs",
+  "documents": [
+    {
+      "@id": "http://localhost:7598/amendment/41/1",
+      "@type": "Amendment",
+      "type": [
+        "Dodatek"
+      ],
+      "dateSigned": "2015-05-22",
+      "id": "41",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Dodatek ke smlouvě č. 2238",
+      "anonymised": false,
+      "contract": "http://localhost:7598/amendment/40/1",
+      "responsiblePersons": [
+        "Josef Sobotka ",
+        "Ing. Jakub Novák "
+      ],
+      "valid": true,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/amendment/41/1/version",
+          "@type": "Version",
+          "published": "2015-05-22T17:12:30.000000+02:00",
+          "uri": "http://localhost:7598/amendment/41/1",
+          "version": 1
+        }
+      ],
+      "document": "http://localhost:7598/file/b9dae93c-7881-44a3-b974-c598542805ee/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Chov%C3%A1n%C3%AD%20%E2%80%93%20postup%2020150301-20150324.pdf"
+    },
+    {
+      "@id": "http://localhost:7598/attachment/1/1",
+      "@type": "Attachment",
+      "type": [
+        "Příloha"
+      ],
+      "id": "1",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Specifikace",
+      "anonymised": false,
+      "contract": [
+        "http://localhost:7598/contract/39/1",
+        "http://localhost:7598/contract/39/2"
+      ],
+      "valid": true,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/attachment/1/1/version",
+          "@type": "Version",
+          "published": "2015-05-13T13:57:19.000000+02:00",
+          "uri": "http://localhost:7598/attachment/1/1",
+          "version": 1
+        }
+      ],
+      "document": "http://localhost:7598/file/f8fe0c7c-1502-49ba-a0d3-6668074584ad/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx"
+    },
+    {
+      "@id": "http://localhost:7598/attachment/9/1",
+      "@type": "Attachment",
+      "type": [
+        "Příloha"
+      ],
+      "id": "9",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Dokumentace",
+      "anonymised": false,
+      "contract": [
+        "http://localhost:7598/contract/39/1",
+        "http://localhost:7598/contract/39/2"
+      ],
+      "valid": true,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/attachment/9/1/version",
+          "@type": "Version",
+          "published": "2015-05-20T09:40:53.000000+02:00",
+          "uri": "http://localhost:7598/attachment/9/1",
+          "version": 1
+        }
+      ],
+      "document": "http://localhost:7598/file/66054b89-6ffa-4bb6-a3bf-783c451bec62/2015_rozpis_triada.xls"
+    },
+    {
+      "@id": "http://localhost:7598/contract/39/1",
+      "@type": "Contract",
+      "type": [
+        "Smlouva"
+      ],
+      "dateSigned": "2015-05-22",
+      "description": "Softwarová zakázka",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Softwarová zakázka",
+      "currency": "CZK",
+      "amount": 100000.0,
+      "http://purl.org/procurement/public-contracts#publicContract": {
+        "@id": "http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557"
+      },
+      "anonymised": false,
+      "attachments": [
+        {
+          "@id": "http://localhost:7598/attachment/1/1"
+        },
+        {
+          "@id": "http://localhost:7598/attachment/9/1"
+        }
+      ],
+      "awardID": "208557",
+      "awardProfileID": "7203010008557",
+      "competency": [
+        "Soukromoprávní smlouva"
+      ],
+      "contractType": "Kupní smlouva",
+      "funding": "vlastní",
+      "parties": [
+        {
+          "@id": "http://localhost:7598/party/388"
+        },
+        {
+          "@id": "http://localhost:7598/party/369"
+        }
+      ],
+      "priceAnnual": false,
+      "responsiblePersons": [
+        "Josef Sobotka ",
+        "RNDr. Albert Einstein Ph.D"
+      ],
+      "valid": false,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/contract/39/1/version",
+          "@type": "Version",
+          "published": "2015-05-22T14:42:11.000000+02:00",
+          "uri": "http://localhost:7598/contract/39/1",
+          "version": 1
+        }
+      ],
+      "document": "http://localhost:7598/file/9bcea9e0-c34b-41d6-8bbb-dd0705df84f2/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf",
+      "validFrom": "2015-05-22"
+    },
+    {
+      "@id": "http://localhost:7598/contract/39/2",
+      "@type": "Contract",
+      "type": [
+        "Smlouva"
+      ],
+      "dateSigned": "2015-05-22",
+      "description": "Softwarová zakázka",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Softwarová zakázka",
+      "currency": "CZK",
+      "amount": 100000.0,
+      "http://purl.org/procurement/public-contracts#publicContract": {
+        "@id": "http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/OMI-001538"
+      },
+      "anonymised": false,
+      "attachments": [
+        {
+          "@id": "http://localhost:7598/attachment/1/1"
+        },
+        {
+          "@id": "http://localhost:7598/attachment/9/1"
+        }
+      ],
+      "awardID": "OMI-001538",
+      "awardProfileID": "OMI-001538",
+      "competency": [
+        "Soukromoprávní smlouva"
+      ],
+      "contractType": "Kupní smlouva",
+      "funding": "vlastní",
+      "implementation": {
+        "@id": "http://localhost:7598/contract/39/2/implementation",
+        "@type": "Implementation",
+        "milestones": [
+          {
+            "@id": "http://localhost:7598/contract/39/2/implementation/milestone/81",
+            "@type": "Milestone",
+            "title": "Podaní výkazu odpracovaných hodin",
+            "dueDate": "2015-06-05T00:00:00.000000+02:00"
+          }
+        ]
+      },
+      "parties": [
+        {
+          "@id": "http://localhost:7598/party/388"
+        },
+        {
+          "@id": "http://localhost:7598/party/369"
+        }
+      ],
+      "priceAnnual": false,
+      "responsiblePersons": [
+        "Josef Sobotka ",
+        "RNDr. Albert Einstein Ph.D"
+      ],
+      "valid": true,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/contract/39/2/version",
+          "@type": "Version",
+          "published": "2015-05-22T14:45:05.000000+02:00",
+          "uri": "http://localhost:7598/contract/39/2",
+          "version": 2
+        }
+      ],
+      "document": "http://localhost:7598/file/9bcea9e0-c34b-41d6-8bbb-dd0705df84f2/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf",
+      "validFrom": "2015-05-22"
+    },
+    {
+      "@id": "http://localhost:7598/contract/40/1",
+      "@type": "Contract",
+      "type": [
+        "Smlouva"
+      ],
+      "dateSigned": "2015-05-22",
+      "description": "Dopravní služby",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Dopravní služby",
+      "currency": "CZK",
+      "amount": 100000.0,
+      "http://purl.org/procurement/public-contracts#publicContract": {
+        "@id": "http://linked.opendata.cz/resource/domain/buyer-profiles/contract/cz/208557"
+      },
+      "amendments": [
+        {
+          "@id": "http://localhost:7598/amendment/41/1"
+        }
+      ],
+      "anonymised": false,
+      "awardID": "208557",
+      "awardProfileID": "7203010008557",
+      "competency": [
+        "Soukromoprávní smlouva"
+      ],
+      "contractType": "Kupní smlouva",
+      "funding": "vlastní",
+      "parties": [
+        {
+          "@id": "http://localhost:7598/party/387"
+        },
+        {
+          "@id": "http://localhost:7598/party/389"
+        }
+      ],
+      "priceAnnual": false,
+      "responsiblePersons": [
+        "Josef Sobotka ",
+        "Ing. Jakub Novák "
+      ],
+      "valid": true,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/contract/40/1/version",
+          "@type": "Version",
+          "published": "2015-05-22T14:44:47.000000+02:00",
+          "uri": "http://localhost:7598/contract/40/1",
+          "version": 1
+        }
+      ],
+      "document": "http://localhost:7598/file/8a39ba47-cf5d-470a-bc31-45ab84d2659a/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1).pdf",
+      "validFrom": "2015-05-22"
+    },
+    {
+      "@id": "http://localhost:7598/contract/42/1",
+      "@type": "Contract",
+      "type": [
+        "Smlouva"
+      ],
+      "dateSigned": "2015-06-03",
+      "description": "Nákup materiálů pro potřeby úřadu",
+      "publisher": {
+        "@id": "http://localhost:7598/publisher",
+        "@type": "Publisher",
+        "id": "00123456",
+        "name": "MěÚ Dolina",
+        "country": "CZE",
+        "authentication": "email",
+        "noID": false,
+        "owl:sameAs": {
+          "@id": "http://linked.opendata.cz/resource/business-entity/CZ00123456"
+        }
+      },
+      "title": "Nákup materiálů pro potřeby úřadu",
+      "currency": "CZK",
+      "amount": 75000.0,
+      "anonymised": false,
+      "competency": [
+        "Soukromoprávní smlouva"
+      ],
+      "contractType": "Kupní smlouva",
+      "funding": "vlastní",
+      "parties": [
+        {
+          "@id": "http://localhost:7598/party/388"
+        },
+        {
+          "@id": "http://localhost:7598/party/385"
+        }
+      ],
+      "priceAnnual": false,
+      "valid": true,
+      "versions": [
+        {
+          "@id": "http://localhost:7598/contract/42/1/version",
+          "@type": "Version",
+          "published": "2015-06-03T17:16:46.000000+02:00",
+          "uri": "http://localhost:7598/contract/42/1",
+          "version": 1
+        }
+      ],
+      "document": "http://localhost:7598/file/1b21c9bf-c18d-408c-8ad6-8009fd427363/Datov%C3%BD-standard-pro-registr-smluv1.pdf",
+      "validFrom": "2015-06-03"
+    }
+  ],
+  "parties": [
+    {
+      "@id": "http://localhost:7598/party/366",
+      "@type": "Party",
+      "id": "43871020",
+      "name": "Triada spol. s r.o.",
+      "paysVAT": false,
+      "address": {
+        "@id": "http://localhost:7598/party/366/address",
+        "@type": "Address",
+        "locality": "Praha 9, Praha ",
+        "postalCode": 19000,
+        "streetAddress": "U svobodárny 12"
+      },
+      "country": "Česká republika",
+      "localID": 366,
+      "noID": false,
+      "owl:sameAs": {
+        "@id": "http://linked.opendata.cz/resource/business-entity/CZ43871020"
+      }
+    },
+    {
+      "@id": "http://localhost:7598/party/369",
+      "@type": "Party",
+      "name": "Adámek Karel",
+      "paysVAT": true,
+      "address": {
+        "@id": "http://localhost:7598/party/369/address",
+        "@type": "Address",
+        "locality": "Dolina, Dolina",
+        "postalCode": 12300,
+        "streetAddress": "Lesní 6"
+      },
+      "country": "Česká republika",
+      "localID": 369,
+      "noID": true
+    },
+    {
+      "@id": "http://localhost:7598/party/372",
+      "@type": "Party",
+      "name": "Einstein Albert",
+      "paysVAT": true,
+      "address": {
+        "@id": "http://localhost:7598/party/372/address",
+        "@type": "Address",
+        "locality": "Praha 1",
+        "postalCode": 11000,
+        "streetAddress": "Vědecka 123"
+      },
+      "country": "Česká republika",
+      "localID": 372,
+      "noID": true
+    },
+    {
+      "@id": "http://localhost:7598/party/384",
+      "@type": "Party",
+      "name": "Instalaterství Makovský Jan",
+      "paysVAT": true,
+      "address": {
+        "@id": "http://localhost:7598/party/384/address",
+        "@type": "Address",
+        "locality": "Prostějov",
+        "postalCode": 79601,
+        "streetAddress": "Krásného 34"
+      },
+      "country": "CZE",
+      "localID": 384,
+      "noID": true
+    },
+    {
+      "@id": "http://localhost:7598/party/385",
+      "@type": "Party",
+      "name": "Skřivánek Jan",
+      "paysVAT": true,
+      "address": {
+        "@id": "http://localhost:7598/party/385/address",
+        "@type": "Address",
+        "locality": "Praha 6",
+        "postalCode": 16000,
+        "streetAddress": "Bělohorská 1815"
+      },
+      "country": "CZE",
+      "localID": 385,
+      "noID": true
+    },
+    {
+      "@id": "http://localhost:7598/party/386",
+      "@type": "Party",
+      "name": "Městský úřad Jihlava",
+      "paysVAT": false,
+      "address": {
+        "@id": "http://localhost:7598/party/386/address",
+        "@type": "Address",
+        "locality": "Jihlava",
+        "postalCode": 58601,
+        "streetAddress": "Masarykovo nám. 2"
+      },
+      "country": "CZE",
+      "localID": 386,
+      "noID": true
+    },
+    {
+      "@id": "http://localhost:7598/party/387",
+      "@type": "Party",
+      "id": "02485164",
+      "name": "ARAL",
+      "paysVAT": false,
+      "address": {
+        "@id": "http://localhost:7598/party/387/address",
+        "@type": "Address",
+        "locality": "Dolina",
+        "postalCode": 12300,
+        "streetAddress": "Svitavská 15"
+      },
+      "country": "CZE",
+      "localID": 387,
+      "noID": false,
+      "owl:sameAs": {
+        "@id": "http://linked.opendata.cz/resource/business-entity/CZ02485164"
+      }
+    },
+    {
+      "@id": "http://localhost:7598/party/388",
+      "@type": "Party",
+      "name": "Úřad práce Znojmo",
+      "paysVAT": false,
+      "address": {
+        "@id": "http://localhost:7598/party/388/address",
+        "@type": "Address",
+        "locality": "Znojmo",
+        "postalCode": 66901,
+        "streetAddress": "Zámecká 10"
+      },
+      "country": "CZE",
+      "localID": 388,
+      "noID": true
+    },
+    {
+      "@id": "http://localhost:7598/party/389",
+      "@type": "Party",
+      "id": "7312111906",
+      "name": "Žáček Jiří",
+      "paysVAT": false,
+      "address": {
+        "@id": "http://localhost:7598/party/389/address",
+        "@type": "Address",
+        "locality": "Stará Role",
+        "postalCode": 36017,
+        "streetAddress": "Javorová 325/1"
+      },
+      "country": "CZE",
+      "localID": 389,
+      "noID": false,
+      "owl:sameAs": {
+        "@id": "http://linked.opendata.cz/resource/business-entity/CZ7312111906"
+      }
+    }
+  ]
+}

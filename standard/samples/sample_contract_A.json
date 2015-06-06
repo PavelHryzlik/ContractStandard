@@ -48,14 +48,14 @@
         ],
         "transactions" : [
           {
-            "number" : 1269483,
+            "publisherId" : "1269483",
             "date" : "2012-01-01T18:35:20+01:00",
             "amount" : 300000,
             "senderOrganization" : 987654,
             "receiverOrganization" : 132456
           },
           {
-            "number" : 934584,
+            "publisherId" : "934584",
             "date" : "2012-02-01T09:13:40+01:00",
             "amount" : 284520,
             "senderOrganization" : 987654,

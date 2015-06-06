@@ -88,7 +88,7 @@
     "transactions" : { "@id": "cn:transaction", "@type": "@id", "@container": "@set" },
     "dueDate" : { "@id": "cn:dueDate", "@type" : "xsd:dateTime" }, 
     "date" : { "@id": "dc:date", "@type" : "xsd:dateTime" },
-    "number" : { "@id": "cn:number", "@type" : "xsd:integer" }, 
+    "publisherId" : "cn:publisherId", 
     "senderOrganization" : { "@id": "com:source", "@type" : "@id" }, 
     "receiverOrganization" : { "@id": "com:destination", "@type" : "@id" },
     

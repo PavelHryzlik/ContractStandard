@@ -160,6 +160,24 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:range xsd:anyURI ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
+:publisherId a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Transaction :Version ) ] ;
+  rdfs:range xsd:string ;
+  rdfs:subPropertyOf dcterms:identifier ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
+:dueDate a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Invoice :Milestone ) ] ;
+  rdfs:range xsd:dateTime ;
+  rdfs:subPropertyOf dcterms:date ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
 ### :Document properties ---  
 
 com:contentUrl vann:usageNote ""@cs, ""@en .
@@ -339,25 +357,7 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
 
 dcterms:identifier vann:usageNote ""@cs, ""@en .
 
-:dueDate a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
-  rdfs:domain :Milestone ;
-  rdfs:range xsd:dateTime ;
-  rdfs:subPropertyOf dcterms:date ;
-  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
-
 ### :Transaction properties ---   
-
-:number a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
-  rdfs:domain :Transaction ;
-  rdfs:range xsd:string ;
-  rdfs:subPropertyOf dcterms:identifier ;
-  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 dcterms:identifier vann:usageNote ""@cs, ""@en . 
 dcterms:date vann:usageNote ""@cs, ""@en .

@@ -748,13 +748,6 @@
         rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation/milestone/{MilestoneID}";
         rr:class cn:Milestone;
     ];
-	rr:predicateObjectMap [
-      rr:predicate cn:number;
-      rr:objectMap [ 
-        rr:column "[MilestoneID]";
-        rr:datatype xsd:integer; 
-      ];
-    ];
     rr:predicateObjectMap [
       rr:predicate dc:title;
       rr:objectMap [ rr:column "[NAZEV]" ];
