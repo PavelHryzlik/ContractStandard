@@ -72,7 +72,7 @@ Detailní popisné údaje smlouvy. Jedná se o jedno z rozšířeních dokumentu
 | Seznam URI identifikátorů dodatků. Viz. [[cs:standard:schema:amendment|Dodatek]]
 
 |- style="background-color: #dff0d8;"
-| Competency || String enum || A
+| Competency || String/String enum || A
 | Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu
 
 |- style="background-color: #dff0d8;"

@@ -11,6 +11,10 @@ Popisné údaje objednávky. Jedná se o doplňující informace k [[cs:standard
 | Jednoznačný identifikátor [[cs:standard:schema:document|dokumentu]]
 
 |- 
+| SubjectType || String || N
+| Číselník typů zboží/služeb, viz. [[cs:standard:codelists|Číselníky]]
+
+|- 
 | Parties || String URI/Int array || N
 | Seznam identifikátorů (URI nebo LocalID) smluvních stran. Viz. [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]]
 

@@ -16,7 +16,7 @@ Popisné údaje dodatku. Jedná se o jedno z rozšířeních dokumentu, resp. ú
 
 |- style="background-color: #d9edf7;"
 | Number || Int || B
-| Číslo přílohy
+| Pořadové číslo dodatku (podle času podpisu)
 
 |- style="background-color: #d9edf7;"
 | DateSigned || Date || B

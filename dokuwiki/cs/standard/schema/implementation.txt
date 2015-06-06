@@ -61,7 +61,7 @@ Reprezentuje proběhlou platbu na základě smlouvy. Jedná se o volitelnou polo
 | Informace o příjemci. Viz. [[cs:standard:schema:document#Party|Party]]
 
 |- style="background-color: #d9edf7;"
-| Number || Int || B
+| PublisherId || String || B
 | Libovolný číselný identifikátor transakce, unikátní v rámci smlouvy
 
 |}

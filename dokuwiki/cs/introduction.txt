@@ -1,31 +1,22 @@
 ====== Úvod ======
 
-Tento materiál navrhuje základní metodiku pro zveřejňování smluv. (Otevřená data)
+Tento materiál navrhuje základní technický i věcný standard pro zveřejňování smluv jako Otevřených dat nad rámec připravovaného zákona o registru smluv. Cílem je sjednotit obdobné snahy úřadů o vyšší transparenci - většina výhod otevřených dat se totiž ztrácí, pokud každý subjekt zveřejňuje v jiném formátu.
+
+==== Věcné vlastnosti standardu ====
+  * U smluv se zveřejňují informace nad rámec chystaných zákonných požadavků. Konkrétně jednotlivé verze smluv, dodatky, přílohy, nepovinně i další události - platby, předávky, výpovědi apod.
+  * Pro snazší vyhledávání a filtraci je standardizováno stanovení ceny, stanovena základní typologie smluv, zdrojů financování, předmětů plnění.
+  * Data může zveřejnit i třetí subjekt (např. město jménem své příspěvkové organizace). Lze sledovat smlouvy vlastní i podřízených organizací a firem.
+  * Je navržen jednotný postup anonymizace . 
+
+==== Technické vlastnosti standardu====
+
+Standard:
   * Definuje podrobné schéma datové struktury smluv a dalších rozšiřujících struktur
-  * Odkazuje na definici použitých standardních číselníků
+  * Odkazuje na definice použitých standardních číselníků
   * Popisuje postup tvorby otevřených dat ve formátu JSON
   * Obsahuje konkrétní příklady a užitečné pomůcky k otevírání dat
 
-Počítá se se vznikem centrálního registru smluv, který bude evidovat smlouvy veřejných institucí.
 
-==== Co jsou otevřená data? (Open data) ====
+==== Jak standard využít ? ====
 
-Z obecného pohledu jde o data zveřejněná na internetu. Aby zveřejňování mělo smysl, je dobré,
-aby data splňovaly určité podmínky.
-
-=== Data by měla být: ===
-
-  * Úplná, resp. zveřejněna v maximálním možné rozsahu
-  * Snadno dohledatelná
-  * Strojově čitelná
-  * Využívající otevřené standardy
-  * Snadno a bez zbytečných nákladů dostupná (technicky i legislativně)
-
-=== Přínosy ===
-
-  * Zveřejněná data umožňují zapojení občanů
-  * Zvyšují transapentnost
-  * Umožňují efektivnější boj s korupcí
-  * Zaručují kvalitnější veřejnou službu
-  * Snižují náklady
-  * Umožňují další využití - analýzy, "watchdog", prezentační platformy uchopitelné běžnými uživateli
+Nejprve je nutné připravit interní evidenci smluv včetně procesu anonymizace, aby bylo možné je zveřejňovat. Následné zveřejňování v souladu se standardem by pro informatiky mělo být prací v řádu dnů, maximálně týdnů (záleží nicméně na konkrétním systému). V rámci projektu [[http://www.otevrenamesta.cz  | Otevřená města]] má v dohledné době vzniknout centrální registr, který napomůže uveřejňovat smlouvy v požadovaném formátu ještě snadněji. Městům a obcím, které chtějí zveřejňovat transparentně smlouvy a další dokumenty doporučujeme se [[http://www.otevrenamesta.cz/clenstvi/  | zapojit]].

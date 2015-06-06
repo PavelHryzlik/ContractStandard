@@ -1,1 +1,14 @@
 ====== Anonymizace ======
+Zde je popsána doporučená //technická// forma anonymizace dokumentů - typicky osobních údajů, méně často i obchodního tajemství. S specifičtějšími otázkami na právní aspekty této činnosti doporučujeme se obrátit např. na [[http://www.otevrenaspolecnost.cz/pravo-na-informace/poskytuji-informace|Otevřená společnost o.p.s.]].
+
+
+
+==== Anonymizované údaje ====
+
+V uveřejněných datech je potřeba provádět anonymizaci jak v rámci metadat, tak v samotném textu dokumentů (typicky smluv). V rámci metadat se osobní údaje mohou vyskytovat v entitách [[cs:standard:schema:contract#Smluvní strana|Smluvní strana]], [[cs:standard:schema:contract#Adresa|Adresa]] a [[cs:standard:schema:document#Vydavatel|Vydavatel]]. Pro tyto entity je přípustné naplnění výrazem "Anonymizováno".
+
+Obdobným zásahem je možné stejné údaje odstraňovat i přímo z uveřejněných dokumentů. Takové nahrazení je uživatelsky čitelnější a jasnější, než klasické začerňování, zároveň však i bezpečnější z hlediska skrytí informace, nebo její délky.
+
+==== Osobní údaje ====
+
+//Podle ustanovení § 4 písm. a) zákona č. 101/2000 Sb. se osobním údajem rozumí jakákoliv informace týkající se určeného nebo určitelného subjektu údajů. Subjekt údajů se považuje za určený nebo určitelný, jestliže lze subjekt údajů přímo či nepřímo identifikovat zejména na základě čísla, kódu nebo jednoho či více prvků, specifických pro jeho fyzickou, fyziologickou, psychickou, ekonomickou, kulturní nebo sociální identitu. /../ // - [[https://www.uoou.cz/anonymizace-osobnich-udaju/d-1764|Úrad pro ochranu osobních údajů]]

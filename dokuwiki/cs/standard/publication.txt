@@ -18,7 +18,7 @@ Datové schéma definuje soustavu specifikací a pravidel, jak má datový soubo
 
 ==== Struktura datového souboru ====
 
-Na základě datového schématu by měl výsledný datový soubor mít položky:
+Na základě datového schématu by výsledný datový soubor měl obsahovat položky:
 
 {| class="wikitable" style="font-size: 90%;"
 |-

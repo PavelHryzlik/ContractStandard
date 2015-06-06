@@ -1,1 +1,112 @@
 ====== Číselníky ======
+
+Některé položky by u jednotlivých entit měly nabývat předem definovaných hodnot. Jejich výčet bude na této stránce, příp. na připojených odkazech.
+
+Jedná se o tyto číselníky:
+  * **[[cs:standard:codelists#Typ dokumentu|Typ dokumentu]]**
+  * **[[cs:standard:codelists#Typ smlouvy|Typ smlouvy]]**
+  * **[[cs:standard:codelists#Typ zboží a služeb|Typ zboží a služeb]]**
+  * **[[cs:standard:codelists#Převažující financování|Převažující financování]]**
+
+==== Typ dokumentu ====
+
+Položka Type u [[cs:standard:schema:document|dokumentu]].
+
+{| class="wikitable" style="font-size: 90%;"
+|-
+! Hodnota
+
+|- style="background-color: #d9edf7;"
+| Smlouva
+
+|- style="background-color: #d9edf7;"
+| Příloha
+
+|- style="background-color: #d9edf7;"
+| Dodatek
+
+|}
+
+==== Typ smlouvy ====
+
+Položka ContractType u [[cs:standard:schema:contract|smlouvy]].
+
+{| class="wikitable" style="font-size: 90%;"
+|-
+! Hodnota
+
+|- style="background-color: #d9edf7;"
+| Nájemní smlouva
+
+|- style="background-color: #d9edf7;"
+| Darovací smlouva
+
+|- style="background-color: #d9edf7;"
+| Kupní smlouva
+
+|- style="background-color: #d9edf7;"
+| Směnná smlouva
+
+|- style="background-color: #d9edf7;"
+| Pojistná smlouva
+
+|- style="background-color: #d9edf7;"
+| Smlouva o výpůjčce
+
+|- style="background-color: #d9edf7;"
+| Licenční smlouva
+
+|- style="background-color: #d9edf7;"
+| Mandátní smlouva
+
+|- style="background-color: #d9edf7;"
+| Leasingová smlouva
+
+|- style="background-color: #d9edf7;"
+| Pachtovní smlouva
+
+|- style="background-color: #d9edf7;"
+| Smlouva o zřízení věcného břemene
+
+|- style="background-color: #d9edf7;"
+| Smlouva o provedení stavby
+
+|- style="background-color: #d9edf7;"
+| Smlouva o provedení práce
+
+|- style="background-color: #d9edf7;"
+| Smlouva o provedení uměleckého výkonu
+
+|- style="background-color: #d9edf7;"
+| Smlouva o úvěru
+
+|- style="background-color: #d9edf7;"
+| Smlouva o uzavření budoucí smlouvy
+
+|- style="background-color: #d9edf7;"
+| Veřejnoprávní smlouva
+
+|- style="background-color: #d9edf7;"
+| Jiná
+
+|}
+
+=====  Typ zboží a služeb =====
+
+Položka SubjectType u [[cs:standard:schema:contract|smlouvy]]. Aktuální číselníky zboží a služeb zveřejněné informačním systémem o veřejných zakázkách.
+
+{| class="wikitable" style="font-size: 90%;"
+|-
+! Popis !! Datový soubor
+
+|- style="background-color: #d9edf7;"
+| Číselníky a klasifikace
+| [[http://www.isvz.cz/ISVZ/Ciselniky/ISVZ_klasifikace_ciselniky.aspx]]
+
+|}
+
+=====  Převažující financování =====
+
+Položka Funding u [[cs:standard:schema:contract|smlouvy]].
+
+TODO

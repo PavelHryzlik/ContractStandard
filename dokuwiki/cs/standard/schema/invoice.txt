@@ -27,7 +27,12 @@ Popisné údaje faktury. Jedná se o doplňující informace k [[cs:standard:sch
 | Měna, 3-písmenný, ISO 4217 formát
 
 |- style="background-color: #d9edf7;"
+| DateSigned || Date || B
+| Datum posledního podpisu
+
+
+|- style="background-color: #d9edf7;"
 | DueDate|| Date || B
-| Datum podpisu
+| Datum splatnosti
 
 |}

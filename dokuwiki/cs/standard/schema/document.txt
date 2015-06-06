@@ -19,7 +19,7 @@ Dokument je základní strukturou pro evidování údajů o [[cs:standard:schema
 | Údaje o verzi dokumentu. Viz. [[cs:standard:schema:document#Verze|Verze]] 
 
 |- style="background-color: #f2dede;"
-| Type || String Enum || C
+| Type || String/String enum || C
 | Typ dokumentu. Nabývá hodnot - [[cs:standard:schema:contract|Smlouva]]/[[cs:standard:schema:attachment|Příloha]]/[[cs:standard:schema:amendment|Dodatek]]
 
 |- style="background-color: #f2dede;"
@@ -81,6 +81,10 @@ Identifikace jednotlivé verze dokumentu.
 {| class="wikitable" style="font-size: 90%;"
 |-
 ! Název pole !! Datový typ !! [[cs:standard:validate|Validita]] !! Popis
+
+|- 
+| PublisherId || String|| N
+| Libovolný číselný identifikátor verze, spisové číslo apod. 
 
 |- style="background-color: #fcf8e3;"
 | Version || Int || S

@@ -1,11 +1,6 @@
 ====== Schéma ======
 
-Schéma podrobně popisuje datovou strukturu otevřeného formátu pro evidenci smluv.
-
-Otevřené smlouvy jsou veřejně dostupná metadata o konkrétních smlouvách, resp. konkrétní otisk dat v daném čase na internetu. Jedná se o [[cs:introduction|otevřená data]].
-
-
-
+Schéma podrobně popisuje datovou strukturu otevřeného formátu pro evidenci smluv. Všechna data pak zapouzdřena v objektu [[cs:standard:publication|Publikace]], který je obsažen buď v exportovaném souboru a nebo poskytován skrte API.
 
 ===== Základní členění =====
 
