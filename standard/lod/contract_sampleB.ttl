@@ -511,4 +511,4 @@
                                   <http://tiny.cc/open-contracting#authentication> "email";
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://xmlns.com/foaf/0.1/Organization>;
-                                  <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00123456>.
+                                  <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00654321>.
