@@ -1,0 +1,39 @@
+Název pole;Datový typ;Validita;Popis
+LocalID;String;A;Libovolný èíselný identifikátor smlouvy, spisové èíslo apod.
+URI;String URI;A;Odkaz na stránku s více informacemi o smlouvì
+Document;String URI;A;Adresa URL fyzického umístìní dokumentu
+AwardID;String;A;Evidenèní èíslo veøejné zakázky. Uvádí se volitelnì, pokud existuje
+AwardProfileID;String;A;Èíslo zakázky na profilu zadavatele
+Amount;Nullable float;C;Cena s DPH (u neplátcù celková cena). Nejvyšší pøípustná hodnota øádného plnìní z dané smlouvy, které vynaloží nìkterá smluvní strana. U smluv na dobu urèitou se jedná o oèekávané celkové finanèní plnìní strany s nejvyšším plnìním, vèetnì opcí, bez sankcí. U smluv na dobu neurèitou, ve kterých není stanoven strop na celkové plnìní, se jedná o nejvyšší oèekávané roèní plnìní. U smluv bez finanèního plnìní (bartery, darovací smlouvy) je uvedena celková hodnota nefinanèního plnìní strany s nejvyšším plnìním (napø. odhadovaná hodnota daru). U smluv s nejasným plnìním pøipustit NULL. 
+AmountNoVat;Nullable float;C;Cena bez dph, uvádí se povinnì pouze v pøípadì, že Amount je s DPH
+Title;String;C;Pøedmìt smlouvy
+ContractType;String;C;Èíselník typù smlouvy
+SubjectType;String;B;Èíselník typù zboží/služeb
+PriceAnnual;Boolean;B;Identifikuje, pokud je v Amount roèní èástka
+Currency;String;B;Mìna, 3-písmenný, ISO 4217 formát
+DateSigned;Date;B;Datum posledního podpisu
+ValidFrom;Date;B;Datum úèinnosti smlouvy
+ValidUntil;Date;B;Datum ukonèení úèinnosti smlouvy (poslední plnìní), NULL pro smlouvy na dobu neurèitou
+Funding;String;B;Pøevažující financování – vlastní, pøípadnì název dotaèního titulu (bude kontrolován proti èíselníku)
+ResponsiblePerson;String ;B;Odpovìdná osoba
+Anonymised;Boolean;B;Znaèí, zda-li byla provedena anonymizace dokumentu
+Competency;String;A;Indikuje, zda-li se jedná o soukromoprávní nebo veøejnoprávní smlouvu
+CurrentValidContract;String URI;A;Aktuálnì platné znìní smlouvy (se zapracovanými dodatky)
+Description;String;A;Popis pøedmìtu smlouvy
+PublisherID;String;A;Identifikaèní èíslo osoby, lze vložit i zahranièní id
+PublisherName;String;C;Název, pøípadnì jméno a pøíjmení (s tituly)
+PublisherPayer;Boolean;C;Identifikuje stranu která bude finanènì plnit, pokud není zøejmé, nevyplòuje se
+PublisherCountry;String;B;Zemì pùvodu, 3-písmený ISO kód
+PublisherAdress;String;A;"Adresa subjektu, pøípadnì ""Anonymizováno"""
+PublisherPaysVAT;Boolean;A;Indikuje, zda-li je subjekt plátce DPH
+PartnerID;String;A;Identifikaèní èíslo osoby, lze vložit i zahranièní id
+PartnerName;String;C;Název, pøípadnì jméno a pøíjmení (s tituly)
+PartnerPayer;Boolean;C;Identifikuje stranu která bude finanènì plnit, pokud není zøejmé, nevyplòuje se
+PartnerCountry;String;B;Zemì pùvodu, 3-písmený ISO kód
+PartnerAdress;String;A;"Adresa subjektu, pøípadnì ""Anonymizováno"""
+PartnerPaysVAT;Boolean;A;Indikuje, zda-li je subjekt plátce DPH
+NumberOfAmendments;Int;B;Poèet dodatkù
+LastAmendmentDateSigned;Date;A;Datum podpisu posledního dodatku
+FirstInvoiceDueDate;Date;A;Datum splatnosti první faktury
+LastInvoiceDueDate;Date;A;Datum splatnosti poslední faktury
+TotalFillingVolume;Float;A;Celkový objem plnìní

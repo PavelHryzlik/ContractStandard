@@ -1,0 +1,39 @@
+Povinný atribut;Název atributu;Hodnota atributu
+Ne;LocalID;Libovolný èíselný identifikátor smlouvy, spisové èíslo apod.
+Ne;URI;Odkaz na stránku s více informacemi o smlouvì
+Ne;Document;Adresa URL fyzického umístìní dokumentu
+Ne;AwardID;Evidenèní èíslo veøejné zakázky. Uvádí se volitelnì, pokud existuje
+Ne;AwardProfileID;Èíslo zakázky na profilu zadavatele
+Ano;Amount;Cena s DPH (u neplátcù celková cena). Nejvyšší pøípustná hodnota øádného plnìní z dané smlouvy, které vynaloží nìkterá smluvní strana. U smluv na dobu urèitou se jedná o oèekávané celkové finanèní plnìní strany s nejvyšším plnìním, vèetnì opcí, bez sankcí. U smluv na dobu neurèitou, ve kterých není stanoven strop na celkové plnìní, se jedná o nejvyšší oèekávané roèní plnìní. U smluv bez finanèního plnìní (bartery, darovací smlouvy) je uvedena celková hodnota nefinanèního plnìní strany s nejvyšším plnìním (napø. odhadovaná hodnota daru). U smluv s nejasným plnìním pøipustit NULL. 
+Ano;AmountNoVat;Cena bez dph, uvádí se povinnì pouze v pøípadì, že Amount je s DPH
+Ano;Title;Pøedmìt smlouvy
+Ano;ContractType;Èíselník typù smlouvy
+Ne;SubjectType;Èíselník typù zboží/služeb
+Ne;PriceAnnual;Identifikuje, pokud je v Amount roèní èástka
+Ne;Currency;Mìna, 3-písmenný, ISO 4217 formát
+Ne;DateSigned;Datum posledního podpisu
+Ne;ValidFrom;Datum úèinnosti smlouvy
+Ne;ValidUntil;Datum ukonèení úèinnosti smlouvy (poslední plnìní), NULL pro smlouvy na dobu neurèitou
+Ne;Funding;Pøevažující financování – vlastní, pøípadnì název dotaèního titulu (bude kontrolován proti èíselníku)
+Ne;ResponsiblePerson;Odpovìdná osoba
+Ne;Anonymised;Znaèí, zda-li byla provedena anonymizace dokumentu
+Ne;Competency;Indikuje, zda-li se jedná o soukromoprávní nebo veøejnoprávní smlouvu
+Ne;CurrentValidContract;Aktuálnì platné znìní smlouvy (se zapracovanými dodatky)
+Ne;Description;Popis pøedmìtu smlouvy
+Ne;PublisherID;Identifikaèní èíslo osoby, lze vložit i zahranièní id
+Ano;PublisherName;Název, pøípadnì jméno a pøíjmení (s tituly)
+Ano;PublisherPayer;Identifikuje stranu která bude finanènì plnit, pokud není zøejmé, nevyplòuje se
+Ne;PublisherCountry;Zemì pùvodu, 3-písmený ISO kód
+Ne;PublisherAdress;"Adresa subjektu, pøípadnì ""Anonymizováno"""
+Ne;PublisherPaysVAT;Indikuje, zda-li je subjekt plátce DPH
+Ne;PartnerID;Identifikaèní èíslo osoby, lze vložit i zahranièní id
+Ano;PartnerName;Název, pøípadnì jméno a pøíjmení (s tituly)
+Ano;PartnerPayer;Identifikuje stranu která bude finanènì plnit, pokud není zøejmé, nevyplòuje se
+Ne;PartnerCountry;Zemì pùvodu, 3-písmený ISO kód
+Ne;PartnerAdress;"Adresa subjektu, pøípadnì ""Anonymizováno"""
+Ne;PartnerPaysVAT;Indikuje, zda-li je subjekt plátce DPH
+Ne;NumberOfAmendments;Poèet dodatkù
+Ne;LastAmendmentDateSigned;Datum podpisu posledního dodatku
+Ne;FirstInvoiceDueDate;Datum splatnosti první faktury
+Ne;LastInvoiceDueDate;Datum splatnosti poslední faktury
+Ne;TotalFillingVolume;Celkový objem plnìní
