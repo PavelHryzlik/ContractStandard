@@ -24,13 +24,13 @@ PublisherID;String;A;Identifikaèní èíslo osoby, lze vloit i zahranièní id
 PublisherName;String;C;Název, pøípadnì jméno a pøíjmení (s tituly)
 PublisherPayer;Boolean;C;Identifikuje stranu která bude finanènì plnit, pokud není zøejmé, nevyplòuje se
 PublisherCountry;String;B;Zemì pùvodu, 3-písmenı ISO kód
-PublisherAdress;String;A;"Adresa subjektu, pøípadnì ""Anonymizováno"""
+PublisherAdress;String;A;Adresa subjektu, pøípadnì 'Anonymizováno'
 PublisherPaysVAT;Boolean;A;Indikuje, zda-li je subjekt plátce DPH
 PartnerID;String;A;Identifikaèní èíslo osoby, lze vloit i zahranièní id
 PartnerName;String;C;Název, pøípadnì jméno a pøíjmení (s tituly)
 PartnerPayer;Boolean;C;Identifikuje stranu která bude finanènì plnit, pokud není zøejmé, nevyplòuje se
 PartnerCountry;String;B;Zemì pùvodu, 3-písmenı ISO kód
-PartnerAdress;String;A;"Adresa subjektu, pøípadnì ""Anonymizováno"""
+PartnerAdress;String;A;Adresa subjektu, pøípadnì 'Anonymizováno'
 PartnerPaysVAT;Boolean;A;Indikuje, zda-li je subjekt plátce DPH
 NumberOfAmendments;Int;B;Poèet dodatkù
 LastAmendmentDateSigned;Date;A;Datum podpisu posledního dodatku
