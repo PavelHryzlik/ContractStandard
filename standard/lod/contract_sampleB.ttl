@@ -4,72 +4,72 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-<http://localhost:7598/amendment/52/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
+<http://opendata.trebic.cz/amendment/52/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
                                        <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                        <http://purl.org/dc/terms/identifier> "52";
-                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/52/1/publisher>;
+                                       <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/amendment/52/1/publisher>;
                                        <http://purl.org/dc/terms/title> "rozšíření o další moduly";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#contract> <http://localhost:7598/amendment/51/1>;
+                                       <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/amendment/51/1>;
                                        <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ",
                                                                                            "RNDr. Albert Einstein Ph.D";
                                        <http://tiny.cc/open-contracting#valid> true;
-                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/amendment/52/1/version>;
+                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/amendment/52/1/version>;
                                        a <http://tiny.cc/open-contracting#Amendment>;
-                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/66bbb72b-e575-420a-aa70-5274180042d7/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Prohl%C3%AD%C5%BEe%C4%8D%20a%20opera%C4%8Dn%C3%AD%20syst%C3%A9m%2020150301-20150324.pdf>.
-<http://localhost:7598/amendment/52/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:55:33.000000+02:00"^^xsd:dateTime;
-                                               <http://tiny.cc/open-contracting#uri> <http://localhost:7598/amendment/52/1>;
+                                       <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/66bbb72b-e575-420a-aa70-5274180042d7/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Prohl%C3%AD%C5%BEe%C4%8D%20a%20opera%C4%8Dn%C3%AD%20syst%C3%A9m%2020150301-20150324.pdf>.
+<http://opendata.trebic.cz/amendment/52/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:55:33.000000+02:00"^^xsd:dateTime;
+                                               <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/amendment/52/1>;
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/amendment/56/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
+<http://opendata.trebic.cz/amendment/56/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Dodatek";
                                        <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                        <http://purl.org/dc/terms/identifier> "56";
-                                       <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/56/1/publisher>;
+                                       <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/amendment/56/1/publisher>;
                                        <http://purl.org/dc/terms/title> "návrh režije tramvaje";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#contract> <http://localhost:7598/amendment/55/1>,
-                                                                                  <http://localhost:7598/amendment/55/2>;
+                                       <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/amendment/55/1>,
+                                                                                  <http://opendata.trebic.cz/amendment/55/2>;
                                        <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ";
                                        <http://tiny.cc/open-contracting#valid> true;
-                                       <http://tiny.cc/open-contracting#version> <http://localhost:7598/amendment/56/1/version>;
+                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/amendment/56/1/version>;
                                        a <http://tiny.cc/open-contracting#Amendment>;
-                                       <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/27390358-bea4-48fa-9a24-1f3598ad9a8e/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1)%20(1).pdf>.
-<http://localhost:7598/amendment/56/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:02:33.000000+02:00"^^xsd:dateTime;
-                                               <http://tiny.cc/open-contracting#uri> <http://localhost:7598/amendment/56/1>;
+                                       <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/27390358-bea4-48fa-9a24-1f3598ad9a8e/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1)%20(1).pdf>.
+<http://opendata.trebic.cz/amendment/56/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:02:33.000000+02:00"^^xsd:dateTime;
+                                               <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/amendment/56/1>;
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/attachment/28/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
+<http://opendata.trebic.cz/attachment/28/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
                                         <http://purl.org/dc/terms/identifier> "28";
-                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/attachment/28/1/publisher>;
+                                        <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/attachment/28/1/publisher>;
                                         <http://purl.org/dc/terms/title> "Projektová dokumentace";
                                         <http://tiny.cc/open-contracting#anonymised> false;
-                                        <http://tiny.cc/open-contracting#contract> <http://localhost:7598/contract/54/1>;
+                                        <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/contract/54/1>;
                                         <http://tiny.cc/open-contracting#valid> true;
-                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/attachment/28/1/version>;
+                                        <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/attachment/28/1/version>;
                                         a <http://tiny.cc/open-contracting#Attachment>;
-                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/42f43d32-7a0d-49c3-ac9a-37fa7a3eb846/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1).pdf>.
-<http://localhost:7598/attachment/28/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:07:10.000000+02:00"^^xsd:dateTime;
-                                                <http://tiny.cc/open-contracting#uri> <http://localhost:7598/attachment/28/1>;
+                                        <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/42f43d32-7a0d-49c3-ac9a-37fa7a3eb846/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1).pdf>.
+<http://opendata.trebic.cz/attachment/28/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:07:10.000000+02:00"^^xsd:dateTime;
+                                                <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/attachment/28/1>;
                                                 <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                 a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/attachment/29/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
+<http://opendata.trebic.cz/attachment/29/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Příloha";
                                         <http://purl.org/dc/terms/identifier> "29";
-                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/attachment/29/1/publisher>;
+                                        <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/attachment/29/1/publisher>;
                                         <http://purl.org/dc/terms/title> "Přílohy";
                                         <http://tiny.cc/open-contracting#anonymised> false;
-                                        <http://tiny.cc/open-contracting#contract> <http://localhost:7598/contract/54/1>;
+                                        <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/contract/54/1>;
                                         <http://tiny.cc/open-contracting#valid> true;
-                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/attachment/29/1/version>;
+                                        <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/attachment/29/1/version>;
                                         a <http://tiny.cc/open-contracting#Attachment>;
-                                        <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/60bf83fc-7300-4268-b698-e634bdc22dda/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>.
-<http://localhost:7598/attachment/29/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:07:35.000000+02:00"^^xsd:dateTime;
-                                                <http://tiny.cc/open-contracting#uri> <http://localhost:7598/attachment/29/1>;
+                                        <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/60bf83fc-7300-4268-b698-e634bdc22dda/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>.
+<http://opendata.trebic.cz/attachment/29/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:07:35.000000+02:00"^^xsd:dateTime;
+                                                <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/attachment/29/1>;
                                                 <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                                 a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/49/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/49/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Stavební práce";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/49/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/49/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Stavební práce";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "500000,00"^^xsd:float;
@@ -77,23 +77,23 @@
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/392>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/392>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ";
                                       <http://tiny.cc/open-contracting#valid> false;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/49/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/49/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
                                       <https://w3id.org/payswarm#validFrom> "2015-06-18"^^xsd:date.
-<http://localhost:7598/contract/49/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:51:03.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/49/1>;
+<http://opendata.trebic.cz/contract/49/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:51:03.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/49/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/49/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/49/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Stavební práce";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/49/2/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/49/2/publisher>;
                                       <http://purl.org/dc/terms/title> "Stavební práce";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "500000,00"^^xsd:float;
@@ -101,23 +101,23 @@
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/392>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/392>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ";
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/49/2/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/49/2/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
                                       <https://w3id.org/payswarm#validFrom> "2015-10-04"^^xsd:date.
-<http://localhost:7598/contract/49/2/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:51:29.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/49/2>;
+<http://opendata.trebic.cz/contract/49/2/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:51:29.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/49/2>;
                                               <http://tiny.cc/open-contracting#versionOrder> 2 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/50/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/50/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Nákup materiálů pro potřeby úřadu";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/50/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/50/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Nákup materiálů pro potřeby úřadu";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "10000,00"^^xsd:float;
@@ -128,47 +128,47 @@
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/389>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/389>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/50/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/50/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/69ffad1f-b4e5-4cd3-9769-42cf79879296/connectors.jpg>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/69ffad1f-b4e5-4cd3-9769-42cf79879296/connectors.jpg>;
                                       <https://w3id.org/payswarm#validFrom> "2015-08-28"^^xsd:date.
-<http://localhost:7598/contract/50/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:53:20.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/50/1>;
+<http://opendata.trebic.cz/contract/50/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:53:20.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/50/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/51/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/51/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Softwarová zakázka";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/51/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/51/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Softwarová zakázka";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "100000,00"^^xsd:float;
-                                      <http://tiny.cc/open-contracting#amendment> <http://localhost:7598/amendment/52/1>;
+                                      <http://tiny.cc/open-contracting#amendment> <http://opendata.trebic.cz/amendment/52/1>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/385>,
-                                                                              <http://localhost:7598/party/388>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/385>,
+                                                                              <http://opendata.trebic.cz/party/388>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ",
                                                                                           "RNDr. Albert Einstein Ph.D";
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/51/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/51/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/payswarm#validFrom> "2015-09-12"^^xsd:date.
-<http://localhost:7598/contract/51/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:54:38.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/51/1>;
+<http://opendata.trebic.cz/contract/51/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:54:38.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/51/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/53/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/53/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Veřejná služba";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/53/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/53/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Úklid města";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "12000,00"^^xsd:float;
@@ -176,23 +176,23 @@
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/386>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/386>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ";
                                       <http://tiny.cc/open-contracting#valid> false;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/53/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/53/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
                                       <https://w3id.org/payswarm#validFrom> "2015-06-18"^^xsd:date.
-<http://localhost:7598/contract/53/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:57:03.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/53/1>;
+<http://opendata.trebic.cz/contract/53/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:57:03.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/53/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/53/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/53/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Veřejná služba";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/53/2/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/53/2/publisher>;
                                       <http://purl.org/dc/terms/title> "Úklid města";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "12000,00"^^xsd:float;
@@ -200,102 +200,102 @@
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/384>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/384>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ";
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/53/2/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/53/2/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
                                       <https://w3id.org/payswarm#validFrom> "2015-06-18"^^xsd:date.
-<http://localhost:7598/contract/53/2/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:59:55.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/53/2>;
+<http://opendata.trebic.cz/contract/53/2/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:59:55.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/53/2>;
                                               <http://tiny.cc/open-contracting#versionOrder> 2 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/54/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/54/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Veřejná služba";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/54/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/54/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Projektová dokumentace divadla";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "20000,00"^^xsd:float;
                                       <http://tiny.cc/open-contracting#anonymised> false;
-                                      <http://tiny.cc/open-contracting#attachment> <http://localhost:7598/attachment/28/1>,
-                                                                                   <http://localhost:7598/attachment/29/1>;
+                                      <http://tiny.cc/open-contracting#attachment> <http://opendata.trebic.cz/attachment/28/1>,
+                                                                                   <http://opendata.trebic.cz/attachment/29/1>;
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/393>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/393>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/54/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/54/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/1247d17e-6cf2-4745-9271-47579bf4def6/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20akvizic%2020150301-20150324.pdf>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/1247d17e-6cf2-4745-9271-47579bf4def6/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20akvizic%2020150301-20150324.pdf>;
                                       <https://w3id.org/payswarm#validFrom> "2015-07-02"^^xsd:date.
-<http://localhost:7598/contract/54/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:59:07.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/54/1>;
+<http://opendata.trebic.cz/contract/54/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:59:07.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/54/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/55/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/55/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Dopravní služby";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/55/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/55/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Koupě nové tramvaje";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "1500000,00"^^xsd:float;
-                                      <http://tiny.cc/open-contracting#amendment> <http://localhost:7598/amendment/56/1>;
+                                      <http://tiny.cc/open-contracting#amendment> <http://opendata.trebic.cz/amendment/56/1>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/386>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/386>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ";
                                       <http://tiny.cc/open-contracting#valid> false;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/55/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/55/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/payswarm#validFrom> "2015-06-18"^^xsd:date.
-<http://localhost:7598/contract/55/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:01:51.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/55/1>;
+<http://opendata.trebic.cz/contract/55/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:01:51.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/55/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/55/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/55/2> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Dopravní služby";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/55/2/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/55/2/publisher>;
                                       <http://purl.org/dc/terms/title> "Koupě nové tramvaje  č.22";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "1500000,00"^^xsd:float;
-                                      <http://tiny.cc/open-contracting#amendment> <http://localhost:7598/amendment/56/1>;
+                                      <http://tiny.cc/open-contracting#amendment> <http://opendata.trebic.cz/amendment/56/1>;
                                       <http://tiny.cc/open-contracting#anonymised> false;
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Kupní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#implementation> <http://localhost:7598/contract/55/2/implementation>;
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/371>,
-                                                                              <http://localhost:7598/party/386>;
+                                      <http://tiny.cc/open-contracting#implementation> <http://opendata.trebic.cz/contract/55/2/implementation>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/371>,
+                                                                              <http://opendata.trebic.cz/party/386>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ";
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/55/2/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/55/2/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
                                       <https://w3id.org/payswarm#validFrom> "2015-08-30"^^xsd:date.
-<http://localhost:7598/contract/55/2/implementation> <http://tiny.cc/open-contracting#milestone> <http://localhost:7598/contract/55/2/implementation/milestone/84>;
+<http://opendata.trebic.cz/contract/55/2/implementation> <http://tiny.cc/open-contracting#milestone> <http://opendata.trebic.cz/contract/55/2/implementation/milestone/84>;
                                                      a <http://tiny.cc/open-contracting#Implementation>.
-<http://localhost:7598/contract/55/2/implementation/milestone/84> <http://purl.org/dc/terms/title> "Splatnost tramvaje";
+<http://opendata.trebic.cz/contract/55/2/implementation/milestone/84> <http://purl.org/dc/terms/title> "Splatnost tramvaje";
                                                                   <http://tiny.cc/open-contracting#dueDate> "2015-08-20T00:00:00.000000+02:00"^^xsd:dateTime;
                                                                   a <http://tiny.cc/open-contracting#Milestone>.
-<http://localhost:7598/contract/55/2/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:03:05.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/55/2>;
+<http://opendata.trebic.cz/contract/55/2/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:03:05.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/55/2>;
                                               <http://tiny.cc/open-contracting#versionOrder> 2 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/contract/57/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
+<http://opendata.trebic.cz/contract/57/1> <http://dublincore.org/documents/dcmi-type-vocabulary/type> "Smlouva";
                                       <http://purl.org/dc/terms/created> "2015-06-18"^^xsd:date;
                                       <http://purl.org/dc/terms/description> "Pronájem kinosálu";
-                                      <http://purl.org/dc/terms/publisher> <http://localhost:7598/contract/57/1/publisher>;
+                                      <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/contract/57/1/publisher>;
                                       <http://purl.org/dc/terms/title> "Pronájem kinosálu";
                                       <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                       <http://purl.org/goodrelations/v1#hasCurrencyValue> "10000,00"^^xsd:float;
@@ -303,210 +303,210 @@
                                       <http://tiny.cc/open-contracting#competency> "Soukromoprávní smlouva";
                                       <http://tiny.cc/open-contracting#contractType> "Nájemní smlouva";
                                       <http://tiny.cc/open-contracting#funding> "vlastní";
-                                      <http://tiny.cc/open-contracting#party> <http://localhost:7598/party/367>,
-                                                                              <http://localhost:7598/party/371>;
+                                      <http://tiny.cc/open-contracting#party> <http://opendata.trebic.cz/party/367>,
+                                                                              <http://opendata.trebic.cz/party/371>;
                                       <http://tiny.cc/open-contracting#priceAnnual> false;
                                       <http://tiny.cc/open-contracting#valid> true;
-                                      <http://tiny.cc/open-contracting#version> <http://localhost:7598/contract/57/1/version>;
+                                      <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/57/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://w3id.org/commerce#contentUrl> <http://localhost:7598/file/b346536f-13ca-41cf-83be-8dc9d63f1c89/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf>;
+                                      <https://w3id.org/commerce#contentUrl> <http://opendata.trebic.cz/file/b346536f-13ca-41cf-83be-8dc9d63f1c89/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf>;
                                       <https://w3id.org/payswarm#validFrom> "2015-06-18"^^xsd:date.
-<http://localhost:7598/contract/57/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:06:15.000000+02:00"^^xsd:dateTime;
-                                              <http://tiny.cc/open-contracting#uri> <http://localhost:7598/contract/57/1>;
+<http://opendata.trebic.cz/contract/57/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:06:15.000000+02:00"^^xsd:dateTime;
+                                              <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/contract/57/1>;
                                               <http://tiny.cc/open-contracting#versionOrder> 1 ;
                                               a <http://tiny.cc/open-contracting#Version>.
-<http://localhost:7598/party/365> <http://purl.org/dc/terms/identifier> "00291676";
+<http://opendata.trebic.cz/party/365> <http://purl.org/dc/terms/identifier> "00291676";
                                   <http://purl.org/goodrelations/v1#legalName> "Město Bučovice";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/365/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/365/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 365 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00291676>.
-<http://localhost:7598/party/365/address> <http://schema.org/addressLocality> "Bučovice";
+<http://opendata.trebic.cz/party/365/address> <http://schema.org/addressLocality> "Bučovice";
                                           <http://schema.org/postalCode> 68501 ;
                                           <http://schema.org/streetAddres> "Jiráskova ";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/366> <http://purl.org/dc/terms/identifier> "43871020";
+<http://opendata.trebic.cz/party/366> <http://purl.org/dc/terms/identifier> "43871020";
                                   <http://purl.org/goodrelations/v1#legalName> "Triada spol. s r.o.";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/366/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/366/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 366 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ43871020>.
-<http://localhost:7598/party/366/address> <http://schema.org/addressLocality> "Praha 9, Praha ";
+<http://opendata.trebic.cz/party/366/address> <http://schema.org/addressLocality> "Praha 9, Praha ";
                                           <http://schema.org/postalCode> 19000 ;
                                           <http://schema.org/streetAddres> "U svobodárny 12";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/367> <http://purl.org/dc/terms/identifier> "01.01.1985";
+<http://opendata.trebic.cz/party/367> <http://purl.org/dc/terms/identifier> "01.01.1985";
                                   <http://purl.org/goodrelations/v1#legalName> "Munis Jiří";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
-                                  <http://schema.org/address> <http://localhost:7598/party/367/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/367/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 367 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ01.01.1985>.
-<http://localhost:7598/party/367/address> <http://schema.org/addressLocality> "Praha 9, Praha ";
+<http://opendata.trebic.cz/party/367/address> <http://schema.org/addressLocality> "Praha 9, Praha ";
                                           <http://schema.org/postalCode> 19000 ;
                                           <http://schema.org/streetAddres> "U Svobodárny 12/1110";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/369> <http://purl.org/goodrelations/v1#legalName> "Adámek Karel";
+<http://opendata.trebic.cz/party/369> <http://purl.org/goodrelations/v1#legalName> "Adámek Karel";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
-                                  <http://schema.org/address> <http://localhost:7598/party/369/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/369/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 369 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/369/address> <http://schema.org/addressLocality> "Dolina, Dolina";
+<http://opendata.trebic.cz/party/369/address> <http://schema.org/addressLocality> "Dolina, Dolina";
                                           <http://schema.org/postalCode> 12300 ;
                                           <http://schema.org/streetAddres> "Lesní 6";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/371> <http://purl.org/goodrelations/v1#legalName> "Katastrální úřad Třebíč";
+<http://opendata.trebic.cz/party/371> <http://purl.org/goodrelations/v1#legalName> "Katastrální úřad Třebíč";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/371/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/371/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 371 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/371/address> <http://schema.org/addressLocality> "Třebíč 1, Třebíč ";
+<http://opendata.trebic.cz/party/371/address> <http://schema.org/addressLocality> "Třebíč 1, Třebíč ";
                                           <http://schema.org/postalCode> 67401 ;
                                           <http://schema.org/streetAddres> "Funtičkova 12";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/372> <http://purl.org/goodrelations/v1#legalName> "Einstein Albert";
+<http://opendata.trebic.cz/party/372> <http://purl.org/goodrelations/v1#legalName> "Einstein Albert";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
-                                  <http://schema.org/address> <http://localhost:7598/party/372/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/372/address>;
                                   <http://schema.org/addressCountry> "Česká republika";
                                   <http://tiny.cc/open-contracting#localID> 372 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/372/address> <http://schema.org/addressLocality> "Praha 1";
+<http://opendata.trebic.cz/party/372/address> <http://schema.org/addressLocality> "Praha 1";
                                           <http://schema.org/postalCode> 11000 ;
                                           <http://schema.org/streetAddres> "Vědecka 123";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/384> <http://purl.org/goodrelations/v1#legalName> "Instalaterství Makovský Jan";
+<http://opendata.trebic.cz/party/384> <http://purl.org/goodrelations/v1#legalName> "Instalaterství Makovský Jan";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
-                                  <http://schema.org/address> <http://localhost:7598/party/384/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/384/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 384 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/384/address> <http://schema.org/addressLocality> "Prostějov";
+<http://opendata.trebic.cz/party/384/address> <http://schema.org/addressLocality> "Prostějov";
                                           <http://schema.org/postalCode> 79601 ;
                                           <http://schema.org/streetAddres> "Krásného 34";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/385> <http://purl.org/goodrelations/v1#legalName> "Skřivánek Jan";
+<http://opendata.trebic.cz/party/385> <http://purl.org/goodrelations/v1#legalName> "Skřivánek Jan";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> true;
-                                  <http://schema.org/address> <http://localhost:7598/party/385/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/385/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 385 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/385/address> <http://schema.org/addressLocality> "Praha 6";
+<http://opendata.trebic.cz/party/385/address> <http://schema.org/addressLocality> "Praha 6";
                                           <http://schema.org/postalCode> 16000 ;
                                           <http://schema.org/streetAddres> "Bělohorská 1815";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/386> <http://purl.org/goodrelations/v1#legalName> "Městský úřad Jihlava";
+<http://opendata.trebic.cz/party/386> <http://purl.org/goodrelations/v1#legalName> "Městský úřad Jihlava";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/386/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/386/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 386 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/386/address> <http://schema.org/addressLocality> "Jihlava";
+<http://opendata.trebic.cz/party/386/address> <http://schema.org/addressLocality> "Jihlava";
                                           <http://schema.org/postalCode> 58601 ;
                                           <http://schema.org/streetAddres> "Masarykovo nám. 2";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/387> <http://purl.org/dc/terms/identifier> "02485164";
+<http://opendata.trebic.cz/party/387> <http://purl.org/dc/terms/identifier> "02485164";
                                   <http://purl.org/goodrelations/v1#legalName> "ARAL";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/387/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/387/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 387 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ02485164>.
-<http://localhost:7598/party/387/address> <http://schema.org/addressLocality> "Dolina";
+<http://opendata.trebic.cz/party/387/address> <http://schema.org/addressLocality> "Dolina";
                                           <http://schema.org/postalCode> 12300 ;
                                           <http://schema.org/streetAddres> "Svitavská 15";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/388> <http://purl.org/goodrelations/v1#legalName> "Úřad práce Znojmo";
+<http://opendata.trebic.cz/party/388> <http://purl.org/goodrelations/v1#legalName> "Úřad práce Znojmo";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/388/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/388/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 388 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/388/address> <http://schema.org/addressLocality> "Znojmo";
+<http://opendata.trebic.cz/party/388/address> <http://schema.org/addressLocality> "Znojmo";
                                           <http://schema.org/postalCode> 66901 ;
                                           <http://schema.org/streetAddres> "Zámecká 10";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/389> <http://purl.org/dc/terms/identifier> "7312111906";
+<http://opendata.trebic.cz/party/389> <http://purl.org/dc/terms/identifier> "7312111906";
                                   <http://purl.org/goodrelations/v1#legalName> "Žáček Jiří";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/389/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/389/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 389 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ7312111906>.
-<http://localhost:7598/party/389/address> <http://schema.org/addressLocality> "Stará Role";
+<http://opendata.trebic.cz/party/389/address> <http://schema.org/addressLocality> "Stará Role";
                                           <http://schema.org/postalCode> 36017 ;
                                           <http://schema.org/streetAddres> "Javorová 325/1";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/390> <http://purl.org/dc/terms/identifier> "6455011893";
+<http://opendata.trebic.cz/party/390> <http://purl.org/dc/terms/identifier> "6455011893";
                                   <http://purl.org/goodrelations/v1#legalName> "Doleželová Marie";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/390/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/390/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 390 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ6455011893>.
-<http://localhost:7598/party/390/address> <http://schema.org/addressLocality> "Dolina";
+<http://opendata.trebic.cz/party/390/address> <http://schema.org/addressLocality> "Dolina";
                                           <http://schema.org/postalCode> 12300 ;
                                           <http://schema.org/streetAddres> "Náves 3";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/391> <http://purl.org/goodrelations/v1#legalName> "A.S.A. spol. s r.o.";
+<http://opendata.trebic.cz/party/391> <http://purl.org/goodrelations/v1#legalName> "A.S.A. spol. s r.o.";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/391/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/391/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 391 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/391/address> <http://schema.org/addressLocality> "Hodonín";
+<http://opendata.trebic.cz/party/391/address> <http://schema.org/addressLocality> "Hodonín";
                                           <http://schema.org/postalCode> 69502 ;
                                           <http://schema.org/streetAddres> "Plotní 3";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/392> <http://purl.org/dc/terms/identifier> "94185496";
+<http://opendata.trebic.cz/party/392> <http://purl.org/dc/terms/identifier> "94185496";
                                   <http://purl.org/goodrelations/v1#legalName> "Mosty s.r.o.";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/392/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/392/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 392 ;
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>;
                                   <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ94185496>.
-<http://localhost:7598/party/392/address> <http://schema.org/addressLocality> "Kroměříž";
+<http://opendata.trebic.cz/party/392/address> <http://schema.org/addressLocality> "Kroměříž";
                                           <http://schema.org/postalCode> 76701 ;
                                           <http://schema.org/streetAddres> "Horní 36";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/party/393> <http://purl.org/goodrelations/v1#legalName> "Fotografia Zlin, s.r.o.";
+<http://opendata.trebic.cz/party/393> <http://purl.org/goodrelations/v1#legalName> "Fotografia Zlin, s.r.o.";
                                   <http://purl.org/goodrelations/v1#valueAddedTaxIncluded> false;
-                                  <http://schema.org/address> <http://localhost:7598/party/393/address>;
+                                  <http://schema.org/address> <http://opendata.trebic.cz/party/393/address>;
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#localID> 393 ;
                                   <http://tiny.cc/open-contracting#noID> true;
                                   a <http://purl.org/goodrelations/v1#BusinessEntity>.
-<http://localhost:7598/party/393/address> <http://schema.org/addressLocality> "Zlín";
+<http://opendata.trebic.cz/party/393/address> <http://schema.org/addressLocality> "Zlín";
                                           <http://schema.org/postalCode> 76001 ;
                                           <http://schema.org/streetAddres> "Mendlova 9";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/publisher> <http://purl.org/dc/terms/identifier> "00123456";
-                                  <http://purl.org/goodrelations/v1#legalName> "MěÚ Třebíč";
+<http://opendata.trebic.cz/publisher> <http://purl.org/dc/terms/identifier> "00123456";
+                                  <http://purl.org/goodrelations/v1#legalName> "Třebíč";
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#authentication> "email";
                                   <http://tiny.cc/open-contracting#noID> false;

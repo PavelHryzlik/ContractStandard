@@ -538,7 +538,7 @@
                                           <http://schema.org/streetAddres> "Plotní 3";
                                           a <http://schema.org/PostalAddress>.
 <http://localhost:7598/publisher> <http://purl.org/dc/terms/identifier> "00123456";
-                                  <http://purl.org/goodrelations/v1#legalName> "MěÚ Dolina";
+                                  <http://purl.org/goodrelations/v1#legalName> "Děčín";
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#authentication> "email";
                                   <http://tiny.cc/open-contracting#noID> false;
