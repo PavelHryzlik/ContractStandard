@@ -5,12 +5,14 @@
 
 _:dataset a dcat:Dataset ;
         dcat:distribution _:distribution1 .
-    _:distribution1 a dcat:Dataset ;
+    _:distribution1 a dcat:Distribution ;
+        dct:identifier '1' ;
         dcat:accessURL <https://raw.githubusercontent.com/PavelHryzlik/ContractStandard/master/standard/lod/contract_sampleA.ttl> ;
-        dct:format [ rdfs:label "Turtle" ].
+        dct:format [ rdfs:label 'Turtle' ].
         
-_:dataset  a dcat:Dataset ;
+_:dataset a dcat:Dataset ;
         dcat:distribution _:distribution2 .
-   _:distribution2 a dcat:Distribution ;
+    _:distribution2 a dcat:Distribution ;
+        dct:identifier '2' ;
         dcat:accessURL <https://raw.githubusercontent.com/PavelHryzlik/ContractStandard/master/standard/lod/contract_sampleB.ttl> ;
-        dct:format [ rdfs:label "Turtle" ] .
+        dct:format [ rdfs:label 'Turtle' ] . 
