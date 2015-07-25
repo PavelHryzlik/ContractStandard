@@ -10,7 +10,7 @@
                                        <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/amendment/52/1/publisher>;
                                        <http://purl.org/dc/terms/title> "rozšíření o další moduly";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/amendment/51/1>;
+                                       <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/contract/51/1>;
                                        <http://tiny.cc/open-contracting#responsiblePerson> "Josef Vedoucí ",
                                                                                            "RNDr. Albert Einstein Ph.D";
                                        <http://tiny.cc/open-contracting#valid> true;
@@ -27,8 +27,8 @@
                                        <http://purl.org/dc/terms/publisher> <http://opendata.trebic.cz/amendment/56/1/publisher>;
                                        <http://purl.org/dc/terms/title> "návrh režije tramvaje";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/amendment/55/1>,
-                                                                                  <http://opendata.trebic.cz/amendment/55/2>;
+                                       <http://tiny.cc/open-contracting#contract> <http://opendata.trebic.cz/contract/55/1>,
+                                                                                  <http://opendata.trebic.cz/contract/55/2>;
                                        <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ";
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/amendment/56/1/version>;
@@ -505,10 +505,10 @@
                                           <http://schema.org/postalCode> 76001 ;
                                           <http://schema.org/streetAddres> "Mendlova 9";
                                           a <http://schema.org/PostalAddress>.
-<http://opendata.trebic.cz/publisher> <http://purl.org/dc/terms/identifier> "00123456";
+<http://opendata.trebic.cz/publisher> <http://purl.org/dc/terms/identifier> "00290629";
                                   <http://purl.org/goodrelations/v1#legalName> "Třebíč";
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#authentication> "email";
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://xmlns.com/foaf/0.1/Organization>;
-                                  <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00654321>.
+                                  <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00290629>.

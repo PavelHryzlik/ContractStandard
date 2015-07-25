@@ -10,7 +10,7 @@
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/41/1/publisher>;
                                        <http://purl.org/dc/terms/title> "Dodatek ke smlouvě č. 2238";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#contract> <http://localhost:7598/amendment/40/1>;
+                                       <http://tiny.cc/open-contracting#contract> <http://localhost:7598/contract/40/1>;
                                        <http://tiny.cc/open-contracting#responsiblePerson> "Ing. Jakub Novák ",
                                                                                            "Josef Sobotka ";
                                        <http://tiny.cc/open-contracting#valid> true;
@@ -27,7 +27,7 @@
                                        <http://purl.org/dc/terms/publisher> <http://localhost:7598/amendment/44/1/publisher>;
                                        <http://purl.org/dc/terms/title> "Licence Operačního systému";
                                        <http://tiny.cc/open-contracting#anonymised> false;
-                                       <http://tiny.cc/open-contracting#contract> <http://localhost:7598/amendment/43/1>;
+                                       <http://tiny.cc/open-contracting#contract> <http://localhost:7598/contract/43/1>;
                                        <http://tiny.cc/open-contracting#responsiblePerson> "Jana Nováková ";
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://localhost:7598/amendment/44/1/version>;
@@ -537,10 +537,10 @@
                                           <http://schema.org/postalCode> 69502 ;
                                           <http://schema.org/streetAddres> "Plotní 3";
                                           a <http://schema.org/PostalAddress>.
-<http://localhost:7598/publisher> <http://purl.org/dc/terms/identifier> "00123456";
+<http://localhost:7598/publisher> <http://purl.org/dc/terms/identifier> "00261238";
                                   <http://purl.org/goodrelations/v1#legalName> "Děčín";
                                   <http://schema.org/addressCountry> "CZE";
                                   <http://tiny.cc/open-contracting#authentication> "email";
                                   <http://tiny.cc/open-contracting#noID> false;
                                   a <http://xmlns.com/foaf/0.1/Organization>;
-                                  <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00123456>.
+                                  <http://www.w3.org/2002/07/owl#sameAs> <http://linked.opendata.cz/resource/business-entity/CZ00261238>.

@@ -1,4 +1,4 @@
-﻿# The R2RML mapping contracts
+# The R2RML mapping contracts
 
 @base			<http://tiny.cc/open-contracting#> .
 @prefix rr:		<http://www.w3.org/ns/r2rml#> .
@@ -551,7 +551,7 @@
     ];
 	rr:predicateObjectMap [
       rr:predicate cn:contract;
-      rr:objectMap [ rr:template "http://localhost:7598/amendment/{RODIC}/{PORADIVERZE}" ];
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{RODIC}/{PORADIVERZE}" ];
     ];
 	rr:predicateObjectMap [
       rr:predicate dc:identifier;
@@ -759,7 +759,3 @@
         rr:datatype xsd:dateTime; 
       ];
     ].
-    
-
-    
-    
