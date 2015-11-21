@@ -30,6 +30,7 @@
     "Implementation" : "cn:Implementation",
     "Milestone" : "cn:Milestone",
     "Transaction" : "com:Transaction",
+    "PriceSpecification" : "gr:PriceSpecification",
 
     "documents" : { "@id": "cn:documents", "@container": "@set" },
     "orders" : { "@id": "cn:orders", "@container": "@set" },
@@ -134,6 +135,7 @@
       
       "amount": {
         "@id" : "http://rsmluv.cz/contract/12345/2/amount",
+        "@type" : "PriceSpecification",
         "amountValue" : 584520.00,
         "currency" : "CZK"
       },

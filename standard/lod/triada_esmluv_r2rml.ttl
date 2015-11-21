@@ -137,7 +137,7 @@
   WHERE ExtKontakt.UZIVATEL IS NULL AND Smlouva.RODIC is NULL
   """.
 
-<#SupplementTableView> rr:sqlQuery """
+<#AmendmentTableView> rr:sqlQuery """
   SELECT Dodatek.ID, Dodatek.RODIC, Verze.PORADIVERZE, 
   VerzeDodatku.PORADIVERZE As PoradiVerzeDodatku, VerzeDodatku.PREDMET, VerzeDodatku.POPIS_POPIS,
   VerzeDodatku.DATUMPODPISU, VerzeDodatku.DATUMZMENYSTAVU_TS,
@@ -152,14 +152,14 @@
   WHERE Dodatek.RODIC is not NULL
   """.
 
-<#SupplementValidTableView> rr:sqlQuery """
+<#AmendmentValidTableView> rr:sqlQuery """
   SELECT Smlouva.ID, Verze.PORADIVERZE,
   IIF(Smlouva.AKTUALNIVERZE = Verze.ID, 'true', 'false') As Valid
   FROM [triada].[ESMLUV_SMLOUVA] AS Smlouva JOIN [triada].[ESMLUV_VERZESMLOUVY] As Verze ON Smlouva.ID = Verze.SMLOUVA
   WHERE Smlouva.RODIC is not NULL
   """.
   
-<#SupplementFilesTableView> rr:sqlQuery """
+<#AmendmentFilesTableView> rr:sqlQuery """
   SELECT Smlouva.ID, Verze.PORADIVERZE, Soubor.NAZEVSOUBORU, Soubor.SADADUL_ULOZISTEID
   FROM [triada].[ESMLUV_VERZESMLOUVY] AS Verze
   JOIN [triada].[ESMLUV_PRILOHASMLOUVY] AS Soubor ON Verze.SOUBOR = Soubor.ID
@@ -167,7 +167,7 @@
   WHERE Smlouva.RODIC is not NULL
   """.
 
-<#SupplementResponsiblePersons1TableView> rr:sqlQuery """
+<#AmendmentResponsiblePersons1TableView> rr:sqlQuery """
   SELECT Smlouva.ID, Verze.PORADIVERZE, 
   LTRIM(CONCAT(
   ISNULL(Uzivatel.TITUL_PRED,''),' ',
@@ -181,7 +181,7 @@
   WHERE Smlouva.RODIC is not NULL
   """.
 
-<#SupplementResponsiblePersons2TableView> rr:sqlQuery """
+<#AmendmentResponsiblePersons2TableView> rr:sqlQuery """
   SELECT Smlouva.ID, Verze.PORADIVERZE, 
   LTRIM(CONCAT(
   ISNULL(ExtKontakt.TITULPRED,''),' ',
@@ -280,17 +280,6 @@
       rr:objectMap [ rr:column "[POPIS_POPIS]" ];
     ];
     rr:predicateObjectMap [
-      rr:predicate gr:hasCurrencyValue;
-	  rr:objectMap [ 
-        rr:column "[CELKOVACASTKA]";
-        rr:datatype xsd:float; 
-      ];
-    ];
-    rr:predicateObjectMap [
-      rr:predicate gr:hasCurrency;
-      rr:objectMap [ rr:column "[ZKRATKA]" ];
-    ];
-    rr:predicateObjectMap [
       rr:predicate dc:created;
       rr:objectMap [ 
         rr:column "[DATUMPODPISU]"; 
@@ -334,13 +323,35 @@
       rr:predicate cn:awardProfileID;
       rr:objectMap [ rr:column "[EVIDENCNICISLOFORMULARE]" ];
     ];
+	rr:predicateObjectMap [
+      rr:predicate cn:amount;
+      rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/amount" ];
+    ];
     rr:predicateObjectMap [
       rr:predicate dc:publisher;
-      rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/publisher" ];
+      rr:objectMap [ rr:template "http://localhost:7598/publisher" ];
     ];
     rr:predicateObjectMap [
       rr:predicate cn:version;
       rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/version" ];
+    ].
+
+<#ContractPriceSpecification> a rr:TriplesMap;
+    rr:logicalTable <#ContractsTableView>;
+    rr:subjectMap [
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/amount";
+		rr:class gr:PriceSpecification;
+    ];
+    rr:predicateObjectMap [
+      rr:predicate gr:hasCurrencyValue;
+	  rr:objectMap [ 
+        rr:column "[CELKOVACASTKA]";
+        rr:datatype xsd:float; 
+      ];
+    ];
+    rr:predicateObjectMap [
+      rr:predicate gr:hasCurrency;
+      rr:objectMap [ rr:column "[ZKRATKA]" ];
     ].
 
 <#ContractType> a rr:TriplesMap;
@@ -508,8 +519,8 @@
         rr:objectMap [ rr:column "[MESTO]" ];
 	  ].
 
-<#ContractSupplements> a rr:TriplesMap;
-    rr:logicalTable <#SupplementTableView>;
+<#ContractAmendments> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentTableView>;
     rr:subjectMap [
         rr:template "http://localhost:7598/contract/{RODIC}/{PORADIVERZE}"
     ];
@@ -528,8 +539,8 @@
       rr:objectMap [ rr:template "http://localhost:7598/attachment/{ID}/1" ];
     ].
 
-<#Supplement> a rr:TriplesMap;
-    rr:logicalTable <#SupplementTableView>;
+<#Amendment> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentTableView>;
     rr:subjectMap [
       rr:template "http://localhost:7598/amendment/{ID}/{PoradiVerzeDodatku}";
       rr:class cn:Amendment;
@@ -566,15 +577,15 @@
     ];
     rr:predicateObjectMap [
       rr:predicate dc:publisher;
-      rr:objectMap [ rr:template "http://localhost:7598/amendment/{ID}/{PoradiVerzeDodatku}/publisher" ];
+      rr:objectMap [ rr:template "http://localhost:7598/publisher" ];
     ];
     rr:predicateObjectMap [
       rr:predicate cn:version;
       rr:objectMap [ rr:template "http://localhost:7598/amendment/{ID}/{PoradiVerzeDodatku}/version" ];
     ].
 
-<#SupplementValid> a rr:TriplesMap;
-    rr:logicalTable <#SupplementValidTableView>;
+<#AmendmentValid> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentValidTableView>;
     rr:subjectMap [
         rr:template "http://localhost:7598/amendment/{ID}/{PORADIVERZE}"
     ];
@@ -586,8 +597,8 @@
       ];
     ].
 
-<#SupplementFile> a rr:TriplesMap;
-    rr:logicalTable <#SupplementFilesTableView>;
+<#AmendmentFile> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentFilesTableView>;
     rr:subjectMap [
         rr:template "http://localhost:7598/amendment/{ID}/{PORADIVERZE}"
     ];
@@ -596,8 +607,8 @@
         rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
     ].
 
-<#SupplementResponsiblePerson1> a rr:TriplesMap;
-    rr:logicalTable <#SupplementResponsiblePersons1TableView>;
+<#AmendmentResponsiblePerson1> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentResponsiblePersons1TableView>;
     rr:subjectMap [
         rr:template "http://localhost:7598/amendment/{ID}/{PORADIVERZE}"
     ];
@@ -606,8 +617,8 @@
         rr:objectMap [ rr:column "[CeleJmeno]" ];
 	].  
 	
-<#SupplementResponsiblePerson2> a rr:TriplesMap;
-    rr:logicalTable <#SupplementResponsiblePersons2TableView>;
+<#AmendmentResponsiblePerson2> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentResponsiblePersons2TableView>;
     rr:subjectMap [
         rr:template "http://localhost:7598/amendment/{ID}/{PORADIVERZE}"
     ];
@@ -616,8 +627,8 @@
         rr:objectMap [ rr:column "[CeleJmeno]" ];
 	].  
 
-<#SupplementVersion> a rr:TriplesMap;
-    rr:logicalTable <#SupplementTableView>;
+<#AmendmentVersion> a rr:TriplesMap;
+    rr:logicalTable <#AmendmentTableView>;
     rr:subjectMap [
         rr:template "http://localhost:7598/amendment/{ID}/{PoradiVerzeDodatku}/version";
 		rr:class cn:Version;
@@ -679,7 +690,7 @@
     ];
     rr:predicateObjectMap [
       rr:predicate dc:publisher;
-      rr:objectMap [ rr:template "http://localhost:7598/attachment/{ID}/1/publisher" ];
+      rr:objectMap [ rr:template "http://localhost:7598/publisher" ];
     ];
     rr:predicateObjectMap [
       rr:predicate cn:version;

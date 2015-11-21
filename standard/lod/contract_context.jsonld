@@ -30,6 +30,7 @@
     "Implementation" : "cn:Implementation",
     "Milestone" : "cn:Milestone",
     "Transaction" : "com:Transaction",
+    "PriceSpecification" : "gr:PriceSpecification",
 
     "documents" : { "@id": "cn:documents", "@container": "@set" },
     "orders" : { "@id": "cn:orders", "@container": "@set" },
