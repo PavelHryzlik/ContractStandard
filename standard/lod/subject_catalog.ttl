@@ -1,0 +1,18 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+_:dataset a dcat:Dataset ;
+        dcat:distribution _:distribution1 .
+    _:distribution1 a dcat:Distribution ;
+        dct:identifier '1' ;
+        dcat:accessURL <https://raw.githubusercontent.com/PavelHryzlik/ContractStandard/master/standard/lod/contract_sampleA.ttl> ;
+        dct:format [ rdfs:label 'Turtle' ].
+        
+_:dataset a dcat:Dataset ;
+        dcat:distribution _:distribution2 .
+    _:distribution2 a dcat:Distribution ;
+        dct:identifier '2' ;
+        dcat:accessURL <https://raw.githubusercontent.com/PavelHryzlik/ContractStandard/master/standard/lod/contract_sampleB.ttl> ;
+        dct:format [ rdfs:label 'Turtle' ] . 
