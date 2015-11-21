@@ -30,7 +30,7 @@
     "Implementation" : "cn:Implementation",
     "Milestone" : "cn:Milestone",
     "Transaction" : "com:Transaction",
-    
+
     "documents" : { "@id": "cn:documents", "@container": "@set" },
     "orders" : { "@id": "cn:orders", "@container": "@set" },
     "invoices" : { "@id": "cn:invoices", "@container": "@set" },
@@ -56,7 +56,6 @@
     "contractType" : "cn:contractType", 
     "subjectType" : "cn:subjectType",
     "priceAnnual" : { "@id": "cn:priceAnnual", "@type" : "xsd:boolean" },
-    
     "dateSigned" : { "@id": "dc:created", "@type" : "xsd:date" }, 
     "validFrom" : { "@id": "ps:validFrom", "@type" : "xsd:date" }, 
     "validUntil" : { "@id": "ps:validUntil", "@type" : "xsd:date" },
@@ -97,9 +96,9 @@
     "receiverOrganization" : { "@id": "com:destination", "@type" : "@id" },
     
     "contract" : { "@id": "cn:contract", "@type" : "@id" }, 
-    "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" }
+    "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" },
     
     "attachmentOrder" : { "@id": "cn:attachmentOrder", "@type" : "xsd:integer" },
-    "amendmentOrder" : { "@id": "cn:amendmentOrder", "@type" : "xsd:integer" },
+    "amendmentOrder" : { "@id": "cn:amendmentOrder", "@type" : "xsd:integer" }
   }
 }

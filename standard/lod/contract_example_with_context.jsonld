@@ -96,10 +96,10 @@
     "receiverOrganization" : { "@id": "com:destination", "@type" : "@id" },
     
     "contract" : { "@id": "cn:contract", "@type" : "@id" }, 
-    "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" }
+    "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" },
     
     "attachmentOrder" : { "@id": "cn:attachmentOrder", "@type" : "xsd:integer" },
-    "amendmentOrder" : { "@id": "cn:amendmentOrder", "@type" : "xsd:integer" },
+    "amendmentOrder" : { "@id": "cn:amendmentOrder", "@type" : "xsd:integer" }
   },
 
   "@id" : "http://rsmluv.cz/data/89f689cd-e784-4374-bb17-94144679d46f",
@@ -133,6 +133,7 @@
       "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
       
       "amount": {
+        "@id" : "http://rsmluv.cz/contract/12345/2/amount",
         "amountValue" : 584520.00,
         "currency" : "CZK"
       },
