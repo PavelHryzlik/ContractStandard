@@ -162,7 +162,7 @@
                     "validity": "C"
                 },
                 "noID": {
-                    "description": "Indikuje že subjekt nemá IČO, nebo zahraniční ID",
+                    "description": "Indikuje že subjekt nemá IČ, nebo zahraniční ID",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
@@ -209,7 +209,7 @@
                     "validity": "C"
                 },
                 "noID": {
-                    "description": "Indikuje že subjekt nemá IČO, nebo zahraniční ID",
+                    "description": "Indikuje že subjekt nemá IČ, nebo zahraniční ID",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
@@ -282,7 +282,7 @@
                     "validity": "C"
                 },
                 "noID": {
-                    "description": "Indikuje že subjekt nemá IČO, nebo zahraniční ID",
+                    "description": "Indikuje že subjekt nemá IČ, nebo zahraniční ID",
                     "type": ["boolean", "null"],
                     "validity": "B"
                 },
@@ -346,13 +346,37 @@
                 },   
                 "amount": {
                     "description": "Cena s DPH (u neplátců celková cena). Nejvyšší přípustná hodnota řádného plnění z dané smlouvy, které vynaloží některá smluvní strana. U smluv na dobu určitou se jedná o očekávané celkové finanční plnění strany s nejvyšším plněním, včetně opcí, bez sankcí. U smluv na dobu neurčitou, ve kterých není stanoven strop na celkové plnění, se jedná o nejvyšší očekávané roční plnění. U smluv bez finančního plnění (bartery, darovací smlouvy) je uvedena celková hodnota nefinančního plnění strany s nejvyšším plněním (např. odhadovaná hodnota daru). U smluv s nejasným plněním připustit NULL. Pokud je cena nenulová, tak alespoň jedna Smluvní strana (Party) musí mít příznak Payer = true",
-                    "type": ["number", "null"],
-                    "validity": "C"
+                    "type": ["object", "number", "null"],
+                    "validity": "C",
+                    "properties": {
+                        "amountVal": {
+                          "description": "Cena s DPH",
+                          "type": ["number", "null"],
+                          "validity": "C"
+                        },
+                        "currencyVal": {
+                          "description": "Měna, 3-písmenný, ISO 4217 formát”",
+                          "type": ["string", "null"],
+                          "validity": "B"
+                        }
+                    }
                 }, 
                 "amountNoVat": {
                     "description": "Cena bez dph, uvádí se povinně pouze v případě, že Amount je s DPH",
-                    "type": ["number", "null"],
-                    "validity": "C"
+                    "type": ["object", "number", "null"],
+                    "validity": "C",
+                    "properties": {
+                        "amountVal": {
+                          "description": "Cena s DPH",
+                          "type": ["number", "null"],
+                          "validity": "C"
+                        },
+                        "currencyVal": {
+                          "description": "Měna, 3-písmenný, ISO 4217 formát”",
+                          "type": ["string", "null"],
+                          "validity": "B"
+                        }
+                    }
                 }, 
                 "title": {
                     "description": "Předmět smlouvy",
@@ -478,7 +502,7 @@
                     },
                     "validity": "C"
                 },
-                "number": {
+                "attachmentOrder": {
                     "description": "Číslo přílohy",
                     "type": ["integer", "null"],
                     "validity": "B"
@@ -508,7 +532,7 @@
                     },
                     "validity": "C"
                 },
-                "number": {
+                "amendmentOrder": {
                     "description": "Číslo dodatku",
                     "type": ["integer", "null"],
                     "validity": "B"
@@ -557,8 +581,20 @@
                 },    
                 "amount": {
                     "description": "Cena s DPH",
-                    "type": ["number", "null"],
-                    "validity": "C"
+                    "type": ["object", "number", "null"],
+                    "validity": "C",
+                    "properties": {
+                        "amountVal": {
+                          "description": "Cena s DPH",
+                          "type": ["number", "null"],
+                          "validity": "C"
+                        },
+                        "currencyVal": {
+                          "description": "Měna, 3-písmenný, ISO 4217 formát”",
+                          "type": ["string", "null"],
+                          "validity": "B"
+                        }
+                    }
                 },
                 "currency": {
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
@@ -609,8 +645,20 @@
                 },    
                 "amount": {
                     "description": "Cena s DPH (u neplátců celková cena)",
-                    "type": ["number", "null"],
-                    "validity": "C"
+                    "type": ["object", "number", "null"],
+                    "validity": "C",
+                    "properties": {
+                        "amountVal": {
+                          "description": "Cena s DPH",
+                          "type": ["number", "null"],
+                          "validity": "C"
+                        },
+                        "currencyVal": {
+                          "description": "Měna, 3-písmenný, ISO 4217 formát”",
+                          "type": ["string", "null"],
+                          "validity": "B"
+                        }
+                    }
                 },
                 "currency": {
                     "description": "Měna, 3-písmenný, ISO 4217 formát",
@@ -692,8 +740,20 @@
                 },
                 "amount": { 
                     "description": "Zaplacená cena s DPH, vždy stejná měna jako v Currency",
-                    "type": ["number", "null"],
-                    "validity": "C"
+                    "type": ["object", "number", "null"],
+                    "validity": "C",
+                    "properties": {
+                        "amountVal": {
+                          "description": "Cena s DPH",
+                          "type": ["number", "null"],
+                          "validity": "C"
+                        },
+                        "currencyVal": {
+                          "description": "Měna, 3-písmenný, ISO 4217 formát”",
+                          "type": ["string", "null"],
+                          "validity": "B"
+                        }
+                    }
                 },
                 "senderOrganization":{
                     "description": "Informace o odesílateli. Viz. Party",
@@ -716,6 +776,6 @@
             "patternProperties": {
             },
             "required": ["date", "amount", "senderOrganization", "receiverOrganization"]
-        }    
+        }
     }  
 }

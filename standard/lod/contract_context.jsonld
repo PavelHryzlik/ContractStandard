@@ -30,7 +30,7 @@
     "Implementation" : "cn:Implementation",
     "Milestone" : "cn:Milestone",
     "Transaction" : "com:Transaction",
-
+    
     "documents" : { "@id": "cn:documents", "@container": "@set" },
     "orders" : { "@id": "cn:orders", "@container": "@set" },
     "invoices" : { "@id": "cn:invoices", "@container": "@set" },
@@ -38,21 +38,25 @@
     "uri" : { "@id": "cn:uri", "@type" : "@id" },
     "document" : { "@id": "com:contentUrl", "@type" : "@id" }, 
     "valid" : { "@id": "cn:valid", "@type" : "xsd:boolean" },
+    "plainText" : "cn:plainText",
     "anonymised" : { "@id": "cn:anonymised", "@type" : "xsd:boolean" },
     "responsiblePersons" : { "@id": "cn:responsiblePerson", "@container": "@set" },  
     "attachments" : { "@id": "cn:attachment", "@container": "@set" },
     "amendments" : { "@id": "cn:amendment", "@container": "@set" },
     
+    "amount": "cn:amount",
+    "amountNoVat": "cn:amountNoVat", 
+    "amountValue": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" },  
+    "currency": "gr:hasCurrency",
+    
     "awardID" : "cn:awardID",  
     "awardProfileID" : "cn:awardProfileID", 
-    "amount": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" }, 
-    "amountNoVat": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" }, 
     "title" : "dc:title",
     "type" : { "@id": "dcmi:type", "@container": "@set" },
     "contractType" : "cn:contractType", 
     "subjectType" : "cn:subjectType",
     "priceAnnual" : { "@id": "cn:priceAnnual", "@type" : "xsd:boolean" },
-    "currency":  "gr:hasCurrency",
+    
     "dateSigned" : { "@id": "dc:created", "@type" : "xsd:date" }, 
     "validFrom" : { "@id": "ps:validFrom", "@type" : "xsd:date" }, 
     "validUntil" : { "@id": "ps:validUntil", "@type" : "xsd:date" },
@@ -94,5 +98,8 @@
     
     "contract" : { "@id": "cn:contract", "@type" : "@id" }, 
     "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" }
+    
+    "attachmentOrder" : { "@id": "cn:attachmentOrder", "@type" : "xsd:integer" },
+    "amendmentOrder" : { "@id": "cn:amendmentOrder", "@type" : "xsd:integer" },
   }
 }

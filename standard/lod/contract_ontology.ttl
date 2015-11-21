@@ -178,6 +178,14 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   rdfs:subPropertyOf dcterms:date ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
+:amount a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice :Transaction ) ] ;
+  rdfs:range gr:PriceSpecification ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
 ### :Document properties ---  
 
 com:contentUrl vann:usageNote ""@cs, ""@en .
@@ -188,6 +196,14 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   rdfs:comment ""@en ;
   rdfs:domain :Document ;
   rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
+:plainText a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Document ;
+  rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :anonymised a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -236,8 +252,6 @@ dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:type vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 dcterms:description vann:usageNote ""@cs, ""@en .
-gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
-gr:hasCurrency vann:usageNote ""@cs, ""@en .
 ps:validFrom vann:usageNote ""@cs, ""@en .
 ps:validUntil vann:usageNote ""@cs, ""@en .
 
@@ -273,6 +287,14 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:type ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
+:amountNoVat a owl:ObjectProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Contract ;
+  rdfs:range gr:PriceSpecification ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :priceAnnual a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -361,7 +383,6 @@ dcterms:identifier vann:usageNote ""@cs, ""@en .
 
 dcterms:identifier vann:usageNote ""@cs, ""@en . 
 dcterms:date vann:usageNote ""@cs, ""@en .
-gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
 com:source vann:usageNote ""@cs, ""@en .
 com:destination vann:usageNote ""@cs, ""@en .
 
@@ -371,25 +392,37 @@ dcterms:identifier vann:usageNote ""@cs, ""@en .
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 
+:attachmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Attachment ;
+  rdfs:range xsd:integer ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+
 ### :Amendment properties ---     
 
 dcterms:identifier vann:usageNote ""@cs, ""@en .
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
+
+:amendmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label ""@cs, ""@en ;
+  rdfs:comment ""@cs ;
+  rdfs:comment ""@en ;
+  rdfs:domain :Amendment ;
+  rdfs:range xsd:integer ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
      
 ### :Order properties ---     
 
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
-gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
-gr:hasCurrency vann:usageNote ""@cs, ""@en .
 
 ### :Invoice properties ---     
 
 dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
-gr:hasCurrencyValue vann:usageNote ""@cs, ""@en .
-gr:hasCurrency vann:usageNote ""@cs, ""@en .
   
 ### gr:BusinessEntity properties --- 
 

@@ -38,21 +38,24 @@
     "uri" : { "@id": "cn:uri", "@type" : "@id" },
     "document" : { "@id": "com:contentUrl", "@type" : "@id" }, 
     "valid" : { "@id": "cn:valid", "@type" : "xsd:boolean" },
+    "plainText" : "cn:plainText",
     "anonymised" : { "@id": "cn:anonymised", "@type" : "xsd:boolean" },
     "responsiblePersons" : { "@id": "cn:responsiblePerson", "@container": "@set" },  
     "attachments" : { "@id": "cn:attachment", "@container": "@set" },
     "amendments" : { "@id": "cn:amendment", "@container": "@set" },
     
+    "amount": "cn:amount",
+    "amountNoVat": "cn:amountNoVat", 
+    "amountValue": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" },  
+    "currency": "gr:hasCurrency",
+    
     "awardID" : "cn:awardID",  
     "awardProfileID" : "cn:awardProfileID", 
-    "amount": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" }, 
-    "amountNoVat": { "@id": "gr:hasCurrencyValue", "@type" : "xsd:float" }, 
     "title" : "dc:title",
     "type" : { "@id": "dcmi:type", "@container": "@set" },
     "contractType" : "cn:contractType", 
     "subjectType" : "cn:subjectType",
     "priceAnnual" : { "@id": "cn:priceAnnual", "@type" : "xsd:boolean" },
-    "currency":  "gr:hasCurrency",
     "dateSigned" : { "@id": "dc:created", "@type" : "xsd:date" }, 
     "validFrom" : { "@id": "ps:validFrom", "@type" : "xsd:date" }, 
     "validUntil" : { "@id": "ps:validUntil", "@type" : "xsd:date" },
@@ -94,9 +97,12 @@
     
     "contract" : { "@id": "cn:contract", "@type" : "@id" }, 
     "parrentDocument" : { "@id": "cn:parrentDocument", "@type" : "@id" }
+    
+    "attachmentOrder" : { "@id": "cn:attachmentOrder", "@type" : "xsd:integer" },
+    "amendmentOrder" : { "@id": "cn:amendmentOrder", "@type" : "xsd:integer" },
   },
 
-    "@id" : "http://rsmluv.cz/data/89f689cd-e784-4374-bb17-94144679d46f",
+  "@id" : "http://rsmluv.cz/data/89f689cd-e784-4374-bb17-94144679d46f",
   "id": "89f689cd-e784-4374-bb17-94144679d46f",
   "published": "2014-03-25T23:20:50+01:00",
   "language": "cs",
@@ -113,12 +119,10 @@
     
       "awardID": "486026",
       "awardProfileID": "OI-010143",
-      "amount": 584520.00,
       "title": "Brno, Vackova, Šafaříkova - rekonstrukce kanalizace a vodovodu",
       "contractType": "Kupní smlouva",
       "subjectType": "Právní, finanční překladatelské, pojišťovnické, poradenské a jiné služby",
       "priceAnnual": false,
-      "currency": "CZK",
       "dateSigned": "2011-11-16",
       "validFrom": "2011-11-02",
       "validUntil": "2012-06-30",
@@ -127,6 +131,11 @@
       "description": "Projektová dokumentace pro stavební povolení a zadání stavby bude řešit rekonstrukci stávající kanalizační stoky z profilu DN 500 na DN 800/1200 v délce 146 m, rekonstrukci kanalizačních přípojek pod veřejným prostranstvím a přepojení všech stávajících dešťových vpustí a také vybourání vozovek a chodníků nad rýhou a zásyp rýhy recyklátem. Součástí bude inženýrsko-geologický průzkum, geodetické zaměření dotčené oblasti, inventarizace zeleně, výkaz výměr, položkový rozpočet a výkon autorského dozoru až do dokončení stavby. Dokumentace bude projednána s orgány státní správy a s účastníky stavebního řízení a jejich připomínky budou do dokumentace zapracovány.",    
     
       "responsiblePersons" : [ "Ing. Petr Vokřál ", "Mgr. Adriana Krnáčová, MBA"],
+      
+      "amount": {
+        "amountValue" : 584520.00,
+        "currency" : "CZK"
+      },
       
       "publisher" : {
         "@id" : "http://rsmluv.cz/contract/12345/2/publisher",

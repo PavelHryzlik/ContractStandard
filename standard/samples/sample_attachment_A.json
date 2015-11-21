@@ -7,7 +7,7 @@
     {
       "title" : "Priloha1",
       "contract" : "http://rsmluv.cz/smlouva/12345", 
-      "number" : 1,      
+      "attachmentOrder" : 1,      
 
       "uri" : "http://rsmluv.cz/priloha/priloha1",
       "document" : "http://rsmluv.cz/smlouva/12345/Priloha1.docx",
