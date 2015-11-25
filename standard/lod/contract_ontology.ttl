@@ -36,59 +36,41 @@
 
 :Document a owl:Class ;
   rdfs:label "Dokument"@cs, "Document"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 :Contract a owl:Class ;
   rdfs:label "Smlouva"@cs, "Contract"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:subClassOf :Document ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Attachment a owl:Class ;
   rdfs:label "Příloha"@cs, "Attachment"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:subClassOf :Document ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
      
 :Amendment a owl:Class ;
   rdfs:label "Dodatek"@cs, "Amendment"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:subClassOf :Document ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 :Order a owl:Class ;
   rdfs:label "Objednávka"@cs, "Order"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Invoice a owl:Class ;
   rdfs:label "Faktura"@cs, "Invoice"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Version a owl:Class ;
   rdfs:label "Verze"@cs, "Version"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Implementation a owl:Class ;
   rdfs:label "Implementace"@cs, "Implementation"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :Milestone a owl:Class ;
   rdfs:label "Milník"@cs, "Milestone"@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 com:Transaction vann:usageNote ""@cs, ""@en .
@@ -100,88 +82,66 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
 dcterms:language vann:usageNote ""@cs, ""@en .
 
 :documents a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Dokumnety"@cs, "Documents"@en ;
   rdfs:range [ a rdfs:Class ; owl:unionOf ( :Contract :Attachment :Amendment ) ] ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :orders a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Objednávky"@cs, "Orders"@en ;
   rdfs:range :Order ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :invoices a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Faktury"@cs, "Invoices"@en ;
   rdfs:range :Invoice ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :party a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Smluvní strana"@cs, "Party"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice ) ] ;
   rdfs:range gr:BusinessEntity ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :implementation a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Rozšiřující entity"@cs, "Implementation"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Document :Order ) ] ;
   rdfs:range :Implementation ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :uri a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Uri"@cs, "Uri"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Attachment :Amendment :Version ) ] ;
   rdfs:range xsd:anyURI ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :contract a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Smlouva"@cs, "Contract"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Attachment :Amendment ) ] ;
   rdfs:range xsd:anyURI ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :parrentDocument a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Nadřazený dokument"@cs, "Parrent document"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Order :Invoice ) ] ;
   rdfs:range xsd:anyURI ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :publisherId a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Id vydavatele"@cs, "Publisher Id"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Transaction :Version ) ] ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:identifier ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :dueDate a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Datum splatnosti"@cs, "Due date"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Invoice :Milestone ) ] ;
   rdfs:range xsd:dateTime ;
   rdfs:subPropertyOf dcterms:date ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :amount a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Částka"@cs, "Amount"@en ;
   rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice :Transaction ) ] ;
   rdfs:range gr:PriceSpecification ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -191,57 +151,43 @@ dcterms:language vann:usageNote ""@cs, ""@en .
 com:contentUrl vann:usageNote ""@cs, ""@en .
 
 :valid a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Platnost"@cs, "Valid"@en ;
   rdfs:domain :Document ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :plainText a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Prostý text"@cs, "Plain text"@en ;
   rdfs:domain :Document ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :anonymised a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Anonymizováno"@cs, "Anonymised"@en ;
   rdfs:domain :Document ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :responsiblePerson a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Zodpovědná osoba"@cs, "Responsible person"@en ;
   rdfs:domain :Document ;
   rdfs:range dcterms:Person ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :publisher a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Vydavatel"@cs, "Publisher"@en ;
   rdfs:domain :Document ;
   rdfs:range foaf:Organization ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .   
   
 :address a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Adresa"@cs, "Address"@en ;
   rdfs:domain :Document ;
   rdfs:range schema:PostalAddress ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :version a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Verze"@cs, "Version"@en ;
   rdfs:domain :Document ;
   rdfs:range :Version ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -256,91 +202,69 @@ ps:validFrom vann:usageNote ""@cs, ""@en .
 ps:validUntil vann:usageNote ""@cs, ""@en .
 
 :awardID a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Evidenční číslo veřejné zakázky"@cs, "Award public contract Id"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :awardProfileID a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Číslo zakázky na profilu zadavatele"@cs, "Award public contract profile Id"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :contractType a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Typ smlouvy"@cs, "Contract type"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:type ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :subjectType a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Typ zboží/služeb"@cs, "Types of goods / services"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:type ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :amountNoVat a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Cena bez DPH"@cs, "Price without VAT"@en ;
   rdfs:domain :Contract ;
   rdfs:range gr:PriceSpecification ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :priceAnnual a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Identifikuje, pokud je v Amount roční částka"@cs, "Annual price "@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :funding a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Převažující financování"@cs, "Funding"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :attachment a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Příloha"@cs, "Attachment"@en ;
   rdfs:domain :Contract ;
   rdfs:range :Attachment ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :amendment a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Dodatek"@cs, "Amendment"@en ;
   rdfs:domain :Contract ;
   rdfs:range :Amendment ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :currentValidContract a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Aktuálně platné znění smlouvy"@cs, "Currently valid wording of the contract"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:anyURI ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :competency a owl:DatatypeProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Indikuje, zda-li se jedná o soukromoprávní nebo veřejnoprávní smlouvu"@cs, "Private or public contract"@en ;
   rdfs:domain :Contract ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -350,9 +274,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
 dcterms:issued vann:usageNote ""@cs, ""@en .   
 
 :versionOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Pořadí verzí"@cs, "Order version"@en ;
   rdfs:domain :Version ;
   rdfs:range xsd:integer ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -360,17 +282,13 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
 ### :Implementation properties ---
 
 :milestone a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Milník"@cs, "Milestone"@en ;
   rdfs:domain :Implementation ;
   rdfs:range :Milestone ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :transaction a owl:ObjectProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Transakce"@cs, "Transaction"@en ;
   rdfs:domain :Implementation ;
   rdfs:range com:Transaction ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -393,9 +311,7 @@ dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 
 :attachmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Pořadové číslo přílohy"@cs, "Serial number of the attachment"@en ;
   rdfs:domain :Attachment ;
   rdfs:range xsd:integer ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -407,9 +323,7 @@ dcterms:title vann:usageNote ""@cs, ""@en .
 dcterms:created vann:usageNote ""@cs, ""@en .
 
 :amendmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Pořadové číslo dodatku"@cs, "Serial number of the amendment"@en ;
   rdfs:domain :Amendment ;
   rdfs:range xsd:integer ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -432,33 +346,25 @@ gr:valueAddedTaxIncluded vann:usageNote ""@cs, ""@en .
 schema:addressCountry vann:usageNote ""@cs, ""@en .
 
 :localID a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Jednoznačný identifikátor"@cs, "Unique identifier"@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:integer ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
 
 :payer a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Plátce"@cs, "Payer"@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :noID a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Indikuje že subjekt nemá IČ, nebo zahraniční ID"@cs, "Without company identification number"@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 :superiorInstitution a owl:ObjectProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Nadřazená instituce"@cs, "Parent institution"@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range gr:BusinessEntity ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -466,9 +372,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
 ### foaf:Organization properties ---  
 
 :authentication a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Značí stupeň ověřenosti zveřejňující strany"@cs, "Verification degree "@en ;
   rdfs:domain foaf:Organization ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -476,9 +380,7 @@ schema:addressCountry vann:usageNote ""@cs, ""@en .
 ### schema:PostalAddress properties ---   
 
 :nuts a owl:DatatypeProperty, owl:FunctionalProperty ;
-  rdfs:label ""@cs, ""@en ;
-  rdfs:comment ""@cs ;
-  rdfs:comment ""@en ;
+  rdfs:label "Normalizovaná klasifikace územních celků"@cs, "Nomenclature of territorial units"@en ;
   rdfs:domain schema:PostalAddress ;
   rdfs:range xsd:string ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
