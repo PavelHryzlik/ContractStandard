@@ -16,12 +16,12 @@
 
 <http://purl.org/open-contracting/ontology> a owl:Ontology ;
   owl:versionInfo "0.1";
-  dcterms:title  ""@cs, ""@en;
-  dcterms:description ""@cs ;
-  dcterms:description ""@en ;
+  dcterms:title  "Ontologie pro smluvní údaje"@cs, "Ontologies for contract data"@en;
+  dcterms:description "Tento materiál navrhuje základní otnologii pro zveřejňování smluv jako Linked Data nad rámec připravovaného zákona o registru smluv. Cílem je sjednotit obdobné snahy úřadů o vyšší transparenci"@cs ;
+  dcterms:description "This material is proposing fundamental ontology for disclosure contracts as Linked Data beyond the act of contracts register. The aim is to consolidate similar efforts by the authorities of higher transparency"@en ;
   dcterms:modified "2015-05-25"^^xsd:date ;
   vann:preferredNamespaceUri "http://tiny.cc/open-contracting#" ;
-  vann:preferredNamespacePrefix "ocn" ;
+  vann:preferredNamespacePrefix "cn" ;
   dcterms:creator <http://www.ms.mff.cuni.cz/~hryzlikp> ;
   dcterms:rights <http://creativecommons.org/licenses/by/3.0/cz/> .
 
