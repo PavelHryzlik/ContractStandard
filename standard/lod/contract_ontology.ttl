@@ -5,7 +5,6 @@
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix gr:       <http://purl.org/goodrelations/v1#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix ps:       <https://w3id.org/payswarm#> .
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema:   <http://schema.org/> .
@@ -73,13 +72,13 @@
   rdfs:label "Milník"@cs, "Milestone"@en ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
-com:Transaction vann:usageNote ""@cs, ""@en .
+com:Transaction vann:usageNote "Transakce"@cs, "Transaction"@en .
   
 ### --- Properties ---
 
-dcterms:identifier vann:usageNote ""@cs, ""@en .
-dcterms:issued vann:usageNote ""@cs, ""@en .
-dcterms:language vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
+dcterms:issued vann:usageNote "Zveřejněno"@cs, "Published"@en .
+dcterms:language vann:usageNote "Jazyk"@cs, "Language"@en .
 
 :documents a owl:ObjectProperty, owl:FunctionalProperty ;
   rdfs:label "Dokumnety"@cs, "Documents"@en ;
@@ -128,7 +127,7 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   
 :publisherId a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Id vydavatele"@cs, "Publisher Id"@en ;
-  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Transaction :Version ) ] ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( com:Transaction :Version ) ] ;
   rdfs:range xsd:string ;
   rdfs:subPropertyOf dcterms:identifier ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
@@ -142,13 +141,14 @@ dcterms:language vann:usageNote ""@cs, ""@en .
   
 :amount a owl:ObjectProperty ;
   rdfs:label "Částka"@cs, "Amount"@en ;
-  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice :Transaction ) ] ;
+  rdfs:domain [ a rdfs:Class ; owl:unionOf ( :Contract :Order :Invoice com:Transaction ) ] ;
   rdfs:range gr:PriceSpecification ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
   
 ### :Document properties ---  
 
-com:contentUrl vann:usageNote ""@cs, ""@en .
+schema:url vann:usageNote "Adresa URL fyzického umístění dokumentu"@cs, "The URL of the physical location of the document"@en .
+dcterms:type vann:usageNote "Typ dokumentu - Smlouva/Příloha/Dodatek"@cs, "Document type - Contract/Attachment/Amendment"@en .
 
 :valid a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Platnost"@cs, "Valid"@en ;
@@ -194,12 +194,9 @@ com:contentUrl vann:usageNote ""@cs, ""@en .
   
 ### :Contract properties --- 
 
-dcterms:title vann:usageNote ""@cs, ""@en .
-dcterms:type vann:usageNote ""@cs, ""@en .
-dcterms:created vann:usageNote ""@cs, ""@en .
-dcterms:description vann:usageNote ""@cs, ""@en .
-ps:validFrom vann:usageNote ""@cs, ""@en .
-ps:validUntil vann:usageNote ""@cs, ""@en .
+dcterms:title vann:usageNote "Předmět smlouvy"@cs, "Object of the contract"@en .
+dcterms:created vann:usageNote "Datum podpisu"@cs, "Signed date"@en .
+dcterms:description vann:usageNote "Popis předmětu smlouvy"@cs, "Description of object of the contract"@en .
 
 :awardID a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Evidenční číslo veřejné zakázky"@cs, "Award public contract Id"@en ;
@@ -238,6 +235,18 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   rdfs:domain :Contract ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+ 
+:validFrom a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "Datum účinnosti smlouvy"@cs, "Effective date of the contract"@en .
+  rdfs:domain :Contract ;
+  rdfs:range xsd:dateTime ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
+:validUntil a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label "Datum ukončení účinnosti smlouvy"@cs, "Expiration date of the contract"@en .
+  rdfs:domain :Contract ;
+  rdfs:range xsd:dateTime ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> . 
   
 :funding a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Převažující financování"@cs, "Funding"@en ;
@@ -271,7 +280,7 @@ ps:validUntil vann:usageNote ""@cs, ""@en .
   
 ### :Version properties ---   
 
-dcterms:issued vann:usageNote ""@cs, ""@en .   
+dcterms:issued vann:usageNote "Zveřejněno"@cs, "Published"@en .   
 
 :versionOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Pořadí verzí"@cs, "Order version"@en ;
@@ -295,20 +304,20 @@ dcterms:issued vann:usageNote ""@cs, ""@en .
   
 ### :Milestone properties ---     
 
-dcterms:identifier vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
 
 ### :Transaction properties ---   
 
-dcterms:identifier vann:usageNote ""@cs, ""@en . 
-dcterms:date vann:usageNote ""@cs, ""@en .
-com:source vann:usageNote ""@cs, ""@en .
-com:destination vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote "ID"@cs, "ID"@en . 
+dcterms:date vann:usageNote "Datum a čas proběhlé transakce"@cs, "Date and time of the transaction took place"@en .
+com:source vann:usageNote "Informace o odesílateli"@cs, "Information about the sender"@en .
+com:destination vann:usageNote "Informace o příjemci"@cs, "Recipient Information"@en .
 
 ### :Attachment properties ---     
 
-dcterms:identifier vann:usageNote ""@cs, ""@en .
-dcterms:title vann:usageNote ""@cs, ""@en .
-dcterms:created vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
+dcterms:title vann:usageNote "Název"@cs, "Name"@en .
+dcterms:created vann:usageNote Datum podpisu"@cs, "Date of signature"@en .
 
 :attachmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Pořadové číslo přílohy"@cs, "Serial number of the attachment"@en ;
@@ -318,9 +327,9 @@ dcterms:created vann:usageNote ""@cs, ""@en .
 
 ### :Amendment properties ---     
 
-dcterms:identifier vann:usageNote ""@cs, ""@en .
-dcterms:title vann:usageNote ""@cs, ""@en .
-dcterms:created vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
+dcterms:title vann:usageNote "Název"@cs, "Name"@en .
+dcterms:created vann:usageNote Datum podpisu"@cs, "Date of signature"@en .
 
 :amendmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Pořadové číslo dodatku"@cs, "Serial number of the amendment"@en ;
@@ -331,19 +340,19 @@ dcterms:created vann:usageNote ""@cs, ""@en .
 ### :Order properties ---     
 
 dcterms:title vann:usageNote ""@cs, ""@en .
-dcterms:created vann:usageNote ""@cs, ""@en .
+dcterms:created vann:usageNote "Datum podpisu"@cs, "Date of signature"@en .
 
 ### :Invoice properties ---     
 
-dcterms:title vann:usageNote ""@cs, ""@en .
-dcterms:created vann:usageNote ""@cs, ""@en .
+dcterms:title vann:usageNote "Název"@cs, "Name"@en .
+dcterms:created vann:usageNote "Datum podpisu"@cs, "Date of signature"@en .
   
 ### gr:BusinessEntity properties --- 
 
-dcterms:identifier vann:usageNote ""@cs, ""@en .
-gr:legalName vann:usageNote ""@cs, ""@en .
-gr:valueAddedTaxIncluded vann:usageNote ""@cs, ""@en .
-schema:addressCountry vann:usageNote ""@cs, ""@en .
+dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
+gr:legalName vann:usageNote "Název"@cs, "Name"@en .
+gr:valueAddedTaxIncluded vann:usageNote "Plátce DPH"@cs, "VAT payer"@en .
+schema:addressCountry vann:usageNote "Země původu, 3-písmený ISO kód"@cs, "Country of origin, 3-letter ISO code"@en .
 
 :localID a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Jednoznačný identifikátor"@cs, "Unique identifier"@en ;

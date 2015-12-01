@@ -11,7 +11,6 @@
 @prefix gr:      <http://purl.org/goodrelations/v1#> .
 @prefix owl:     <http://www.w3.org/2002/07/owl#> .
 @prefix pc:      <http://purl.org/procurement/public-contracts#> .
-@prefix ps:      <https://w3id.org/payswarm#> .
 @prefix schema:  <http://schema.org/> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
@@ -287,14 +286,14 @@
       ];
     ];
     rr:predicateObjectMap [
-      rr:predicate ps:validFrom;
+      rr:predicate cn:validFrom;
       rr:objectMap [ 
         rr:column "[DATUMUCINOSTI]"; 
         rr:datatype xsd:date; 
       ];
     ];
     rr:predicateObjectMap [
-      rr:predicate ps:validUntil;
+      rr:predicate cn:validUntil;
       rr:objectMap [ 
         rr:column "[DATUMUKONCENI]"; 
         rr:datatype xsd:date; 
@@ -387,7 +386,7 @@
         rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}"
     ];
     rr:predicateObjectMap [
-        rr:predicate com:contentUrl;
+        rr:predicate schema:url;
         rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
     ].
 
@@ -603,7 +602,7 @@
         rr:template "http://localhost:7598/amendment/{ID}/{PORADIVERZE}"
     ];
     rr:predicateObjectMap [
-        rr:predicate com:contentUrl;
+        rr:predicate schema:url;
         rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
     ].
 
@@ -685,7 +684,7 @@
       ];
     ];
 	rr:predicateObjectMap [
-      rr:predicate com:contentUrl;
+      rr:predicate schema:url;
       rr:objectMap [  rr:template "http://localhost:7598/file/{SADADUL_ULOZISTEID}/{NAZEVSOUBORU}" ];
     ];
     rr:predicateObjectMap [
