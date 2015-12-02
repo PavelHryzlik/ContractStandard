@@ -70,7 +70,7 @@
     "payer" : { "@id": "cn:payer", "@type" : "xsd:boolean" }, 
     "noID" : { "@id": "cn:noID", "@type" : "xsd:boolean" },
     "country" : "schema:addressCountry",     
-    "paysVAT" : { "@id": "gr:valueAddedTaxIncluded", "@type" : "xsd:boolean" },
+    "paysVAT" : { "@id": "cn:paysVAT", "@type" : "xsd:boolean" },
     "superiorInstitution" : "cn:superiorInstitution", 
         
     "publisher" : "dc:publisher",

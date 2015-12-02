@@ -16,7 +16,7 @@
 
 <http://purl.org/open-contracting/ontology> a owl:Ontology ;
   owl:versionInfo "0.1";
-  dcterms:title  "Ontologie pro smluvní údaje"@cs, "Ontologies for contract data"@en;
+  dcterms:title  "Ontologie pro smluvní údaje"@cs, "Contract ontology"@en;
   dcterms:description "Tento materiál navrhuje základní otnologii pro zveřejňování smluv jako Linked Data nad rámec připravovaného zákona o registru smluv. Cílem je sjednotit obdobné snahy úřadů o vyšší transparenci"@cs ;
   dcterms:description "This material is proposing fundamental ontology for disclosure contracts as Linked Data beyond the act of contracts register. The aim is to consolidate similar efforts by the authorities of higher transparency"@en ;
   dcterms:modified "2015-05-25"^^xsd:date ;
@@ -306,7 +306,7 @@ dcterms:issued vann:usageNote "Zveřejněno"@cs, "Published"@en .
 
 dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
 
-### :Transaction properties ---   
+### com:Transaction properties ---   
 
 dcterms:identifier vann:usageNote "ID"@cs, "ID"@en . 
 dcterms:date vann:usageNote "Datum a čas proběhlé transakce"@cs, "Date and time of the transaction took place"@en .
@@ -351,7 +351,6 @@ dcterms:created vann:usageNote "Datum podpisu"@cs, "Date of signature"@en .
 
 dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
 gr:legalName vann:usageNote "Název"@cs, "Name"@en .
-gr:valueAddedTaxIncluded vann:usageNote "Plátce DPH"@cs, "VAT payer"@en .
 schema:addressCountry vann:usageNote "Země původu, 3-písmený ISO kód"@cs, "Country of origin, 3-letter ISO code"@en .
 
 :localID a owl:DatatypeProperty, owl:FunctionalProperty ;
@@ -368,6 +367,12 @@ schema:addressCountry vann:usageNote "Země původu, 3-písmený ISO kód"@cs, "
   
 :noID a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Indikuje že subjekt nemá IČ, nebo zahraniční ID"@cs, "Without company identification number"@en ;
+  rdfs:domain gr:BusinessEntity ;
+  rdfs:range xsd:boolean ;
+  rdfs:isDefinedBy <http://tiny.cc/open-contracting> .
+  
+:paysVAT a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:label vann:usageNote "Plátce DPH"@cs, "VAT payer"@en ;
   rdfs:domain gr:BusinessEntity ;
   rdfs:range xsd:boolean ;
   rdfs:isDefinedBy <http://tiny.cc/open-contracting> .

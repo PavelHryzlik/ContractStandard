@@ -247,10 +247,6 @@
     rr:predicateObjectMap [
         rr:predicate schema:addressCountry;
         rr:objectMap [  rr:constant "CZE" ];
-    ];
-    rr:predicateObjectMap [
-        rr:predicate cn:authentication;
-        rr:objectMap [  rr:constant "email" ];
     ].
   
 <#Contract> a rr:TriplesMap;
@@ -486,7 +482,7 @@
         rr:objectMap [ rr:column "[STAT]" ];
 	  ];
     rr:predicateObjectMap [
-        rr:predicate gr:valueAddedTaxIncluded;
+        rr:predicate cn:paysVAT;
         rr:objectMap [ 
 			rr:column "[PlatceDPH]"; 
 			rr:datatype xsd:boolean;
@@ -749,13 +745,13 @@
     ];
     rr:predicateObjectMap [
         rr:predicate cn:milestone;
-        rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation/milestone/{MilestoneID}" ];
+        rr:objectMap [ rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/milestone/{MilestoneID}" ];
 	].
 
 <#Milestone> a rr:TriplesMap;
     rr:logicalTable <#MilestoneTableView>;
     rr:subjectMap [
-        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/implementation/milestone/{MilestoneID}";
+        rr:template "http://localhost:7598/contract/{ID}/{PORADIVERZE}/milestone/{MilestoneID}";
         rr:class cn:Milestone;
     ];
     rr:predicateObjectMap [
