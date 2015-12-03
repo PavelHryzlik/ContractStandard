@@ -19,7 +19,7 @@
   dcterms:title  "Ontologie pro smluvní údaje"@cs, "Contract ontology"@en;
   dcterms:description "Tento materiál navrhuje základní otnologii pro zveřejňování smluv jako Linked Data nad rámec připravovaného zákona o registru smluv. Cílem je sjednotit obdobné snahy úřadů o vyšší transparenci"@cs ;
   dcterms:description "This material is proposing fundamental ontology for disclosure contracts as Linked Data beyond the act of contracts register. The aim is to consolidate similar efforts by the authorities of higher transparency"@en ;
-  dcterms:modified "2015-05-25"^^xsd:date ;
+  dcterms:modified "2015-11-30"^^xsd:date ;
   vann:preferredNamespaceUri "http://tiny.cc/open-contracting#" ;
   vann:preferredNamespacePrefix "cn" ;
   dcterms:creator <http://www.ms.mff.cuni.cz/~hryzlikp> ;
@@ -317,7 +317,7 @@ com:destination vann:usageNote "Informace o příjemci"@cs, "Recipient Informati
 
 dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
 dcterms:title vann:usageNote "Název"@cs, "Name"@en .
-dcterms:created vann:usageNote Datum podpisu"@cs, "Date of signature"@en .
+dcterms:created vann:usageNote "Datum podpisu"@cs, "Date of signature"@en .
 
 :attachmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Pořadové číslo přílohy"@cs, "Serial number of the attachment"@en ;
@@ -329,7 +329,7 @@ dcterms:created vann:usageNote Datum podpisu"@cs, "Date of signature"@en .
 
 dcterms:identifier vann:usageNote "ID"@cs, "ID"@en .
 dcterms:title vann:usageNote "Název"@cs, "Name"@en .
-dcterms:created vann:usageNote Datum podpisu"@cs, "Date of signature"@en .
+dcterms:created vann:usageNote "Datum podpisu"@cs, "Date of signature"@en .
 
 :amendmentOrder a owl:DatatypeProperty, owl:FunctionalProperty ;
   rdfs:label "Pořadové číslo dodatku"@cs, "Serial number of the amendment"@en ;
