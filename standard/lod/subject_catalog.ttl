@@ -16,10 +16,3 @@ _:dataset a dcat:Dataset ;
         dct:identifier '2' ;
         dcat:accessURL <https://raw.githubusercontent.com/PavelHryzlik/ContractStandard/master/standard/lod/contract_sampleB.ttl> ;
         dct:format [ rdfs:label 'Turtle' ] . 
-        
-_:dataset a dcat:Dataset ;
-        dcat:distribution _:distribution3 .
-    _:distribution3 a dcat:Distribution ;
-        dct:identifier '3' ;
-        dcat:accessURL <https://raw.githubusercontent.com/PavelHryzlik/ContractStandard/master/standard/lod/contract_sampleC.ttl> ;
-        dct:format [ rdfs:label 'Turtle' ] . 
