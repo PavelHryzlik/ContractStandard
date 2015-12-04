@@ -16,7 +16,7 @@
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/amendment/52/1/version>;
                                        a <http://tiny.cc/open-contracting#Amendment>;
-                                       <https://schema.org/url> <http://opendata.trebic.cz/file/66bbb72b-e575-420a-aa70-5274180042d7/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Prohl%C3%AD%C5%BEe%C4%8D%20a%20opera%C4%8Dn%C3%AD%20syst%C3%A9m%2020150301-20150324.pdf>.
+                                       <http://schema.org/url> <http://opendata.trebic.cz/file/66bbb72b-e575-420a-aa70-5274180042d7/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20Prohl%C3%AD%C5%BEe%C4%8D%20a%20opera%C4%8Dn%C3%AD%20syst%C3%A9m%2020150301-20150324.pdf>.
 <http://opendata.trebic.cz/amendment/52/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T12:55:33.000000+02:00"^^xsd:dateTime;
                                                <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/amendment/52/1>;
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
@@ -33,7 +33,7 @@
                                        <http://tiny.cc/open-contracting#valid> true;
                                        <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/amendment/56/1/version>;
                                        a <http://tiny.cc/open-contracting#Amendment>;
-                                       <https://schema.org/url> <http://opendata.trebic.cz/file/27390358-bea4-48fa-9a24-1f3598ad9a8e/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1)%20(1).pdf>.
+                                       <http://schema.org/url> <http://opendata.trebic.cz/file/27390358-bea4-48fa-9a24-1f3598ad9a8e/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1)%20(1).pdf>.
 <http://opendata.trebic.cz/amendment/56/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:02:33.000000+02:00"^^xsd:dateTime;
                                                <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/amendment/56/1>;
                                                <http://tiny.cc/open-contracting#versionOrder> 1 ;
@@ -47,7 +47,7 @@
                                         <http://tiny.cc/open-contracting#valid> true;
                                         <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/attachment/28/1/version>;
                                         a <http://tiny.cc/open-contracting#Attachment>;
-                                        <https://schema.org/url> <http://opendata.trebic.cz/file/42f43d32-7a0d-49c3-ac9a-37fa7a3eb846/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1).pdf>.
+                                        <http://schema.org/url> <http://opendata.trebic.cz/file/42f43d32-7a0d-49c3-ac9a-37fa7a3eb846/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20publika%2020150301-20150324(1).pdf>.
 <http://opendata.trebic.cz/attachment/28/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:07:10.000000+02:00"^^xsd:dateTime;
                                                 <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/attachment/28/1>;
                                                 <http://tiny.cc/open-contracting#versionOrder> 1 ;
@@ -61,7 +61,7 @@
                                         <http://tiny.cc/open-contracting#valid> true;
                                         <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/attachment/29/1/version>;
                                         a <http://tiny.cc/open-contracting#Attachment>;
-                                        <https://schema.org/url> <http://opendata.trebic.cz/file/60bf83fc-7300-4268-b698-e634bdc22dda/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>.
+                                        <http://schema.org/url> <http://opendata.trebic.cz/file/60bf83fc-7300-4268-b698-e634bdc22dda/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>.
 <http://opendata.trebic.cz/attachment/29/1/version> <http://purl.org/dc/terms/issued> "2015-06-18T13:07:35.000000+02:00"^^xsd:dateTime;
                                                 <http://tiny.cc/open-contracting#uri> <http://opendata.trebic.cz/attachment/29/1>;
                                                 <http://tiny.cc/open-contracting#versionOrder> 1 ;
@@ -83,7 +83,7 @@
                                       <http://tiny.cc/open-contracting#valid> false;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/49/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-06-18"^^xsd:date.
 <http://opendata.trebic.cz/contract/49/1/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "500000,00"^^xsd:float;
@@ -109,7 +109,7 @@
                                       <http://tiny.cc/open-contracting#valid> true;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/49/2/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/790194a0-5ba3-4809-b8ef-6501a1a4e666/Odes%C3%ADl%C3%A1n%C3%AD%20notifikac%C3%AD.docx>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-10-04"^^xsd:date.
 <http://opendata.trebic.cz/contract/49/2/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "500000,00"^^xsd:float;
@@ -137,7 +137,7 @@
                                       <http://tiny.cc/open-contracting#valid> true;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/50/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/69ffad1f-b4e5-4cd3-9769-42cf79879296/connectors.jpg>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/69ffad1f-b4e5-4cd3-9769-42cf79879296/connectors.jpg>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-08-28"^^xsd:date.
 <http://opendata.trebic.cz/contract/50/1/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "10000,00"^^xsd:float;
@@ -190,7 +190,7 @@
                                       <http://tiny.cc/open-contracting#valid> false;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/53/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-06-18"^^xsd:date.
 <http://opendata.trebic.cz/contract/53/1/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "12000,00"^^xsd:float;
@@ -216,7 +216,7 @@
                                       <http://tiny.cc/open-contracting#valid> true;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/53/2/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/ff32e4f5-dd55-4684-9c8a-b88a586e5293/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324%20(1).pdf>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-06-18"^^xsd:date.
 <http://opendata.trebic.cz/contract/53/2/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "12000,00"^^xsd:float;
@@ -243,7 +243,7 @@
                                       <http://tiny.cc/open-contracting#valid> true;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/54/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/1247d17e-6cf2-4745-9271-47579bf4def6/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20akvizic%2020150301-20150324.pdf>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/1247d17e-6cf2-4745-9271-47579bf4def6/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%20akvizic%2020150301-20150324.pdf>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-07-02"^^xsd:date.
 <http://opendata.trebic.cz/contract/54/1/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "20000,00"^^xsd:float;
@@ -326,7 +326,7 @@
                                       <http://tiny.cc/open-contracting#valid> true;
                                       <http://tiny.cc/open-contracting#version> <http://opendata.trebic.cz/contract/57/1/version>;
                                       a <http://tiny.cc/open-contracting#Contract>;
-                                      <https://schema.org/url> <http://opendata.trebic.cz/file/b346536f-13ca-41cf-83be-8dc9d63f1c89/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf>;
+                                      <http://schema.org/url> <http://opendata.trebic.cz/file/b346536f-13ca-41cf-83be-8dc9d63f1c89/Analytics%20V%C5%A1echny%20%C3%BAdaje%20o%20webu%20P%C5%99ehled%2020150301-20150324.pdf>;
                                       <http://tiny.cc/open-contracting#validFrom> "2015-06-18"^^xsd:date.
  <http://opendata.trebic.cz/contract/57/1/amount> <http://purl.org/goodrelations/v1#hasCurrency> "CZK";
                                              <http://purl.org/goodrelations/v1#hasCurrencyValue> "10000,00"^^xsd:float;
